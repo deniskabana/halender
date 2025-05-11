@@ -1,9 +1,10 @@
 convert:
-  #!/usr/bin/julia
+  #!/Users/denis/.juliaup/bin/julia
+
   import Pkg; Pkg.activate(".")
   import HexToCterm; HexToCterm.convert()
 
 update-packages:
-  #!/usr/bin/julia
+  #!/Users/denis/.juliaup/bin/julia
   import Pkg; Pkg.activate(".")
   Pkg.Registry.update(); Pkg.update()

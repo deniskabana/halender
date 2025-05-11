@@ -134,9 +134,9 @@ local M = {
   Type                                       = { fg = "purple" },                                  -- (preferred) int, long, char, etc.
   -- StorageClass = {}, -- static, register, volatile, etc.
   -- Structure = {}, -- struct, union, enum, etc.
-  Typedef                                    = { fg = "red" },   -- A typedef
+  Typedef                                    = { fg = "red" },  -- A typedef
 
-  Special                                    = { fg = "pink2" }, -- (preferred) any special symbol
+  Special                                    = { fg = "pink" }, -- (preferred) any special symbol
   -- SpecialChar = {}, -- special character in a constant
   -- Tag = {}, -- you can use CTRL-] on this
   Delimiter                                  = { fg = "highlight" }, -- character that needs attention

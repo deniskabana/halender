@@ -2,7 +2,7 @@
 # Favour higher codes as the first 16 are more likely to be overridden by
 # the user
 
-# 0 = '#000000' # 16
+ 0 = '#000000' # 16
 1 = '#800000'
 2 = '#008000'
 3 = '#808000'
