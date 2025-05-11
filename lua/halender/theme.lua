@@ -811,6 +811,6 @@ if config.transparent.sidebar then
 end
 
 -- Merge user-defined overrides
-M = vim.tbl_extend("force", M, config.overrides.theme or {})
+-- M = vim.tbl_extend("force", M, config.overrides.theme or {})
 
 return M

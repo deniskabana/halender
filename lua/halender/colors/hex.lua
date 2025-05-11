@@ -1,11 +1,8 @@
 ---@alias Palette table<string,string>
 
----@type HalenderOpts
-local config = require("halender.config")
-
 -- https://en.wikipedia.org/wiki/X11_color_names
 ---@type Palette
-local M      = {
+local M = {
   -- Syntax colors (Main)
   purple       = "#c3a6ff", -- Keywords, constants
   yellow       = "#ffd580", -- Functions, classes, object literal keys
