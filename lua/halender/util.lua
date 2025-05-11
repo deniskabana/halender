@@ -1,11 +1,10 @@
--- SPDX-License-Identifier: LGPL-3.0-only
----@mod lavender.util utility functions
+---@mod halender.util utility functions
 
 local M = {}
 
 ---Load main theme highlights
----@param theme Highlights lavender.theme
----@param colors table lavender.colors
+---@param theme Highlights halender.theme
+---@param colors table halender.colors
 function M.apply_theme(theme, colors)
   for group, hl in pairs(theme) do
     local fg_name = hl.fg
@@ -48,7 +47,7 @@ function M.apply_theme(theme, colors)
 end
 
 ---Load terminal colours
----@param c Palette lavender.colors
+---@param c Palette halender.colors
 function M.hl_terminal(c)
   -- terminfo(5)
   -- TODO: would possibly like 16 colours instead of 8
@@ -94,7 +93,7 @@ end
 
 ---Define autocommands
 function M.autocmds()
-  local group = vim.api.nvim_create_augroup("lavender", { clear = true })
+  local group = vim.api.nvim_create_augroup("halender", { clear = true })
 
   -- Clear autocommands when loading a colorscheme
   -- (mostly useful when loading other colorschemes)

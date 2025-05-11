@@ -1,7 +1,7 @@
 ---@alias Palette table<string,string>
 
----@type LavenderOpts
-local config = require("lavender.config")
+---@type HalenderOpts
+local config = require("halender.config")
 
 -- https://en.wikipedia.org/wiki/X11_color_names
 ---@type Palette

@@ -1,5 +1,4 @@
--- SPDX-License-Identifier: LGPL-3.0-only
----@mod lualine.themes.lavender lavender lualine theme
+---@mod lualine.themes.halender halender lualine theme
 
 ---@type table<string,table<string, string>>
 local M = {
