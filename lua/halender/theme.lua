@@ -393,7 +393,7 @@ local M = {
   ["@variable"]                              = { link = "Identifier" }, -- Any variable name that does not have another highlight. WARN: broken in 0.10 but not documented?
   ["@variable.builtin"]                      = { fg = "blue" },         -- Variable names that are defined by the languages, like `this` or `self`.
   -- ["@variable.member"] = {}, -- For fields.
-  -- ["@variable.parameter"] = { fg = "paleblue" }, -- For parameters of a function. -- FIX:
+  -- ["@variable.parameter"] = { fg = "blue" }, -- For parameters of a function. -- FIX:
   -- ["@variable.parameter.builtin"] = {}, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
   -- ["@type"] = { link = "Type" },
@@ -491,7 +491,7 @@ local M = {
   diffIndexLine                              = { fg = "purple" },
 
   -- NeogitOrg/neogit
-  NeogitBranch                               = { fg = "paleblue" },
+  NeogitBranch                               = { fg = "blue" },
   NeogitRemote                               = { fg = "purple" },
   NeogitHunkHeader                           = { fg = "fg", bg = "highlight" },
   NeogitHunkHeaderHighlight                  = { fg = "blue", bg = "contrast" },
@@ -572,12 +572,12 @@ local M = {
   LspFloatWinBorder                          = { fg = "purple" },
 
   LspSagaBorderTitle                         = { fg = "purple3" },
-  LspSagaHoverBorder                         = { fg = "paleblue" },
+  LspSagaHoverBorder                         = { fg = "blue" },
   LspSagaRenameBorder                        = { fg = "lime" },
   LspSagaDefPreviewBorder                    = { fg = "lime" },
   LspSagaCodeActionBorder                    = { fg = "blue" },
   LspSagaFinderSelection                     = { fg = "lime" },
-  LspSagaCodeActionTitle                     = { fg = "paleblue" },
+  LspSagaCodeActionTitle                     = { fg = "blue" },
   LspSagaCodeActionContent                   = { fg = "purple" },
   LspSagaSignatureHelpBorder                 = { fg = "pink" },
 
