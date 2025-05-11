@@ -1,20 +1,20 @@
 -- SPDX-License-Identifier: LGPL-3.0-only
 
----@type LavenderOpts
-local config    = require("lavender.config")
+---@type HalenderOpts
+local config    = require("halender.config")
 ---@type Highlights
-local theme     = require("lavender.theme")
-local colors    = require("lavender.colors")
+local theme     = require("halender.theme")
+local colors    = require("halender.colors")
 ---@type Palette
-local hexcolors = require("lavender.colors.hex")
-local util      = require("lavender.util")
+local hexcolors = require("halender.colors.hex")
+local util      = require("halender.util")
 
-local M = {}
+local M         = {}
 
 function M.load()
   -- Clear existing highlights only if a colorscheme has been set
   if vim.g.colors_name then
-    if vim.g.colors_name == "lavender" then
+    if vim.g.colors_name == "halender" then
       return
     end
 
@@ -27,7 +27,7 @@ function M.load()
   end
   vim.o.termguicolors = true
   vim.o.background    = "dark"
-  vim.g.colors_name   = "lavender"
+  vim.g.colors_name   = "halender"
 
   -- Load terminal colours
   util.hl_terminal(hexcolors)

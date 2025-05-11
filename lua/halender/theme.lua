@@ -1,11 +1,11 @@
----@mod lavender.theme highlight definitions
+---@mod halender.theme highlight definitions
 
----@type LavenderOpts
-local config = require("lavender.config")
+---@type HalenderOpts
+local config = require("halender.config")
 
 ---:help nvim_set_hl
 ---@class (exact) Highlight
----@field fg? string foreground - name of a colour defined in lavender.colors.hex
+---@field fg? string foreground - name of a colour defined in halender.colors.hex
 ---@field bg? string background - name of a colour as above
 ---@field sp? string special - name of a colour as above
 ---@field blend? integer between 0 and 100
