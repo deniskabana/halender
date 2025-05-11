@@ -1,3 +1,5 @@
+# Halender
+
 ## Halender colorscheme (nvim)
 
 > Colors heavily inspired from: https://github.com/bchiang7/halcyon-vscode

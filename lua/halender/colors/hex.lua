@@ -38,10 +38,7 @@ local M      = {
   error        = "#ef6b73",
   warning      = "#ffd580",
   info         = "#5ccfe6",
-  link         = "#ffcc66",
+  link         = "#ffcc66"
 }
-
-M.sidebar    = M.bg
-M.float      = M.bg
 
 return M

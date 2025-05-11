@@ -1,4 +1,3 @@
--- SPDX-License-Identifier: LGPL-3.0-only
 ---@mod halender.colors.cterm colour mappings for cterm
 
 -- These mappings are best-effort, and generated from the hex colours based
@@ -58,6 +57,6 @@ else
 end
 
 -- Merge user-defined config
-M = vim.tbl_extend("force", M, config.overrides.colors.cterm or {})
+-- M = vim.tbl_extend("force", M, config.overrides.colors.cterm or {})
 
 return M

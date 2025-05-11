@@ -1,5 +1,3 @@
--- SPDX-License-Identifier: LGPL-3.0-only
-
 ---@type HalenderOpts
 local config    = require("halender.config")
 ---@type Highlights
