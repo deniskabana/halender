@@ -1,1 +1,1 @@
-require("halender").load()
+require("halender.init").load()

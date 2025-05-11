@@ -12,7 +12,7 @@ local M         = {}
 function M.load()
   -- Clear existing highlights only if a colorscheme has been set
   if vim.g.colors_name then
-    if vim.g.colors_name == "halender" then
+    if vim.g.colors_name == "Halender" then
       return
     end
 
@@ -25,7 +25,7 @@ function M.load()
   end
   vim.o.termguicolors = true
   vim.o.background    = "dark"
-  vim.g.colors_name   = "halender"
+  vim.g.colors_name   = "Halender"
 
   -- Load terminal colours
   util.hl_terminal(hexcolors)
