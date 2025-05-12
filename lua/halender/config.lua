@@ -6,6 +6,7 @@
 ---@field dim_inactive? boolean dim inactive editors
 ---@field signs? boolean use icon (patched font) diagnostic sign text
 ---@field disable_semantic_highlighting? boolean disable LSP semantic highlighting
+---@field enable_bold? boolean allows using bold fonts
 
 ---@class (exact) HalenderTransparentOpts
 ---@field background? boolean do not render the main background
@@ -42,6 +43,8 @@ local M = {
   },
 
   dim_inactive = true,
+
+  enable_bold = true,
 
   disable_semantic_highlighting = false,
 
