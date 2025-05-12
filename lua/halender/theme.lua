@@ -34,7 +34,6 @@ local config = require("halender.config")
 
 ---@type Highlights
 local M = {
-  ToggleTerm                                 = { bg = "#ff0000" },
   Comment                                    = { fg = "comments", italic = config.italic.comments }, -- any comment
   ColorColumn                                = { bg = "border" },                                    -- used for the columns set with 'colorcolumn'
   Conceal                                    = { fg = "disabled" },                                  -- placeholder characters substituted for concealed text (see 'conceallevel')
@@ -798,7 +797,7 @@ for i, c in ipairs(h_rainbow) do
   M["markdownH" .. i .. "Delimiter"] = { link = "@markup.heading." .. i .. ".marker" }
 end
 
--- diagnostic group links
+-- Diagnostic group links
 if not vim.diagnostic then
   local severity_map = {
     Error = "Error",
@@ -834,8 +833,5 @@ end
 if config.transparent.sidebar then
   M.NormalSB.bg = "NONE"
 end
-
--- Merge user-defined overrides
--- M = vim.tbl_extend("force", M, config.overrides.theme or {})
 
 return M

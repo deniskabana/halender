@@ -103,17 +103,16 @@ function M.autocmds()
   })
 
   -- Window local backgrounds
-  -- TODO: are these necessary?
-  -- local alt_hl = "Normal:NormalFloat,SignColumn:NormalFloat"
-  -- vim.api.nvim_create_autocmd("TermOpen", {
-  --   group = group,
-  --   callback = function() vim.wo.winhighlight = alt_hl end
-  -- })
-  -- vim.api.nvim_create_autocmd("FileType", {
-  --   group = group,
-  --   pattern = { "packer", "qf" },
-  --   callback = function() vim.wo.winhighlight = alt_hl end
-  -- })
+  local alt_hl = "Normal:NormalFloat,SignColumn:NormalFloat"
+  vim.api.nvim_create_autocmd("TermOpen", {
+    group = group,
+    callback = function() vim.wo.winhighlight = alt_hl end
+  })
+  vim.api.nvim_create_autocmd("FileType", {
+    group = group,
+    pattern = { "packer", "qf" },
+    callback = function() vim.wo.winhighlight = alt_hl end
+  })
 end
 
 return M

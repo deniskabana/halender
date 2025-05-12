@@ -2,8 +2,8 @@
 
 ---@class (exact) HalenderOpts
 ---@field transparent? HalenderTransparentOpts
----@field contrast? boolean colour the sidebar and floating windows differently to the main background
 ---@field italic? HalenderItalicOpts
+---@field dim_inactive? boolean dim inactive editors
 ---@field signs? boolean use icon (patched font) diagnostic sign text
 
 ---@class (exact) HalenderTransparentOpts
@@ -17,6 +17,9 @@
 ---@field functions? boolean italic function names
 ---@field keywords? boolean italic keywords
 ---@field variables? boolean italic variables
+---@field strings? boolean italic strings
+---@field types? boolean italic types
+---@field function_call? boolean italic function calls
 
 ---@type HalenderOpts
 local M = {
@@ -26,20 +29,20 @@ local M = {
     popup      = false,
     sidebar    = false,
   },
-  contrast = true,
+
+  dim_inactive = true,
 
   italic = {
-    comments  = true,
-    functions = false,
-    keywords  = true,
-    variables = false,
+    comments      = true,
+    functions     = false,
+    keywords      = true,
+    variables     = false,
+    strings       = true,
+    types         = true,
+    function_call = true,
   },
 
-  signs = false,
+  signs = true,
 }
-
--- Merge user-defined config
--- FIX: need to validate config!!
-M = vim.tbl_deep_extend("force", M, vim.g.halender or {})
 
 return M
