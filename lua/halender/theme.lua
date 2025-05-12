@@ -37,12 +37,11 @@ local M = {
   Comment                                    = { fg = "comments", italic = config.italic.comments }, -- any comment
   ColorColumn                                = { bg = "border" },                                    -- used for the columns set with 'colorcolumn'
   Conceal                                    = { fg = "disabled" },                                  -- placeholder characters substituted for concealed text (see 'conceallevel')
-  Cursor                                     = { bg = "cursor" },                                    -- character under the cursor
+  Cursor                                     = { bg = "red" },                                       -- character under the cursor
   lCursor                                    = { link = "Cursor" },                                  -- the character under the cursor when |language-mapping| is used (see 'guicursor')
   CursorIM                                   = { link = "Cursor" },                                  -- like Cursor, but used when in IME mode |CursorIM|
   CursorColumn                               = { bg = "border" },                                    -- Screen-column at the cursor, when 'cursorcolumn' is set.
   CursorLine                                 = { bold = true, bg = "highlight" },                    -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-  -- CursorLine = { bg = "border" },
   Directory                                  = { fg = "cyan" },                                      -- directory names (and other special names in listings)
   DiffAdd                                    = { fg = "lime", reverse = true },                      -- diff mode: Added line |diff.txt|
   DiffChange                                 = { fg = "orange", reverse = true },                    -- diff mode: Changed line |diff.txt|
@@ -66,11 +65,11 @@ local M = {
   MsgArea                                    = { fg = "accent" },              -- Area for messages and cmdline
   -- MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
   -- MoreMsg = {}, -- |more-prompt|
-  NonText                                    = { fg = "disabled" },                                         -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-  Normal                                     = { fg = "fg", bg = "bg", ctermbg = "sidebar", guibg = none }, -- normal text
+  NonText                                    = { fg = "disabled" },           -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+  Normal                                     = { fg = "fg", bg = "bg" },      -- normal text
   -- NormalNC = {}, -- normal text in non-current windows
-  NormalSB                                   = { fg = "fg", bg = "sidebar" },                               -- normal text in sidebar
-  NormalFloat                                = { fg = "fg", bg = "float" },                                 -- Normal text in floating windows.
+  NormalSB                                   = { fg = "fg", bg = "sidebar" }, -- normal text in sidebar
+  NormalFloat                                = { fg = "fg", bg = "float" },   -- Normal text in floating windows.
   FloatBorder                                = { fg = "border", bg = "float" },
   -- FloatTitle = {},
   Pmenu                                      = { fg = "text", bg = "contrast" },      -- Popup menu: normal item.

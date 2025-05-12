@@ -1,9 +1,10 @@
+---@mod halender.palette color palette
+
 ---@alias Palette table<string,string>
 
 -- https://en.wikipedia.org/wiki/X11_color_names
 ---@type Palette
 local M = {
-  -- HexToCterm: START
   purple       = "#c3a6ff", -- Keywords, constants
   yellow       = "#ffd580", -- Functions, classes, object literal keys
   orange       = "#ffae57", -- Constants, operators
@@ -35,8 +36,7 @@ local M = {
   error        = "#cf2a2c",
   warning      = "#ffd580",
   info         = "#5ccfe6",
-  link         = "#ffcc66",
-  -- HexToCterm: END
+  link         = "#2e96ff",
 }
 
 return M

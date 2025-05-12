@@ -1,13 +1,12 @@
 ---@type HalenderOpts
-local config    = require("halender.config")
+local config  = require("halender.config")
 ---@type Highlights
-local theme     = require("halender.theme")
-local colors    = require("halender.colors")
+local theme   = require("halender.theme")
 ---@type Palette
-local hexcolors = require("halender.colors.hex")
-local util      = require("halender.util")
+local palette = require("halender.palette")
+local util    = require("halender.util")
 
-local M         = {}
+local M       = {}
 
 function M.load()
   -- Clear existing highlights only if a colorscheme has been set
@@ -24,9 +23,9 @@ function M.load()
   vim.g.colors_name   = "Halender"
 
   -- Load terminal colours
-  util.hl_terminal(hexcolors)
+  util.hl_terminal(palette)
   -- Load main highlights
-  util.apply_theme(theme, colors)
+  util.apply_theme(theme, palette)
   -- Load diagnostic signs
   if config.signs then
     util.diagnostic_signs()

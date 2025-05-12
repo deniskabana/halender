@@ -5,6 +5,7 @@
 ---@field italic? HalenderItalicOpts
 ---@field dim_inactive? boolean dim inactive editors
 ---@field signs? boolean use icon (patched font) diagnostic sign text
+---@field disable_semantic_highlighting? boolean disable LSP semantic highlighting
 
 ---@class (exact) HalenderTransparentOpts
 ---@field background? boolean do not render the main background
@@ -30,8 +31,6 @@ local M = {
     sidebar    = false,
   },
 
-  dim_inactive = true,
-
   italic = {
     comments      = true,
     functions     = false,
@@ -41,6 +40,10 @@ local M = {
     types         = true,
     function_call = true,
   },
+
+  dim_inactive = true,
+
+  disable_semantic_highlighting = false,
 
   signs = true,
 }

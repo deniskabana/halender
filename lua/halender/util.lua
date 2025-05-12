@@ -4,42 +4,28 @@ local M = {}
 
 ---Load main theme highlights
 ---@param theme Highlights halender.theme
----@param colors table halender.colors
-function M.apply_theme(theme, colors)
+---@param palette Palette halender.colors
+function M.apply_theme(theme, palette)
   for group, hl in pairs(theme) do
     local fg_name = hl.fg
     local bg_name = hl.bg
     local ctermfg_name = hl.ctermfg
     local ctermbg_name = hl.ctermbg
 
-    if type(ctermfg_name) == "string" and ctermfg_name ~= "NONE" then
-      hl.ctermfg = colors.cterm[ctermfg_name]
-    end
-
-    if colors.hex[fg_name] ~= nil then
-      hl.fg = colors.hex[fg_name]
-      if ctermfg_name == nil and colors.cterm[fg_name] ~= nil then
-        hl.ctermfg = colors.cterm[fg_name]
-      end
+    if palette[fg_name] ~= nil then
+      hl.fg = palette[fg_name]
     elseif fg_name == "NONE" and ctermfg_name == nil then
       hl.ctermfg = fg_name
     end
 
-    if type(ctermbg_name) == "string" and ctermbg_name ~= "NONE" then
-      hl.ctermbg = colors.cterm[ctermbg_name]
-    end
-
-    if colors.hex[bg_name] ~= nil then
-      hl.bg = colors.hex[bg_name]
-      if ctermbg_name == nil and colors.cterm[bg_name] ~= nil then
-        hl.ctermbg = colors.cterm[bg_name]
-      end
+    if palette[bg_name] ~= nil then
+      hl.bg = palette[bg_name]
     elseif bg_name == "NONE" and ctermbg_name == nil then
       hl.ctermbg = bg_name
     end
 
-    if colors.hex[hl.sp] ~= nil then
-      hl.sp = colors.hex[hl.sp]
+    if palette[hl.sp] ~= nil then
+      hl.sp = palette[hl.sp]
     end
 
     vim.api.nvim_set_hl(0, group, hl)
@@ -49,8 +35,6 @@ end
 ---Load terminal colours
 ---@param c Palette halender.colors
 function M.hl_terminal(c)
-  -- terminfo(5)
-  -- TODO: would possibly like 16 colours instead of 8
   vim.g.terminal_color_0  = c.black
   vim.g.terminal_color_8  = c.highlight
 
