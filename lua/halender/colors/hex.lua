@@ -3,7 +3,7 @@
 -- https://en.wikipedia.org/wiki/X11_color_names
 ---@type Palette
 local M = {
-  -- Syntax colors (Main)
+  -- HexToCterm: START
   purple       = "#c3a6ff", -- Keywords, constants
   yellow       = "#ffd580", -- Functions, classes, object literal keys
   orange       = "#ffae57", -- Constants, operators
@@ -16,8 +16,8 @@ local M = {
   purple2      = "#9066ce", -- Env keywords (import, export, from)
   white        = "#d7dce2",
   red          = "#ef6b73",
+  red2         = "#cf2a2c",
 
-  -- UI Colors
   bg           = "#1d2433",
   sidebar      = "#171c28",
   float        = "#171c28",
@@ -32,10 +32,11 @@ local M = {
   disabled     = "#515772",
   cursor       = "#a19bb5",
   accent       = "#ffd580",
-  error        = "#ef6b73",
+  error        = "#cf2a2c",
   warning      = "#ffd580",
   info         = "#5ccfe6",
-  link         = "#ffcc66"
+  link         = "#ffcc66",
+  -- HexToCterm: END
 }
 
 return M

@@ -34,6 +34,7 @@ local config = require("halender.config")
 
 ---@type Highlights
 local M = {
+  ToggleTerm                                 = { bg = "#ff0000" },
   Comment                                    = { fg = "comments", italic = config.italic.comments }, -- any comment
   ColorColumn                                = { bg = "border" },                                    -- used for the columns set with 'colorcolumn'
   Conceal                                    = { fg = "disabled" },                                  -- placeholder characters substituted for concealed text (see 'conceallevel')
@@ -41,7 +42,7 @@ local M = {
   lCursor                                    = { link = "Cursor" },                                  -- the character under the cursor when |language-mapping| is used (see 'guicursor')
   CursorIM                                   = { link = "Cursor" },                                  -- like Cursor, but used when in IME mode |CursorIM|
   CursorColumn                               = { bg = "border" },                                    -- Screen-column at the cursor, when 'cursorcolumn' is set.
-  CursorLine                                 = { bold = true, italic = true, bg = "border" },        -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+  CursorLine                                 = { bold = true, bg = "highlight" },                    -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
   -- CursorLine = { bg = "border" },
   Directory                                  = { fg = "cyan" },                                      -- directory names (and other special names in listings)
   DiffAdd                                    = { fg = "lime", reverse = true },                      -- diff mode: Added line |diff.txt|
@@ -66,11 +67,11 @@ local M = {
   MsgArea                                    = { fg = "accent" },              -- Area for messages and cmdline
   -- MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
   -- MoreMsg = {}, -- |more-prompt|
-  NonText                                    = { fg = "disabled" },           -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-  Normal                                     = { fg = "fg", bg = "bg" },      -- normal text
+  NonText                                    = { fg = "disabled" },                                         -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+  Normal                                     = { fg = "fg", bg = "bg", ctermbg = "sidebar", guibg = none }, -- normal text
   -- NormalNC = {}, -- normal text in non-current windows
-  NormalSB                                   = { fg = "fg", bg = "sidebar" }, -- normal text in sidebar
-  NormalFloat                                = { fg = "fg", bg = "float" },   -- Normal text in floating windows.
+  NormalSB                                   = { fg = "fg", bg = "sidebar" },                               -- normal text in sidebar
+  NormalFloat                                = { fg = "fg", bg = "float" },                                 -- Normal text in floating windows.
   FloatBorder                                = { fg = "border", bg = "float" },
   -- FloatTitle = {},
   Pmenu                                      = { fg = "text", bg = "contrast" },      -- Popup menu: normal item.
@@ -107,7 +108,7 @@ local M = {
   -- default,
   -- Uncomment and edit if you want more specific syntax highlighting.
 
-  Constant                                   = { fg = "purple" },                                  -- (preferred) any constant
+  Constant                                   = { fg = "fg", bold = true },                         -- (preferred) any constant
   String                                     = { fg = "lime", italic = true },                     -- a string constant: "this is a string"
   Character                                  = { fg = "purple" },                                  -- a character constant: 'c', '\n'
   Number                                     = { fg = "purple" },                                  -- a number constant: 234, 0xff
@@ -115,28 +116,28 @@ local M = {
   Float                                      = { fg = "purple" },                                  -- a floating point constant: 2.3e10
 
   Identifier                                 = { fg = "cyan", italic = config.italic.variables },  -- (preferred) any variable name
-  Function                                   = { fg = "blue2", italic = config.italic.functions }, -- function name (also: methods for classes)
+  Function                                   = { fg = "yellow", bold = true },                     -- function name (also: methods for classes)
 
   Statement                                  = { fg = "pink" },                                    -- (preferred) any statement
-  Conditional                                = { fg = "purple", italic = config.italic.keywords }, -- if, then, else, endif, switch, etc.
+  Conditional                                = { fg = "orange", italic = false, bold = true },     -- if, then, else, endif, switch, etc.
   Repeat                                     = { fg = "purple", italic = config.italic.keywords }, -- for, do, while, etc.
   Label                                      = { fg = "red" },                                     -- case, default, etc.
-  Operator                                   = { fg = "pink" },                                    -- "sizeof", "+", "*", etc.
+  Operator                                   = { fg = "orange", bold = true },                     -- "sizeof", "+", "*", etc.
   Keyword                                    = { fg = "purple", italic = config.italic.keywords }, -- any other keyword
-  Exception                                  = { fg = "yellow" },                                  -- try, catch, throw
+  Exception                                  = { fg = "purple2" },                                 -- try, catch, throw
 
   PreProc                                    = { fg = "purple" },                                  -- (preferred) generic Preprocessor
-  Include                                    = { fg = "blue2" },                                   -- preprocessor #include
+  Include                                    = { fg = "purple2", bold = true },                    -- preprocessor #include
   Define                                     = { fg = "pink" },                                    -- preprocessor #define
   Macro                                      = { fg = "pink" },                                    -- same as Define
-  PreCondit                                  = { fg = "purple3" },                                 -- preprocessor #if, #else, #endif, etc.
+  PreCondit                                  = { fg = "purple2" },                                 -- preprocessor #if, #else, #endif, etc.
 
-  Type                                       = { fg = "purple" },                                  -- (preferred) int, long, char, etc.
+  Type                                       = { fg = "fg" },                                      -- (preferred) int, long, char, etc.
   -- StorageClass = {}, -- static, register, volatile, etc.
   -- Structure = {}, -- struct, union, enum, etc.
-  Typedef                                    = { fg = "red" },  -- A typedef
+  Typedef                                    = { fg = "red" },                   -- A typedef
 
-  Special                                    = { fg = "pink" }, -- (preferred) any special symbol
+  Special                                    = { fg = "yellow", italic = true }, -- (preferred) any special symbol
   -- SpecialChar = {}, -- special character in a constant
   -- Tag = {}, -- you can use CTRL-] on this
   Delimiter                                  = { fg = "highlight" }, -- character that needs attention
@@ -225,6 +226,7 @@ local M = {
   -- ???
   -- asciidocQuotedSingleQuoted = { link = "Label" },
   -- asciidocQuotedDoubleQuoted = { link = "Label" },
+  NvimTreeNormal                             = { fg = "white", bg = "sidebar" },
 
   asciidocAttributeEntry                     = { link = "@constant.builtin.asciidoc" },
   asciidocAttributeRef                       = { link = "@constant.asciidoc" },
@@ -293,7 +295,7 @@ local M = {
   DapStoppedLine                             = { bg = "yellow" }, -- Used for "Warning" diagnostic virtual text
 
   -- nvim-treesitter/nvim-treesitter
-  ["@none"]                                  = {},
+  ["@none"]                                  = { nocombine = true },
   ["@annotation"]                            = { fg = "red" },
   ["@attribute"]                             = { fg = "yellow" },
 
@@ -304,12 +306,13 @@ local M = {
   ["@comment.info"]                          = { fg = "cyan", italic = config.italic.comments },
   ["@comment.hint"]                          = { fg = "purple", italic = config.italic.comments },
   ["@comment.note"]                          = { link = "@comment.hint" },
-  ["@comment.todo"]                          = { fg = "blue", italic = config.italic.comments },
+  ["@comment.todo"]                          = { fg = "gold", italic = config.italic.comments },
   -- ["@comment.documentation"] = {}, -- TODO:
 
-  -- ["@punctuation.delimiter"] = {}, -- For delimiters ie: `.`
-  -- ["@punctuation.bracket"] = {}, -- For brackets and parens.
-  ["@punctuation.special"]                   = { fg = "pink" }, -- For special symbols (e.g. `{}` in string interpolation)
+  ["@punctuation"]                           = { fg = "orange" }, -- For delimiters ie: `.`
+  ["@punctuation.bracket"]                   = { fg = "blue" },   -- For brackets and parens.
+  ["@punctuation.special"]                   = { fg = "pink" },   -- For special symbols (e.g. `{}` in string interpolation)
+  ["@punctuation.delimiter"]                 = { fg = "blue" },   -- For delimiters ie: `.`
 
   --- Markup
   ["@markup"]                                = { link = "@none" },
@@ -345,7 +348,7 @@ local M = {
 
   --- Literals
   -- ["@constant"] = { link = "Constant" },
-  ["@constant.builtin"]                      = { fg = "orange" },
+  ["@constant.builtin"]                      = { fg = "purple", bold = true },
   ["@constant.macro"]                        = { link = "Macro" },
 
   -- ["@string"] = { link = "String" },
@@ -363,14 +366,14 @@ local M = {
   --- Functions
   -- ["@function"] = { link = "Function" },
   -- ["@function.builtin"] = {},
-  -- ["@function.call"] = {},
+  ["@function.call"]                         = { bold = false, nocombine = true, fg = "yellow", italic = true },
   ["@function.macro"]                        = { link = "Macro" },
   -- ["@function.method"] = {},
   -- ["@function.method.call"] = {},
 
   -- ["@property"] = { link = "Identifier" },
 
-  -- ["@constructor"] = { fg = "purple" }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+  ["@constructor"]                           = { fg = "purple" }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
   -- ["@constructor.tsx"] = {},
 
   --- Keywords
@@ -385,29 +388,31 @@ local M = {
   ["@keyword.exception"]                     = { link = "Exception" },
   ["@keyword.function"]                      = { link = "@keyword" }, -- For keywords used to define a fuction.
   ["@keyword.import"]                        = { link = "Include" },
+  ["@keyword.export"]                        = { fg = "orange", bold = true },
   ["@keyword.operator"]                      = { link = "@operator" },
   ["@keyword.repeat"]                        = { link = "Repeat" },
-  ["@keyword.return"]                        = { link = "@keyword" },
+  ["@keyword.return"]                        = { link = "@keyword.export" },
 
   --- Identifiers
-  ["@variable"]                              = { link = "Identifier" }, -- Any variable name that does not have another highlight. WARN: broken in 0.10 but not documented?
-  ["@variable.builtin"]                      = { fg = "blue" },         -- Variable names that are defined by the languages, like `this` or `self`.
-  -- ["@variable.member"] = {}, -- For fields.
-  -- ["@variable.parameter"] = { fg = "blue" }, -- For parameters of a function. -- FIX:
+  ["@variable"]                              = { link = "Constant" }, -- Any variable name that does not have another highlight. WARN: broken in 0.10 but not documented?
+  ["@variable.builtin"]                      = { fg = "orange" },     -- Variable names that are defined by the languages, like `this` or `self`.
+  ["@variable.member"]                       = { fg = "yellow" },     -- For fields.
+  ["@variable.parameter"]                    = { fg = "cyan" },       -- For parameters of a function. -- FIX:
   -- ["@variable.parameter.builtin"] = {}, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
-  -- ["@type"] = { link = "Type" },
-  -- ["@type.builtin"] = {},
-  ["@type.definition"]                       = { link = "Typedef" },
+  ["@type"]                                  = { fg = "blue", underline = true, bold = false, italic = true },
+  ["@type.builtin"]                          = { fg = "yellow", nocombine = true },
+  ["@type.definition"]                       = { fg = "blue", underline = true, italic = true, bold = false },
 
   ["@namespace.builtin"]                     = { link = "@variable.builtin" },
 
   ["@module"]                                = { link = "Include" },
   -- ["@module.builtin"] = {}, -- Variable names that are defined by the languages, like `this` or `self`.
 
-  ["@tag"]                                   = { link = "Label" },
-  ["@tag.attribute"]                         = { link = "@property" },
-  ["@tag.delimiter"]                         = { link = "Delimiter" },
+  ["@tag"]                                   = { fg = "cyan", nocombine = true, italic = false, bold = true },
+  ["@tag.delimiter"]                         = { fg = "disabled" },
+  ["@tag.builtin"]                           = { fg = "purple", bold = false },
+  ["@tag.attribute"]                         = { fg = "orange", italic = true, bold = true },
 
   --- Misc
   ["@diff.plus"]                             = { link = "diffAdded" },
@@ -415,30 +420,42 @@ local M = {
   ["@diff.delta"]                            = { link = "diffChanged" },
 
   -- LSP Semantic Token Groups
+  ["@lsp.type"]                              = { fg = "blue", underline = true, italic = true, bold = false },
+  ["@lsp.type.type"]                         = { fg = "blue", underline = true, italic = true, bold = false },
   ["@lsp.type.boolean"]                      = { link = "@boolean" },
   ["@lsp.type.builtinType"]                  = { link = "@type.builtin" },
   ["@lsp.type.comment"]                      = { link = "@comment" },
+  ["@lsp.type.function"]                     = { link = "function.call", nocombine = true },
   ["@lsp.type.decorator"]                    = { link = "@attribute" },
   ["@lsp.type.deriveHelper"]                 = { link = "@attribute" },
-  ["@lsp.type.enum"]                         = { link = "@type" },
+  ["@lsp.type.enum"]                         = { link = "@type.definition" },
   ["@lsp.type.enumMember"]                   = { link = "@constant" },
   ["@lsp.type.escapeSequence"]               = { link = "@string.escape" },
   ["@lsp.type.formatSpecifier"]              = { link = "@markup.list" },
   ["@lsp.type.generic"]                      = { link = "@variable" },
-  ["@lsp.type.interface"]                    = { link = "@type" },
+  ["@lsp.type.interface"]                    = { link = "@type.definition" },
   ["@lsp.type.keyword"]                      = { link = "@keyword" },
   ["@lsp.type.lifetime"]                     = { link = "@keyword.storage" },
   ["@lsp.type.namespace"]                    = { link = "@module" },
   ["@lsp.type.number"]                       = { link = "@number" },
   ["@lsp.type.operator"]                     = { link = "@operator" },
   ["@lsp.type.parameter"]                    = { link = "@variable.parameter" },
-  ["@lsp.type.property"]                     = { link = "@property" },
+  ["@lsp.type.property"]                     = { fg = "blue" },
   ["@lsp.type.selfKeyword"]                  = { link = "@variable.builtin" },
   ["@lsp.type.selfTypeKeyword"]              = { link = "@variable.builtin" },
   ["@lsp.type.string"]                       = { link = "@string" },
   ["@lsp.type.typeAlias"]                    = { link = "@type.definition" },
   ["@lsp.type.unresolvedReference"]          = { link = "@markup.link" },
-  ["@lsp.type.variable"]                     = {}, -- use treesitter styles for regular variables
+  ["@lsp.type.variable"]                     = { fg = "fg", underline = false, bold = true },                      -- use treesitter styles for regular variables
+  ["@lsp.mod.declaration"]                   = { fg = "yellow", underline = true, bold = true, nocombine = true }, -- use treesitter styles for regular variables
+  ["@lsp.mod.defaultLibrary"]                = { fg = "cyan", underline = false },                                 -- use treesitter styles for regular variables
+  -- ["@lsp.typemod.property.declaration"]      = { fg = "cyan", nocombine = true },                                  -- use treesitter styles for regular variables
+  ["@lsp.typemod.function.declaration"]      = { link = "@function" },                                             -- use treesitter styles for regular variables
+  ["@lsp.type.typeParameter"]                = { fg = "lime", italic = true },
+  ["@lsp.typemod.typeParameter"]             = { link = "@lsp.type.typeParameter" },                               -- use treesitter styles for regular variables
+  ["@lsp.typemod.parameter.declaration"]     = { fg = "fg", bold = true, underline = false, nocombine = true },    -- use treesitter styles for regular variables
+  -- ["@lsp.typemod"]                           = { link = "@type" },
+  -- ["@lsp.typemod.function.readonly"]         = { link = "@function" },
   ["@lsp.typemod.class.defaultLibrary"]      = { link = "@type.builtin" },
   ["@lsp.typemod.enum.defaultLibrary"]       = { link = "@type.builtin" },
   ["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
@@ -456,6 +473,13 @@ local M = {
   ["@lsp.typemod.variable.defaultLibrary"]   = { link = "@variable.builtin" },
   ["@lsp.typemod.variable.injected"]         = { link = "@variable" },
   ["@lsp.typemod.variable.static"]           = { link = "@constant" },
+  ["@lsp.typemod.variable"]                  = { fg = "fg", underline = false, bold = true, nocombine = true },
+  ["@lsp.typemod.variable.readonly"]         = { link = "@function" },
+  ["@lsp.typemod.variable.declaration"]      = { link = "@lsp.typemod.variable" },
+  ["@lsp.typemod.member"]                    = { fg = "yellow", underline = false, bold = false, italic = true },
+  -- ["@lsp.typemod.variable.readonly"]         = { fg = "yellow", underline = false, bold = false, italic = true },
+  ["@lsp.typemod.enumMember"]                = { fg = "fg", underline = false },
+  ["@lsp.typemod.property"]                  = { fg = "fg", underline = false, bold = true },
   -- NOTE: maybe add these with distinct highlights?
   -- ["@lsp.typemod.variable.globalScope"] (global variables)
 
@@ -690,14 +714,14 @@ local M = {
   -- TreesitterContext = {},
 
   -- nvim-lualine/lualine.nvim (custom)
-  LualineNormalA                             = { fg = "bg", bg = "purple", bold = true },
-  LualineNormalB                             = { fg = "fg", bg = "border" },
-  LualineNormalC                             = { fg = "fg", bg = "selection" },
+  LualineNormalA                             = { fg = "bg", bg = "cyan", bold = true },
+  LualineNormalB                             = { fg = "fg", bg = "highlight" },
+  LualineNormalC                             = { fg = "fg", bg = "bg" },
 
   LualineInsertA                             = { fg = "bg", bg = "lime", bold = true },
   LualineInsertB                             = { link = "LualineNormalB" },
 
-  LualineVisualA                             = { fg = "bg", bg = "purple", bold = true },
+  LualineVisualA                             = { fg = "bg", bg = "purple2", bold = true },
   LualineVisualB                             = { link = "LualineNormalB" },
 
   LualineReplaceA                            = { fg = "bg", bg = "red", bold = true },
@@ -708,7 +732,8 @@ local M = {
 
   LualineInactiveA                           = { fg = "disabled", bg = "bg", bold = true },
   LualineInactiveB                           = { fg = "disabled", bg = "bg" },
-  LualineInactiveC                           = { fg = "disabled", bg = "selection" },
+  LualineInactiveC                           = { fg = "disabled", bg = "bg" },
+
 }
 
 -- lsp symbol kind and completion kind highlights
