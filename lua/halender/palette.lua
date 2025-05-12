@@ -2,7 +2,6 @@
 
 ---@alias Palette table<string,string>
 
--- https://en.wikipedia.org/wiki/X11_color_names
 ---@type Palette
 local M = {
   purple       = "#c3a6ff", -- Keywords, constants

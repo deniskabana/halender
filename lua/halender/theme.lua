@@ -578,11 +578,11 @@ local M = {
   NotifyTRACETitle                      = { link = "NotifyTRACEIcon" },
 
   -- nvim-lualine/lualine.nvim (custom)
-  LualineNormalA                        = { fg = "bg", bg = "purple", bold = true },
+  LualineNormalA                        = { fg = "bg", bg = "lime", bold = true },
   LualineNormalB                        = { fg = "fg", bg = "highlight" },
   LualineNormalC                        = { fg = "fg", bg = "sidebar" },
 
-  LualineInsertA                        = { fg = "bg", bg = "lime", bold = true },
+  LualineInsertA                        = { fg = "bg", bg = "yellow", bold = true },
   LualineInsertB                        = { link = "LualineNormalB" },
 
   LualineVisualA                        = { fg = "bg", bg = "cyan", bold = true },
@@ -591,7 +591,7 @@ local M = {
   LualineReplaceA                       = { fg = "bg", bg = "red", bold = true },
   LualineReplaceB                       = { link = "LualineNormalB" },
 
-  LualineCommandA                       = { fg = "bg", bg = "yellow", bold = true },
+  LualineCommandA                       = { fg = "bg", bg = "orange", bold = true },
   LualineCommandB                       = { link = "LualineNormalB" },
 
   LualineInactiveA                      = { fg = "disabled", bg = "bg", bold = true },
