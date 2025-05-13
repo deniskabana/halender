@@ -34,7 +34,7 @@ local M = {
 
   italic = {
     comments      = true,
-    functions     = false,
+    functions     = true,
     keywords      = true,
     variables     = false,
     strings       = true,
