@@ -279,7 +279,7 @@ local M = {
   -- ["@lsp.type.boolean"]                      = { link = "@boolean" },
   -- ["@lsp.type.builtinType"]                  = { link = "@type.builtin" },
   -- ["@lsp.type.comment"]                      = { link = "@comment" },
-  ["@lsp.type.property"]                   = { fg = "yellow", underline = true },
+  ["@lsp.type.property"]                   = { fg = "blue2", underline = true },
   ["@lsp.type.function"]                   = {},
   -- ["@lsp.type.decorator"]                    = { link = "@attribute" },
   -- ["@lsp.type.deriveHelper"]                 = { link = "@attribute" },
