@@ -52,7 +52,7 @@ local M = {
   Comment                                  = { fg = "comments", italic = config.italic.comments }, -- any comment
   ErrorMsg                                 = { fg = "error" },                                     -- error messages on the command line
   VertSplit                                = { fg = "cursor" },                                    -- the column separating vertically split windows
-  WinSeparator                             = { link = "VertSplit" },                               -- the column separating vertically split windows
+  WinSeparator                             = { fg = "cursor", bg = "float" },                      -- the column separating vertically split windows
   Folded                                   = { fg = "disabled", italic = true },                   -- line used for closed folds
   FoldColumn                               = { fg = "accent" },                                    -- 'foldcolumn'
   SignColumn                               = { link = "Normal" },                                  -- column where |signs| are displayed
@@ -253,7 +253,7 @@ local M = {
   ["@variable.parameter.builtin"]          = { fg = "purple" },              -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
   ["@type"]                                = { fg = "blue", underline = true, bold = false, italic = true, nocombine = true },
-  ["@type.builtin"]                        = { fg = "blue", italic = true },
+  ["@type.builtin"]                        = { fg = "yellow", italic = true },
   ["@type.definition"]                     = { fg = "blue", underline = true, italic = true, bold = false },
 
   ["@namespace.builtin"]                   = { link = "@variable.builtin" },
@@ -311,7 +311,7 @@ local M = {
   ["@lsp.typemod.function.readonly"]       = {},                                            -- use treesitter styles for regular variables
   ["@lsp.typemod.function.call"]           = { link = "@function.call", nocombine = true }, -- use treesitter styles for regular variables
   ["@lsp.typemod.function.declaration"]    = { bold = true, fg = "yellow" },                -- use treesitter styles for regular variables
-  ["@lsp.type.typeParameter"]              = { fg = "yellow", italic = true, underline = true, bold = false, nocombine = true },
+  ["@lsp.type.typeParameter"]              = { fg = "lime", italic = true, underline = true, bold = false, nocombine = true },
   ["@lsp.typemod.typeParameter"]           = { link = "@lsp.type.typeParameter" },          -- use treesitter styles for regular variables
   -- ["@lsp.typemod.parameter.declaration"]     = { fg = "fg", bold = true, underline = false, nocombine = true },    -- use treesitter styles for regular variables
   -- ["@lsp.typemod"]                           = { link = "@type" },
@@ -400,7 +400,7 @@ local M = {
 
   -- nvim-telescope/telescope.nvim
   TelescopeNormal                          = { link = "NormalFloat" },
-  TelescopeBorder                          = { fg = "border" },
+  TelescopeBorder                          = { fg = "border", bg = "float" },
   -- TelescopePreviewBorder                     = { fg = "lime" },
   TelescopeSelection                       = { fg = "pink", bold = true },
   TelescopeMatching                        = { underline = true, sp = "pink", bold = true },
@@ -488,10 +488,10 @@ local M = {
   BufferLineSeparator                      = { bg = "black", fg = "black" },
   BufferLineSeparatorVisible               = { bg = "black", fg = "black" },
 
-  BufferLineWarningDiagnostic              = { fg = "yellow", bg = "black" },
-  BufferLineErrorDiagnostic                = { fg = "red", bg = "black" },
-  BufferLineWarningDiagnosticSelected      = { bg = "bg", fg = "yellow", underline = true, sp = "yellow" },
-  BufferLineErrorDiagnosticSelected        = { bg = "bg", fg = "red", underline = true, sp = "yellow" },
+  BufferLineWarningDiagnostic              = { fg = "warning", bg = "black" },
+  BufferLineErrorDiagnostic                = { fg = "error", bg = "black" },
+  BufferLineWarningDiagnosticSelected      = { bg = "bg", fg = "warning", underline = true, sp = "yellow" },
+  BufferLineErrorDiagnosticSelected        = { bg = "bg", fg = "error", underline = true, sp = "yellow" },
 
   BufferLineTabSelected                    = { fg = "white", bold = true, italic = false, underline = true, bg = "bg", sp = "yellow" },
   BufferLineSeparatorSelected              = { bg = "bg", fg = "black", sp = "yellow", underline = true },
