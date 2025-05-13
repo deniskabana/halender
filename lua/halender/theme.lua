@@ -41,7 +41,7 @@ local M = {
   CursorIM                              = { link = "Cursor" },                  -- like Cursor, but used when in IME mode |CursorIM|
   CursorColumn                          = { bg = "border" },                    -- Screen-column at the cursor, when 'cursorcolumn' is set.
   CursorLine                            = { bold = true, bg = "highlight" },    -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-  Directory                             = { fg = "text" },                      -- directory names (and other special names in listings)
+  Directory                             = { fg = "text", italic = true },       -- directory names (and other special names in listings)
   DiffAdd                               = { fg = "lime", reverse = true },      -- diff mode: Added line |diff.txt|
   DiffChange                            = { fg = "orange", reverse = true },    -- diff mode: Changed line |diff.txt|
   DiffDelete                            = { fg = "red", reverse = true },       -- diff mode: Deleted line |diff.txt|
@@ -185,6 +185,8 @@ local M = {
 
   -- nvim-tree/nvim-tree
   NvimTreeNormal                        = { fg = "white", bg = "sidebar", bold = false },
+  NvimTreeFolderIcon                    = { fg = "orange" },
+  NvimTreeOpenedFolderIcon              = { fg = "yellow" },
 
   -- nvim-treesitter/nvim-treesitter
   ["@none"]                             = { nocombine = true },
