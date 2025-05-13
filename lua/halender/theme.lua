@@ -42,8 +42,8 @@ local M = {
   CursorColumn                             = { bg = "highlight" },                                            -- Screen-column at the cursor, when 'cursorcolumn' is set.
   CursorLine                               = { bold = true, bg = "highlight", force = true, default = true }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
   Directory                                = { fg = "text", italic = true },                                  -- directory names (and other special names in listings)
-  DiffAdd                                  = { fg = "lime", reverse = true },                                 -- diff mode: Added line |diff.txt|
-  DiffChange                               = { fg = "orange", reverse = true },                               -- diff mode: Changed line |diff.txt|
+  DiffAdd                                  = { fg = "green", reverse = true },                                -- diff mode: Added line |diff.txt|
+  DiffChange                               = { fg = "cyan", reverse = true },                                 -- diff mode: Changed line |diff.txt|
   DiffDelete                               = { fg = "red", reverse = true },                                  -- diff mode: Deleted line |diff.txt|
   DiffText                                 = { fg = "selection", reverse = true },                            -- diff mode: Changed text within a changed line |diff.txt|
   EndOfBuffer                              = { fg = "border" },                                               -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
@@ -311,7 +311,7 @@ local M = {
   ["@lsp.typemod.function.readonly"]       = {},                                            -- use treesitter styles for regular variables
   ["@lsp.typemod.function.call"]           = { link = "@function.call", nocombine = true }, -- use treesitter styles for regular variables
   ["@lsp.typemod.function.declaration"]    = { bold = true, fg = "yellow" },                -- use treesitter styles for regular variables
-  ["@lsp.type.typeParameter"]              = { fg = "lime", italic = true, underline = true, bold = false, nocombine = true },
+  ["@lsp.type.typeParameter"]              = { fg = "pink", italic = true, underline = true, bold = false, nocombine = true },
   ["@lsp.typemod.typeParameter"]           = { link = "@lsp.type.typeParameter" },          -- use treesitter styles for regular variables
   -- ["@lsp.typemod.parameter.declaration"]     = { fg = "fg", bold = true, underline = false, nocombine = true },    -- use treesitter styles for regular variables
   -- ["@lsp.typemod"]                           = { link = "@type" },
@@ -367,7 +367,7 @@ local M = {
   TroubleNormal                            = { link = "NormalSB" },
 
   -- diff
-  diffAdded                                = { fg = "lime" },
+  diffAdded                                = { fg = "green" },
   diffRemoved                              = { fg = "red" },
   diffChanged                              = { fg = "yellow" },
   diffOldFile                              = { fg = "yellow" },
@@ -397,7 +397,6 @@ local M = {
   GitSignsAdd                              = { link = "diffAdded" },   -- diff mode: Added line |diff.txt|
   GitSignsChange                           = { link = "diffChanged" }, -- diff mode: Changed line |diff.txt|
   GitSignsDelete                           = { link = "diffRemoved" }, -- diff mode: Deleted line |diff.txt|
-
   -- nvim-telescope/telescope.nvim
   TelescopeNormal                          = { link = "NormalFloat" },
   TelescopeBorder                          = { fg = "border", bg = "float" },
@@ -570,8 +569,8 @@ local M = {
   LazyUrl                                  = { link = "@markup.link.url" },
 
   -- nvim-tree/nvim-tree
-  NvimTreeNormal                           = { fg = "fg", bg = "sidebar", bold = false },
-  NvimTreeFolderIcon                       = { fg = "orange2" },
+  NvimTreeNormal                           = { fg = "white", bg = "sidebar", bold = false },
+  NvimTreeFolderIcon                       = { fg = "orange" },
   NvimTreeOpenedFolderIcon                 = { fg = "yellow" },
   NvimTreeGitFolderDirtyHL                 = { link = "Directory" },
   NvimTreeGitDirtyIcon                     = { fg = "gold" },
