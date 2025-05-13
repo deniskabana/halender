@@ -34,19 +34,19 @@ local config = require("halender.config")
 
 ---@type Highlights
 local M = {
-  ColorColumn                              = { bg = "border" },                    -- used for the columns set with 'colorcolumn'
-  Conceal                                  = { fg = "disabled" },                  -- placeholder characters substituted for concealed text (see 'conceallevel')
-  Cursor                                   = { bg = "white", fg = "white" },       -- character under the cursor
-  lCursor                                  = { link = "Cursor" },                  -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-  CursorIM                                 = { link = "Cursor" },                  -- like Cursor, but used when in IME mode |CursorIM|
-  CursorColumn                             = { bg = "highlight" },                 -- Screen-column at the cursor, when 'cursorcolumn' is set.
-  CursorLine                               = { bold = true, bg = "highlight" },    -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-  Directory                                = { fg = "text", italic = true },       -- directory names (and other special names in listings)
-  DiffAdd                                  = { fg = "lime", reverse = true },      -- diff mode: Added line |diff.txt|
-  DiffChange                               = { fg = "orange", reverse = true },    -- diff mode: Changed line |diff.txt|
-  DiffDelete                               = { fg = "red", reverse = true },       -- diff mode: Deleted line |diff.txt|
-  DiffText                                 = { fg = "selection", reverse = true }, -- diff mode: Changed text within a changed line |diff.txt|
-  EndOfBuffer                              = { fg = "border" },                    -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+  ColorColumn                              = { bg = "border" },                                               -- used for the columns set with 'colorcolumn'
+  Conceal                                  = { fg = "disabled" },                                             -- placeholder characters substituted for concealed text (see 'conceallevel')
+  Cursor                                   = { bg = "white", fg = "white" },                                  -- character under the cursor
+  lCursor                                  = { link = "Cursor" },                                             -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+  CursorIM                                 = { link = "Cursor" },                                             -- like Cursor, but used when in IME mode |CursorIM|
+  CursorColumn                             = { bg = "highlight" },                                            -- Screen-column at the cursor, when 'cursorcolumn' is set.
+  CursorLine                               = { bold = true, bg = "highlight", force = true, default = true }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+  Directory                                = { fg = "text", italic = true },                                  -- directory names (and other special names in listings)
+  DiffAdd                                  = { fg = "lime", reverse = true },                                 -- diff mode: Added line |diff.txt|
+  DiffChange                               = { fg = "orange", reverse = true },                               -- diff mode: Changed line |diff.txt|
+  DiffDelete                               = { fg = "red", reverse = true },                                  -- diff mode: Deleted line |diff.txt|
+  DiffText                                 = { fg = "selection", reverse = true },                            -- diff mode: Changed text within a changed line |diff.txt|
+  EndOfBuffer                              = { fg = "border" },                                               -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
   -- TermCursor = {}, -- cursor in a focused terminal
   -- TermCursorNC = {}, -- cursor in an unfocused terminal
   Comment                                  = { fg = "comments", italic = config.italic.comments }, -- any comment
@@ -106,31 +106,31 @@ local M = {
   -- default,
   -- Uncomment and edit if you want more specific syntax highlighting.
 
-  Constant                                 = { fg = "fg", underline = false, italic = false, nocombine = true, bold = true }, -- (preferred) any constant
-  String                                   = { fg = "lime", italic = config.italic.strings },                                 -- a string constant: "this is a string"
-  Character                                = { fg = "purple2" },                                                              -- a character constant: 'c', '\n'
-  Number                                   = { fg = "purple", bold = config.enable_bold },                                    -- a number constant: 234, 0xff
-  Boolean                                  = { fg = "purple", bold = config.enable_bold },                                    -- a boolean constant: TRUE, false
-  Float                                    = { fg = "purple", bold = config.enable_bold },                                    -- a floating point constant: 2.3e10
+  Constant                                 = { fg = "fg", underline = true, italic = false, nocombine = true, bold = true }, -- (preferred) any constant
+  String                                   = { fg = "lime", italic = config.italic.strings },                                -- a string constant: "this is a string"
+  Character                                = { fg = "purple2" },                                                             -- a character constant: 'c', '\n'
+  Number                                   = { fg = "purple", bold = config.enable_bold },                                   -- a number constant: 234, 0xff
+  Boolean                                  = { fg = "purple", bold = config.enable_bold },                                   -- a boolean constant: TRUE, false
+  Float                                    = { fg = "purple", bold = config.enable_bold },                                   -- a floating point constant: 2.3e10
 
-  Identifier                               = { fg = "cyan", italic = config.italic.variables },                               -- (preferred) any variable name
-  Function                                 = { fg = "yellow", bold = config.enable_bold, underline = true },                  -- function name (also: methods for classes)
+  Identifier                               = { fg = "cyan", italic = config.italic.variables },                              -- (preferred) any variable name
+  Function                                 = { fg = "yellow", bold = config.enable_bold, underline = true },                 -- function name (also: methods for classes)
 
-  Statement                                = { fg = "pink" },                                                                 -- (preferred) any statement
-  Conditional                              = { fg = "orange", italic = false, bold = config.enable_bold },                    -- if, then, else, endif, switch, etc.
-  Repeat                                   = { fg = "purple", italic = config.italic.keywords },                              -- for, do, while, etc.
-  Label                                    = { fg = "orange", bold = config.enable_bold },                                    -- case, default, etc.
-  Operator                                 = { link = "Label" },                                                              -- "sizeof", "+", "*", etc.
-  Keyword                                  = { fg = "purple", bold = false, italic = config.italic.keywords },                -- any other keyword
-  Exception                                = { link = "Label" },                                                              -- try, catch, throw
+  Statement                                = { fg = "pink" },                                                                -- (preferred) any statement
+  Conditional                              = { fg = "orange", italic = false, bold = config.enable_bold },                   -- if, then, else, endif, switch, etc.
+  Repeat                                   = { fg = "purple", italic = config.italic.keywords },                             -- for, do, while, etc.
+  Label                                    = { fg = "orange", bold = config.enable_bold },                                   -- case, default, etc.
+  Operator                                 = { link = "Label" },                                                             -- "sizeof", "+", "*", etc.
+  Keyword                                  = { fg = "purple", bold = false, italic = config.italic.keywords },               -- any other keyword
+  Exception                                = { link = "Label" },                                                             -- try, catch, throw
 
-  PreProc                                  = { fg = "purple" },                                                               -- (preferred) generic Preprocessor
-  Include                                  = { fg = "purple2", bold = config.enable_bold },                                   -- preprocessor #include
-  Define                                   = { fg = "pink" },                                                                 -- preprocessor #define
-  Macro                                    = { fg = "pink" },                                                                 -- same as Define
-  PreCondit                                = { fg = "purple" },                                                               -- preprocessor #if, #else, #endif, etc.
+  PreProc                                  = { fg = "purple" },                                                              -- (preferred) generic Preprocessor
+  Include                                  = { fg = "purple2", bold = config.enable_bold },                                  -- preprocessor #include
+  Define                                   = { fg = "pink" },                                                                -- preprocessor #define
+  Macro                                    = { fg = "pink" },                                                                -- same as Define
+  PreCondit                                = { fg = "purple" },                                                              -- preprocessor #if, #else, #endif, etc.
 
-  Type                                     = { fg = "blue" },                                                                 -- (preferred) int, long, char, etc.
+  Type                                     = { fg = "blue" },                                                                -- (preferred) int, long, char, etc.
   -- StorageClass = {}, -- static, register, volatile, etc.
   -- Structure = {}, -- struct, union, enum, etc.
   Typedef                                  = { fg = "yellow" },              -- A typedef
@@ -253,7 +253,7 @@ local M = {
   ["@variable.parameter.builtin"]          = { fg = "purple" },              -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
   ["@type"]                                = { fg = "blue", underline = true, bold = false, italic = true, nocombine = true },
-  ["@type.builtin"]                        = { fg = "blue2", italic = true },
+  ["@type.builtin"]                        = { fg = "blue", italic = true },
   ["@type.definition"]                     = { fg = "blue", underline = true, italic = true, bold = false },
 
   ["@namespace.builtin"]                   = { link = "@variable.builtin" },
@@ -279,12 +279,12 @@ local M = {
   -- ["@lsp.type.boolean"]                      = { link = "@boolean" },
   -- ["@lsp.type.builtinType"]                  = { link = "@type.builtin" },
   -- ["@lsp.type.comment"]                      = { link = "@comment" },
-  ["@lsp.type.property"]                   = { fg = "blue2", underline = true },
+  ["@lsp.type.property"]                   = { fg = "yellow", underline = true },
   ["@lsp.type.function"]                   = {},
   -- ["@lsp.type.decorator"]                    = { link = "@attribute" },
   -- ["@lsp.type.deriveHelper"]                 = { link = "@attribute" },
   -- ["@lsp.type.enum"]                         = { link = "@type.definition" },
-  -- ["@lsp.type.enumMember"]                   = { link = "@constant" },
+  ["@lsp.type.enumMember"]                 = { fg = "fg", bold = true, italic = false, nocombine = true },
   -- ["@lsp.type.escapeSequence"]               = { link = "@string.escape" },
   -- ["@lsp.type.formatSpecifier"]              = { link = "@markup.list" },
   -- ["@lsp.type.generic"]                      = { link = "@variable" },
@@ -411,7 +411,7 @@ local M = {
 
   -- indent guides
   IndentBlanklineChar                      = { fg = "comments" },
-  IndentBlanklineContextChar               = { bg = "selection", fg = "comments" },
+  IndentBlanklineContextChar               = { fg = "purple2" },
 
   -- NeoTreeCursorLine = { bold = true },
   NeoTreeIndentMarker                      = { link = "Whitespace" },
@@ -483,24 +483,24 @@ local M = {
   healthWarning                            = { link = "DiagnosticWarn" },
 
   -- akinsho/bufferline.nvim
-  BufferLineIndicatorSelected              = { fg = "white", bg = "selection" },
-  BufferLineFill                           = { bg = "sidebar" },
-  BufferLineSeparator                      = { bg = "sidebar", fg = "sidebar" },
-  BufferLineSeparatorVisible               = { bg = "sidebar", fg = "sidebar" },
+  BufferLineIndicatorSelected              = { fg = "white", bg = "bg" },
+  BufferLineFill                           = { bg = "black" },
+  BufferLineSeparator                      = { bg = "black", fg = "black" },
+  BufferLineSeparatorVisible               = { bg = "black", fg = "black" },
 
-  BufferLineWarningDiagnostic              = { fg = "yellow", bg = "sidebar" },
-  BufferLineErrorDiagnostic                = { fg = "red", bg = "sidebar" },
-  BufferLineWarningDiagnosticSelected      = { bg = "selection", fg = "yellow", underline = true, sp = "yellow" },
-  BufferLineErrorDiagnosticSelected        = { bg = "selection", fg = "red", underline = true, sp = "yellow" },
+  BufferLineWarningDiagnostic              = { fg = "yellow", bg = "black" },
+  BufferLineErrorDiagnostic                = { fg = "red", bg = "black" },
+  BufferLineWarningDiagnosticSelected      = { bg = "bg", fg = "yellow", underline = true, sp = "yellow" },
+  BufferLineErrorDiagnosticSelected        = { bg = "bg", fg = "red", underline = true, sp = "yellow" },
 
-  BufferLineTabSelected                    = { fg = "white", bold = true, italic = false, underline = true, bg = "selection", sp = "yellow" },
-  BufferLineSeparatorSelected              = { bg = "selection", fg = "sidebar", sp = "yellow", underline = true },
-  BufferLineModifiedSelected               = { bg = "selection", fg = "lime", sp = "yellow", underline = true },
+  BufferLineTabSelected                    = { fg = "white", bold = true, italic = false, underline = true, bg = "bg", sp = "yellow" },
+  BufferLineSeparatorSelected              = { bg = "bg", fg = "black", sp = "yellow", underline = true },
+  BufferLineModifiedSelected               = { bg = "bg", fg = "lime", sp = "yellow", underline = true },
   BufferLineBufferSelected                 = { link = "BufferLineTabSelected" },
   BufferLineErrorSelected                  = { link = "BufferLineTabSelected" },
   BufferLineWarningSelected                = { link = "BufferLineTabSelected" },
 
-  BufferLineBackground                     = { italic = true, fg = "disabled", bg = "sidebar", nocombine = true },
+  BufferLineBackground                     = { italic = true, fg = "disabled", bg = "black", nocombine = true },
   BufferLineBufferVisible                  = { link = "BufferLineBackground" },
   BufferLineErrorVisible                   = { link = "BufferLineBackground" },
   BufferLineWarningVisible                 = { link = "BufferLineBackground" },
@@ -509,7 +509,7 @@ local M = {
   BufferLineError                          = { link = "BufferLineBackground" },
   BufferLineWarning                        = { link = "BufferLineBackground" },
   BufferLineGroupLabel                     = { link = "BufferLineTabSelected" },
-  BufferLineDuplicateSelected              = { bg = "selection", sp = "yellow", underline = true, fg = "text", bold = false, nocombine = true, italic = true },
+  BufferLineDuplicateSelected              = { bg = "bg", sp = "yellow", underline = true, fg = "text", bold = false, nocombine = true, italic = true },
 
   -- justinmk/vim-sneak
   Sneak                                    = { fg = "bg", bg = "accent" },
@@ -567,12 +567,13 @@ local M = {
   LazyUrl                                  = { link = "@markup.link.url" },
 
   -- nvim-tree/nvim-tree
-  NvimTreeNormal                           = { fg = "white", bg = "sidebar", bold = false },
+  NvimTreeNormal                           = { fg = "fg", bg = "sidebar", bold = false },
   NvimTreeFolderIcon                       = { fg = "orange2" },
   NvimTreeOpenedFolderIcon                 = { fg = "yellow" },
   NvimTreeGitFolderDirtyHL                 = { link = "Directory" },
   NvimTreeGitDirtyIcon                     = { fg = "gold" },
   NvimTreeGitFileDirtyHL                   = { fg = "yellow" },
+  NvimTreeGitFolderNewHL                   = { link = "Directory" },
 
   --- Border
   NotifyERRORBorder                        = { link = "NotifyERRORIcon" },

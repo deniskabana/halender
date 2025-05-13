@@ -23,6 +23,7 @@ local M = {
   bg           = "#1d2433",
   sidebar      = "#171c28",
   float        = "#171c28",
+  black        = "#070c18",
   fg           = "#a2aabc",
   text         = "#8695aa",
   comments     = "#515d76",
