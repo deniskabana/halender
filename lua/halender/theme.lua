@@ -34,35 +34,35 @@ local config = require("halender.config")
 
 ---@type Highlights
 local M = {
-  ColorColumn                              = { bg = "border" },                                               -- used for the columns set with 'colorcolumn'
-  Conceal                                  = { fg = "disabled" },                                             -- placeholder characters substituted for concealed text (see 'conceallevel')
-  Cursor                                   = { bg = "white", fg = "white" },                                  -- character under the cursor
-  lCursor                                  = { link = "Cursor" },                                             -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-  CursorIM                                 = { link = "Cursor" },                                             -- like Cursor, but used when in IME mode |CursorIM|
-  CursorColumn                             = { bg = "highlight" },                                            -- Screen-column at the cursor, when 'cursorcolumn' is set.
-  CursorLine                               = { bold = true, bg = "highlight", force = true, default = true }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
-  Directory                                = { fg = "text", italic = true },                                  -- directory names (and other special names in listings)
-  DiffAdd                                  = { fg = "green", reverse = true },                                -- diff mode: Added line |diff.txt|
-  DiffChange                               = { fg = "cyan", reverse = true },                                 -- diff mode: Changed line |diff.txt|
-  DiffDelete                               = { fg = "red", reverse = true },                                  -- diff mode: Deleted line |diff.txt|
-  DiffText                                 = { fg = "selection", reverse = true },                            -- diff mode: Changed text within a changed line |diff.txt|
-  EndOfBuffer                              = { fg = "border" },                                               -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
+  ColorColumn                              = { bg = "border" },                    -- used for the columns set with 'colorcolumn'
+  Conceal                                  = { fg = "disabled" },                  -- placeholder characters substituted for concealed text (see 'conceallevel')
+  Cursor                                   = { bg = "pink", fg = "bg" },           -- character under the cursor
+  lCursor                                  = { link = "Cursor" },                  -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+  CursorIM                                 = { link = "Cursor" },                  -- like Cursor, but used when in IME mode |CursorIM|
+  CursorColumn                             = { bg = "highlight" },                 -- Screen-column at the cursor, when 'cursorcolumn' is set.
+  CursorLine                               = { bg = "highlight" },                 -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+  Directory                                = { fg = "text", italic = true },       -- directory names (and other special names in listings)
+  DiffAdd                                  = { fg = "green", reverse = true },     -- diff mode: Added line |diff.txt|
+  DiffChange                               = { fg = "cyan", reverse = true },      -- diff mode: Changed line |diff.txt|
+  DiffDelete                               = { fg = "red", reverse = true },       -- diff mode: Deleted line |diff.txt|
+  DiffText                                 = { fg = "selection", reverse = true }, -- diff mode: Changed text within a changed line |diff.txt|
+  EndOfBuffer                              = { fg = "border" },                    -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
   -- TermCursor = {}, -- cursor in a focused terminal
   -- TermCursorNC = {}, -- cursor in an unfocused terminal
   Comment                                  = { fg = "comments", italic = config.italic.comments }, -- any comment
   ErrorMsg                                 = { fg = "error" },                                     -- error messages on the command line
   VertSplit                                = { fg = "cursor" },                                    -- the column separating vertically split windows
-  WinSeparator                             = { fg = "cursor", bg = "float" },                      -- the column separating vertically split windows
+  WinSeparator                             = { fg = "cursor" },                                    -- the column separating vertically split windows
   Folded                                   = { fg = "disabled", italic = true },                   -- line used for closed folds
   FoldColumn                               = { fg = "accent" },                                    -- 'foldcolumn'
   SignColumn                               = { link = "Normal" },                                  -- column where |signs| are displayed
   -- SignColumnSB = {}, -- column where |signs| are displayed
   -- Substitute = {}, -- |:substitute| replacement text highlighting
-  LineNr                                   = { fg = "line_numbers" },                       -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-  CursorLineNr                             = { fg = "fg" },                                 -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-  MatchParen                               = { reverse = true, bold = config.enable_bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-  ModeMsg                                  = { fg = "fg" },                                 -- 'showmode' message (e.g., "-- INSERT -- ")
-  MsgArea                                  = { fg = "fg" },                                 -- Area for messages and cmdline
+  LineNr                                   = { fg = "line_numbers" },                                            -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+  CursorLineNr                             = { fg = "fg" },                                                      -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+  MatchParen                               = { bold = true, underline = true, italic = true, bg = "selection" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+  ModeMsg                                  = { fg = "fg" },                                                      -- 'showmode' message (e.g., "-- INSERT -- ")
+  MsgArea                                  = { fg = "fg" },                                                      -- Area for messages and cmdline
   -- MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
   -- MoreMsg = {}, -- |more-prompt|
   NonText                                  = { fg = "disabled" },           -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -72,33 +72,33 @@ local M = {
   NormalFloat                              = { fg = "fg", bg = "float" },   -- Normal text in floating windows.
   FloatBorder                              = { fg = "border", bg = "float" },
   -- FloatTitle = {},
-  Pmenu                                    = { fg = "text", bg = "contrast" },                                -- Popup menu: normal item.
-  PmenuSel                                 = { bg = "border" },                                               -- Popup menu: selected item.
-  PmenuSbar                                = { fg = "text", bg = "contrast" },                                -- Popup menu: scrollbar.
-  PmenuThumb                               = { fg = "fg", bg = "accent" },                                    -- Popup menu: Thumb of the scrollbar.
-  Question                                 = { fg = "purple2" },                                              -- |hit-enter| prompt and yes/no questions
-  QuickFixLine                             = { fg = "highlight", italic = true },                             -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-  Search                                   = { fg = "contrast", bold = true, bg = "pink", nocombine = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-  IncSearch                                = { link = "Search" },                                             -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+  Pmenu                                    = { fg = "text", bg = "contrast" },                                   -- Popup menu: normal item.
+  PmenuSel                                 = { bg = "border" },                                                  -- Popup menu: selected item.
+  PmenuSbar                                = { fg = "text", bg = "contrast" },                                   -- Popup menu: scrollbar.
+  PmenuThumb                               = { fg = "fg", bg = "accent" },                                       -- Popup menu: Thumb of the scrollbar.
+  Question                                 = { fg = "purple2" },                                                 -- |hit-enter| prompt and yes/no questions
+  QuickFixLine                             = { fg = "highlight", italic = true },                                -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+  Search                                   = { fg = "contrast", bold = true, bg = "purple2", nocombine = true }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+  IncSearch                                = { link = "Search" },                                                -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
   CurSearch                                = { link = "IncSearch" },
-  SpecialKey                               = { link = "SpecialChar" },                                        -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
-  SpellBad                                 = { sp = "error", undercurl = true },                              -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-  SpellCap                                 = { sp = "cyan", undercurl = true },                               -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-  SpellLocal                               = { sp = "yellow", undercurl = true },                             -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-  SpellRare                                = { sp = "purple", undercurl = true },                             -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-  StatusLine                               = { fg = "fg", bg = "sidebar", },                                  -- status line of current window
-  StatusLineNC                             = { fg = "disabled", bg = "sidebar" },                             -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-  TabLine                                  = { fg = "white" },                                                -- tab pages line, not active tab page label
-  TabLineFill                              = {},                                                              -- tab pages line, where there are no labels
-  TabLineSel                               = { fg = "bg", bg = "accent" },                                    -- tab pages line, active tab page label
-  Title                                    = { fg = "lime", bold = config.enable_bold },                      -- titles for output from ":set all", ":autocmd" etc.
-  Visual                                   = { bg = "selection" },                                            -- Visual mode selection
-  VisualNOS                                = { link = "Visual" },                                             -- Visual mode selection when vim is "Not Owning the Selection".
-  WarningMsg                               = { fg = "orange" },                                               -- warning messages
-  Whitespace                               = { link = "NonText" },                                            -- "nbsp", "space", "tab" and "trail" in 'listchars'
-  WildMenu                                 = { fg = "red", bold = config.enable_bold },                       -- current match in 'wildmenu' completion
-  WinBar                                   = { link = "StatusLine" },                                         -- window bar
-  WinBarNC                                 = { link = "StatusLineNC" },                                       -- window bar in inactive windows
+  SpecialKey                               = { link = "SpecialChar" },                                           -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+  SpellBad                                 = { sp = "error", undercurl = true },                                 -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+  SpellCap                                 = { sp = "cyan", undercurl = true },                                  -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+  SpellLocal                               = { sp = "yellow", undercurl = true },                                -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+  SpellRare                                = { sp = "purple", undercurl = true },                                -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
+  StatusLine                               = { fg = "fg", bg = "sidebar", },                                     -- status line of current window
+  StatusLineNC                             = { fg = "disabled", bg = "sidebar" },                                -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+  TabLine                                  = { fg = "white" },                                                   -- tab pages line, not active tab page label
+  TabLineFill                              = {},                                                                 -- tab pages line, where there are no labels
+  TabLineSel                               = { fg = "bg", bg = "accent" },                                       -- tab pages line, active tab page label
+  Title                                    = { fg = "lime", bold = config.enable_bold },                         -- titles for output from ":set all", ":autocmd" etc.
+  Visual                                   = { bg = "selection" },                                               -- Visual mode selection
+  VisualNOS                                = { link = "Visual" },                                                -- Visual mode selection when vim is "Not Owning the Selection".
+  WarningMsg                               = { fg = "orange" },                                                  -- warning messages
+  Whitespace                               = { link = "NonText" },                                               -- "nbsp", "space", "tab" and "trail" in 'listchars'
+  WildMenu                                 = { fg = "red", bold = config.enable_bold },                          -- current match in 'wildmenu' completion
+  WinBar                                   = { link = "StatusLine" },                                            -- window bar
+  WinBarNC                                 = { link = "StatusLineNC" },                                          -- window bar in inactive windows
 
   -- These groups are not listed as default vim groups,
   -- but they are defacto standard group names for syntax highlighting.
@@ -177,6 +177,7 @@ local M = {
   LspSignatureActiveParameter              = { bold = true },
   LspCodeLens                              = { italic = true },
   NavicText                                = { fg = "comments", italic = true },
+  NavicSeparator                           = { link = "NavicText" },
 
   ALEErrorSign                             = { link = "DiagnosticError" },
   ALEWarningSign                           = { link = "DiagnosticWarn" },
@@ -198,9 +199,9 @@ local M = {
   ["@comment.todo"]                        = { fg = "gold", italic = config.italic.comments },
   ["@comment.documentation"]               = { link = "Comment" },
 
-  ["@punctuation"]                         = { fg = "blue" },                            -- For delimiters ie: `.`
-  ["@punctuation.bracket"]                 = { fg = "blue" },                            -- For brackets and parens.
-  ["@punctuation.special"]                 = { fg = "pink", bold = config.enable_bold }, -- For special symbols (e.g. `{}` in string interpolation)
+  ["@punctuation"]                         = { fg = "blue" },                              -- For delimiters ie: `.`
+  ["@punctuation.bracket"]                 = { fg = "blue" },                              -- For brackets and parens.
+  ["@punctuation.special"]                 = { fg = "orange", bold = config.enable_bold }, -- For special symbols (e.g. `{}` in string interpolation)
   -- ["@punctuation.delimiter"]            = { fg = "blue", bold = config.enable_bold }, -- For delimiters ie: `.`
 
   --- Literals
@@ -233,7 +234,7 @@ local M = {
   -- ["@operator"] = { link = "Operator" }, -- For any operator: `+`, but also `->` and `*` in C.
   -- ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
   ["@keyword.conditional"]                 = { link = "Conditional" },
-  ["@keyword.coroutine"]                   = { link = "@keyword" },
+  ["@keyword.coroutine"]                   = { fg = "orange", bold = true },
   ["@keyword.debug"]                       = { link = "Debug" },
   ["@keyword.directive"]                   = { link = "PreProc" },
   ["@keyword.directive.define"]            = { link = "Define" },
@@ -264,7 +265,7 @@ local M = {
   ["@tag"]                                 = { fg = "cyan", nocombine = true, italic = false },
   ["@tag.tsx"]                             = { fg = "cyan", nocombine = true, italic = false, underline = true },
   ["@tag.jsx"]                             = { fg = "cyan", nocombine = true, italic = false },
-  ["@tag.delimiter"]                       = { fg = "disabled", bold = true },
+  ["@tag.delimiter"]                       = { fg = "comments", bold = true },
   ["@tag.builtin"]                         = { fg = "purple", bold = true },
   ["@tag.attribute"]                       = { fg = "orange", italic = true },
 
@@ -279,7 +280,7 @@ local M = {
   -- ["@lsp.type.boolean"]                      = { link = "@boolean" },
   -- ["@lsp.type.builtinType"]                  = { link = "@type.builtin" },
   -- ["@lsp.type.comment"]                      = { link = "@comment" },
-  ["@lsp.type.property"]                   = { fg = "blue2", underline = true },
+  ["@lsp.type.property"]                   = { underline = true, fg = "fg" },
   ["@lsp.type.function"]                   = {},
   -- ["@lsp.type.decorator"]                    = { link = "@attribute" },
   -- ["@lsp.type.deriveHelper"]                 = { link = "@attribute" },
@@ -291,7 +292,7 @@ local M = {
   -- ["@lsp.type.interface"]                    = { link = "@type.definition" },
   -- ["@lsp.type.keyword"]                      = { link = "@keyword" },
   -- ["@lsp.type.lifetime"]                     = { link = "@keyword.storage" },
-  -- ["@lsp.type.namespace"]                    = { link = "@module" },
+  ["@lsp.type.namespace"]                  = { fg = "cyan", bold = true },
   -- ["@lsp.type.number"]                       = { link = "@number" },
   -- ["@lsp.type.operator"]                     = { link = "@operator" },
   ["@lsp.type.parameter"]                  = {},
@@ -311,7 +312,7 @@ local M = {
   ["@lsp.typemod.function.readonly"]       = {},                                            -- use treesitter styles for regular variables
   ["@lsp.typemod.function.call"]           = { link = "@function.call", nocombine = true }, -- use treesitter styles for regular variables
   ["@lsp.typemod.function.declaration"]    = { bold = true, fg = "yellow" },                -- use treesitter styles for regular variables
-  ["@lsp.type.typeParameter"]              = { fg = "pink", italic = true, underline = true, bold = false, nocombine = true },
+  ["@lsp.type.typeParameter"]              = { fg = "cyan", italic = true, underline = true, bold = true, nocombine = true },
   ["@lsp.typemod.typeParameter"]           = { link = "@lsp.type.typeParameter" },          -- use treesitter styles for regular variables
   -- ["@lsp.typemod.parameter.declaration"]     = { fg = "fg", bold = true, underline = false, nocombine = true },    -- use treesitter styles for regular variables
   -- ["@lsp.typemod"]                           = { link = "@type" },
@@ -410,7 +411,7 @@ local M = {
 
   -- indent guides
   IndentBlanklineChar                      = { fg = "comments" },
-  IndentBlanklineContextChar               = { fg = "purple2" },
+  IndentBlanklineContextChar               = { fg = "gold" },
 
   -- NeoTreeCursorLine = { bold = true },
   NeoTreeIndentMarker                      = { link = "Whitespace" },
