@@ -105,31 +105,31 @@ local M = {
   -- default,
   -- Uncomment and edit if you want more specific syntax highlighting.
 
-  Constant = { fg = "fg", underline = true, italic = false, nocombine = true, bold = true }, -- (preferred) any constant
-  String = { fg = "lime", italic = config.italic.strings },                                  -- a string constant: "this is a string"
-  Character = { fg = "purple2" },                                                            -- a character constant: 'c', '\n'
-  Number = { fg = "purple", bold = config.enable_bold },                                     -- a number constant: 234, 0xff
-  Boolean = { fg = "purple", bold = config.enable_bold },                                    -- a boolean constant: TRUE, false
-  Float = { fg = "purple", bold = config.enable_bold },                                      -- a floating point constant: 2.3e10
+  Constant = { fg = "fg", underline = true, italic = false, nocombine = true, bold = true },   -- (preferred) any constant
+  String = { fg = "lime", italic = config.italic.strings },                                    -- a string constant: "this is a string"
+  Character = { fg = "purple2" },                                                              -- a character constant: 'c', '\n'
+  Number = { fg = "purple", bold = config.enable_bold },                                       -- a number constant: 234, 0xff
+  Boolean = { fg = "purple", bold = config.enable_bold },                                      -- a boolean constant: TRUE, false
+  Float = { fg = "purple", bold = config.enable_bold },                                        -- a floating point constant: 2.3e10
 
-  Identifier = { fg = "cyan", italic = config.italic.variables },                            -- (preferred) any variable name
-  Function = { fg = "yellow", bold = config.enable_bold, underline = true },                 -- function name (also: methods for classes)
+  Identifier = { fg = "cyan", italic = config.italic.variables },                              -- (preferred) any variable name
+  Function = { fg = "yellow", bold = config.enable_bold, underline = true, nocombine = true }, -- function name (also: methods for classes)
 
-  Statement = { fg = "pink" },                                                               -- (preferred) any statement
-  Conditional = { fg = "orange", italic = false, bold = config.enable_bold },                -- if, then, else, endif, switch, etc.
-  Repeat = { fg = "purple", italic = config.italic.keywords },                               -- for, do, while, etc.
-  Label = { fg = "orange", bold = config.enable_bold },                                      -- case, default, etc.
-  Operator = { link = "Label" },                                                             -- "sizeof", "+", "*", etc.
-  Keyword = { fg = "purple", bold = false, italic = config.italic.keywords },                -- any other keyword
-  Exception = { link = "Label" },                                                            -- try, catch, throw
+  Statement = { fg = "pink" },                                                                 -- (preferred) any statement
+  Conditional = { fg = "orange", italic = false, bold = config.enable_bold },                  -- if, then, else, endif, switch, etc.
+  Repeat = { fg = "purple", italic = config.italic.keywords },                                 -- for, do, while, etc.
+  Label = { fg = "orange", bold = config.enable_bold },                                        -- case, default, etc.
+  Operator = { link = "Label" },                                                               -- "sizeof", "+", "*", etc.
+  Keyword = { fg = "purple", bold = false, italic = config.italic.keywords },                  -- any other keyword
+  Exception = { link = "Label" },                                                              -- try, catch, throw
 
-  PreProc = { fg = "purple" },                                                               -- (preferred) generic Preprocessor
-  Include = { fg = "purple2", italic = config.italic.keywords },                             -- preprocessor #include
-  Define = { fg = "pink" },                                                                  -- preprocessor #define
-  Macro = { fg = "pink" },                                                                   -- same as Define
-  PreCondit = { fg = "purple" },                                                             -- preprocessor #if, #else, #endif, etc.
+  PreProc = { fg = "purple" },                                                                 -- (preferred) generic Preprocessor
+  Include = { fg = "purple2", italic = config.italic.keywords },                               -- preprocessor #include
+  Define = { fg = "pink" },                                                                    -- preprocessor #define
+  Macro = { fg = "pink" },                                                                     -- same as Define
+  PreCondit = { fg = "purple" },                                                               -- preprocessor #if, #else, #endif, etc.
 
-  Type = { fg = "blue" },                                                                    -- (preferred) int, long, char, etc.
+  Type = { fg = "blue" },                                                                      -- (preferred) int, long, char, etc.
   -- StorageClass = {}, -- static, register, volatile, etc.
   -- Structure = {}, -- struct, union, enum, etc.
   Typedef = { fg = "yellow" },              -- A typedef
@@ -246,7 +246,7 @@ local M = {
   ["@keyword.return"] = { link = "@keyword.export" },
 
   --- Identifiers
-  ["@variable"] = { fg = "cyan" },                                                         -- Any variable name that does not have another highlight. WARN: broken in 0.10 but not documented?
+  ["@variable"] = { fg = "fg" },                                                           -- Any variable name that does not have another highlight. WARN: broken in 0.10 but not documented?
   ["@variable.builtin"] = { fg = "purple", bold = true, italic = config.italic.keywords }, -- Variable names that are defined by the languages, like `this` or `self`.
   ["@variable.member"] = { fg = "yellow" },                                                -- For fields.
   ["@variable.parameter"] = { fg = "fg", bold = true },                                    -- For parameters of a function. -- FIX:
