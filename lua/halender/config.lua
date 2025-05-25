@@ -26,31 +26,31 @@
 
 ---@type HalenderOpts
 local M = {
-	transparent = {
-		background = false,
-		float = false,
-		popup = false,
-		sidebar = false,
-	},
+  transparent = {
+    background = false,
+    float = false,
+    popup = false,
+    sidebar = false,
+  },
 
-	italic = {
-		comments = true,
-		functions = false,
-		keywords = true,
-		variables = false,
-		strings = true,
-		types = true,
-		function_call = false,
-		builtins = true,
-	},
+  italic = {
+    comments = true,
+    functions = false,
+    keywords = true,
+    variables = false,
+    strings = true,
+    types = true,
+    function_call = true,
+    builtins = true,
+  },
 
-	dim_inactive = true,
+  dim_inactive = true,
 
-	enable_bold = true,
+  enable_bold = true,
 
-	disable_semantic_highlighting = false,
+  disable_semantic_highlighting = false,
 
-	signs = true,
+  signs = true,
 }
 
 return M
