@@ -282,6 +282,7 @@ local M = {
 	["@lsp.type.property"] = { underline = true, fg = "fg" },
 	["@lsp.type.function"] = {},
 	-- ["@lsp.type.decorator"]                    = { link = "@attribute" },
+	["@lsp.type.method"] = {},
 	-- ["@lsp.type.deriveHelper"]                 = { link = "@attribute" },
 	-- ["@lsp.type.enum"]                         = { link = "@type.definition" },
 	["@lsp.type.enumMember"] = { fg = "fg", bold = true, italic = false, nocombine = true },
