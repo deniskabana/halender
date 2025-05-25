@@ -71,7 +71,7 @@ local M = {
 	NormalFloat = { fg = "fg", bg = "float" }, -- Normal text in floating windows.
 	FloatBorder = { fg = "cursor", bg = "float" },
 	-- FloatTitle = {},
-	Pmenu = { fg = "text", bg = "bg" }, -- Popup menu: normal item.
+	Pmenu = { fg = "text", bg = "contrast" }, -- Popup menu: normal item.
 	PmenuSel = { bg = "selection" }, -- Popup menu: selected item.
 	PmenuSbar = { fg = "text", bg = "contrast" }, -- Popup menu: scrollbar.
 	PmenuThumb = { fg = "fg", bg = "accent" }, -- Popup menu: Thumb of the scrollbar.
@@ -527,7 +527,7 @@ local M = {
 	},
 
 	-- justinmk/vim-sneak
-	Sneak = { fg = "bg", bg = "accent" },
+	Sneak = { fg = "pink", bg = "contrast" },
 	SneakScope = { bg = "selection" },
 
 	-- mfussenegger/nvim-treehopper
@@ -538,10 +538,10 @@ local M = {
 	LeapMatch = { fg = "lime", bold = true },
 	LeapLabelPrimary = { fg = "pink2", bold = true },
 	LeapLabelSecondary = { fg = "pink", bold = true },
-	LeapBackdrop = { fg = "text" },
+	LeapBackdrop = { fg = "text", bg = "contrast" },
 
 	-- folke/flash.nvim
-	FlashBackdrop = { fg = "text" },
+	FlashBackdrop = { fg = "text", bg = "contrast" },
 	FlashLabel = { bg = "pink2" },
 
 	-- hrsh7th/nvim-cmp
