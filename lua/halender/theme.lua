@@ -198,8 +198,8 @@ local M = {
 	["@comment.todo"] = { fg = "gold", italic = config.italic.comments },
 	["@comment.documentation"] = { link = "Comment" },
 
-	["@punctuation"] = { fg = "blue" }, -- For delimiters ie: `.`
-	["@punctuation.bracket"] = { fg = "blue" }, -- For brackets and parens.
+	["@punctuation"] = { fg = "blue", bold = true }, -- For delimiters ie: `.`
+	["@punctuation.bracket"] = { fg = "blue", bold = true }, -- For brackets and parens.
 	["@punctuation.special"] = { fg = "orange", bold = config.enable_bold }, -- For special symbols (e.g. `{}` in string interpolation)
 	-- ["@punctuation.delimiter"]            = { fg = "blue", bold = config.enable_bold }, -- For delimiters ie: `.`
 
@@ -240,7 +240,7 @@ local M = {
 	["@keyword.exception"] = { link = "Exception" },
 	["@keyword.function"] = { link = "@keyword" }, -- For keywords used to define a fuction.
 	["@keyword.import"] = { link = "Include" },
-	["@keyword.export"] = { fg = "orange", bold = false },
+	["@keyword.export"] = { fg = "orange", bold = true },
 	["@keyword.operator"] = { link = "@operator" },
 	["@keyword.repeat"] = { link = "Repeat" },
 	["@keyword.return"] = { link = "@keyword.export" },
@@ -312,7 +312,7 @@ local M = {
 	["@lsp.typemod.function.readonly"] = {}, -- use treesitter styles for regular variables
 	["@lsp.typemod.function.call"] = { link = "@function.call", nocombine = true }, -- use treesitter styles for regular variables
 	["@lsp.typemod.function.declaration"] = { bold = true, fg = "yellow" }, -- use treesitter styles for regular variables
-	["@lsp.type.typeParameter"] = { fg = "cyan", italic = true, underline = true, bold = true, nocombine = true },
+	["@lsp.type.typeParameter"] = { fg = "pink", italic = true, underline = true, bold = true, nocombine = true },
 	["@lsp.typemod.typeParameter"] = { link = "@lsp.type.typeParameter" }, -- use treesitter styles for regular variables
 	["@lsp.typemod.variable.declaration"] = { fg = "fg", bold = true }, -- use treesitter styles for regular variables
 	-- ["@lsp.typemod"]                           = { link = "@type" },

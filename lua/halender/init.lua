@@ -13,10 +13,6 @@ function M.load(variant)
 
 	-- Clear existing highlights only if a colorscheme has been set
 	if vim.g.colors_name then
-		if vim.g.colors_name == "halender" or vim.g.colors_name == "halender-light" then
-			return
-		end
-
 		vim.cmd("highlight clear")
 		vim.cmd("colorscheme vim")
 	end
