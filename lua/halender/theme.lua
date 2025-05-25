@@ -51,7 +51,7 @@ local M = {
   -- TermCursorNC = {}, -- cursor in an unfocused terminal
   Comment                                  = { fg = "comments", italic = config.italic.comments }, -- any comment
   ErrorMsg                                 = { fg = "error" },                                     -- error messages on the command line
-  VertSplit                                = { fg = "cursor", bg = "sidebar" },                    -- the column separating vertically split windows
+  VertSplit                                = { fg = "cursor", bg = "bg" },                         -- the column separating vertically split windows
   WinSeparator                             = { fg = "cursor", bg = "sidebar" },                    -- the column separating vertically split windows
   Folded                                   = { fg = "disabled", italic = true },                   -- line used for closed folds
   FoldColumn                               = { fg = "accent" },                                    -- 'foldcolumn'
@@ -815,6 +815,7 @@ if config.transparent.sidebar then
 end
 if config.dim_inactive then
   M.NormalNC = { bg = "sidebar", fg = "fg" }
+  M.VertSplit = { bg = 'bg', fg = 'fg' }
 end
 
 return M
