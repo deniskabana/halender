@@ -246,7 +246,7 @@ local M = {
 	["@keyword.return"] = { link = "@keyword.export" },
 
 	--- Identifiers
-	["@variable"] = { fg = "fg" }, -- Any variable name that does not have another highlight. WARN: broken in 0.10 but not documented?
+	["@variable"] = { fg = "cyan" }, -- Any variable name that does not have another highlight. WARN: broken in 0.10 but not documented?
 	["@variable.builtin"] = { fg = "purple", bold = true, italic = config.italic.keywords }, -- Variable names that are defined by the languages, like `this` or `self`.
 	["@variable.member"] = { fg = "yellow" }, -- For fields.
 	["@variable.parameter"] = { fg = "fg", bold = true }, -- For parameters of a function. -- FIX:
