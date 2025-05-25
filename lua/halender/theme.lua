@@ -541,8 +541,8 @@ local M = {
 	LeapBackdrop = { fg = "text", bg = "contrast" },
 
 	-- folke/flash.nvim
-	FlashBackdrop = { fg = "text", bg = "contrast" },
-	FlashLabel = { bg = "pink2" },
+	FlashBackdrop = { fg = "comments", bg = "contrast" },
+	FlashLabel = { bg = "fg", fg = "bg" },
 
 	-- hrsh7th/nvim-cmp
 	-- TODO: cmp
