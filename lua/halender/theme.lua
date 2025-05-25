@@ -313,7 +313,7 @@ local M = {
 	["@lsp.typemod.function.declaration"] = { bold = true, fg = "yellow" }, -- use treesitter styles for regular variables
 	["@lsp.type.typeParameter"] = { fg = "cyan", italic = true, underline = true, bold = true, nocombine = true },
 	["@lsp.typemod.typeParameter"] = { link = "@lsp.type.typeParameter" }, -- use treesitter styles for regular variables
-	-- ["@lsp.typemod.parameter.declaration"]     = { fg = "fg", bold = true, underline = false, nocombine = true },    -- use treesitter styles for regular variables
+	["@lsp.typemod.variable.declaration"] = { fg = "fg", bold = true }, -- use treesitter styles for regular variables
 	-- ["@lsp.typemod"]                           = { link = "@type" },
 	-- ["@lsp.typemod.function.readonly"]         = { link = "@function" },
 	["@lsp.typemod.class.defaultLibrary"] = {
