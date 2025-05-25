@@ -51,11 +51,11 @@ local M = {
   -- TermCursorNC = {}, -- cursor in an unfocused terminal
   Comment                                  = { fg = "comments", italic = config.italic.comments }, -- any comment
   ErrorMsg                                 = { fg = "error" },                                     -- error messages on the command line
-  VertSplit                                = { fg = "cursor" },                                    -- the column separating vertically split windows
-  WinSeparator                             = { fg = "cursor" },                                    -- the column separating vertically split windows
+  VertSplit                                = { fg = "cursor", bg = "sidebar" },                    -- the column separating vertically split windows
+  WinSeparator                             = { fg = "cursor", bg = "sidebar" },                    -- the column separating vertically split windows
   Folded                                   = { fg = "disabled", italic = true },                   -- line used for closed folds
   FoldColumn                               = { fg = "accent" },                                    -- 'foldcolumn'
-  SignColumn                               = { link = "Normal" },                                  -- column where |signs| are displayed
+  SignColumn                               = { fg = "fg" },                                        -- column where |signs| are displayed
   -- SignColumnSB = {}, -- column where |signs| are displayed
   -- Substitute = {}, -- |:substitute| replacement text highlighting
   LineNr                                   = { fg = "line_numbers" },                                            -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
@@ -67,7 +67,6 @@ local M = {
   -- MoreMsg = {}, -- |more-prompt|
   NonText                                  = { fg = "disabled" },           -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
   Normal                                   = { fg = "fg", bg = "bg" },      -- normal text
-  -- NormalNC = {}, -- normal text in non-current windows
   NormalSB                                 = { fg = "fg", bg = "sidebar" }, -- normal text in sidebar
   NormalFloat                              = { fg = "fg", bg = "float" },   -- Normal text in floating windows.
   FloatBorder                              = { fg = "border", bg = "float" },
@@ -813,6 +812,9 @@ if config.transparent.popup then
 end
 if config.transparent.sidebar then
   M.NormalSB.bg = "NONE"
+end
+if config.dim_inactive then
+  M.NormalNC = { bg = "sidebar", fg = "fg" }
 end
 
 return M
