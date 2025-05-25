@@ -536,8 +536,8 @@ local M = {
 
 	-- ggandor/leap.nvim
 	LeapMatch = { fg = "lime", bold = true },
-	LeapLabelPrimary = { fg = "pink2", bold = true },
-	LeapLabelSecondary = { fg = "pink", bold = true },
+	LeapLabelPrimary = { fg = "fg", bold = true, bg = "selection" },
+	LeapLabelSecondary = { fg = "pink", bold = true, bg = "selection" },
 	LeapBackdrop = { fg = "text", bg = "contrast" },
 
 	-- folke/flash.nvim
