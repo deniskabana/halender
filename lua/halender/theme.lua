@@ -304,7 +304,7 @@ local M = {
 	["@lsp.mod.variable"] = { fg = "cyan" },
 	-- ["@lsp.mod.local"]                       = { bold = false, nocombine = true },
 	-- ["@lsp.mod.readonly"]                 = { fg = "cyan" },
-	-- ["@lsp.mod.declaration"] = { fg = "fg", underline = false, italic = false, bold = true },
+	["@lsp.mod.declaration"] = { bold = true },
 	["@lsp.mod.defaultLibrary"] = {}, -- use treesitter styles for regular variables
 	-- ["@lsp.typemod.function"]                = { fg = "yellow", bold = false, nocombine = true }, -- use treesitter styles for regular variables
 	-- ["@lsp.typemod.function.local"]          = { fg = "yellow", bold = false, nocombine = true }, -- use treesitter styles for regular variables
@@ -332,7 +332,7 @@ local M = {
 	-- ["@lsp.typemod.operator.injected"]         = { link = "@operator" },
 	-- ["@lsp.typemod.string.injected"]           = { link = "@string" },
 	-- ["@lsp.typemod.struct.defaultLibrary"]     = { link = "@type.builtin" },
-	["@lsp.typemod.type.declaration"] = { link = "@type" },
+	["@lsp.typemod.type.declaration"] = { link = "@type", nocombine = true },
 	-- ["@lsp.typemod.typeAlias.defaultLibrary"]  = { link = "@type.builtin" },
 	-- ["@lsp.typemod.variable.callable"]         = { link = "@function" },
 	["@lsp.typemod.variable.defaultLibrary"] = { link = "@lsp.typemod.class.defaultLibrary" },
@@ -344,7 +344,7 @@ local M = {
 	["@lsp.typemod.member.defaultLibrary"] = { fg = "yellow" },
 	-- ["@lsp.typemod.parameter.declaration"] = { fg = "cyan", bold = false, italic = false, nocombine = true },
 	["@lsp.typemod.parameter.declaration"] = { fg = "fg", bold = true },
-	["@lsp.typemod.property.declaration"] = { fg = "fg", bold = false, nocombine = true },
+	["@lsp.typemod.property.declaration"] = { fg = "cyan", bold = false, nocombine = true },
 	["@lsp.typemod.enumMember"] = { fg = "fg", bold = true },
 	-- ["@lsp.typemod.property"]             = { fg = "fg", underline = false, bold = true, nocombine = true },
 	-- ["@lsp.typemod.variable.globalScope"] -- (global variables)
