@@ -351,8 +351,8 @@ local M = {
 	-- ["@lsp.typemod.variable.globalScope"] -- (global variables)
 
 	-- HiPhish/nvim-ts-rainbow2
-	TSRainbowBlue = { fg = "#4EA3FF" },
-	TSRainbowViolet = { fg = "#DC73F1" },
+	TSRainbowBlue = { fg = "blue2" },
+	TSRainbowViolet = { fg = "pink" },
 	TSRainbowRed = { fg = "red" },
 	TSRainbowOrange = { fg = "orange" },
 	TSRainbowCyan = { fg = "purple2" },
@@ -446,6 +446,11 @@ local M = {
 	DashboardHeader = { fg = "red" },
 	DashboardCenter = { fg = "purple3" },
 	DashboardFooter = { fg = "lime", italic = true },
+
+	-- snacks/dashboard-nvim
+	SnacksDashboardHeader = { fg = "purple" },
+	SnacksDashboardDesc = { fg = "yellow" },
+	SnacksDashboardIcon = { fg = "cyan" },
 	-- DashboardKey = {},
 	-- DashboardDesc = {},
 	-- DashboardIcon = {},
