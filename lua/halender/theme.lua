@@ -52,7 +52,7 @@ local M = {
 	Comment = { fg = "comments", italic = config.italic.comments }, -- any comment
 	ErrorMsg = { fg = "error" }, -- error messages on the command line
 	VertSplit = { fg = "cursor", bg = "bg" }, -- the column separating vertically split windows
-	WinSeparator = { fg = "cursor", bg = "sidebar" }, -- the column separating vertically split windows
+	WinSeparator = { fg = "cursor", bg = "bg" }, -- the column separating vertically split windows
 	Folded = { fg = "disabled", italic = true }, -- line used for closed folds
 	FoldColumn = { fg = "accent" }, -- 'foldcolumn'
 	SignColumn = { fg = "fg" }, -- column where |signs| are displayed
@@ -828,7 +828,11 @@ if config.transparent.sidebar then
 end
 if config.dim_inactive then
 	M.NormalNC = { bg = "sidebar", fg = "fg" }
-	M.VertSplit = { bg = "bg", fg = "fg" }
+	M.VertSplit = { bg = "sidebar", fg = "fg" }
+	M.WinSeparator = { fg = "cursor", bg = "sidebar" }
+	M.NormalSB = { fg = "fg", bg = "bg" }
+	M.NormalFloat = { fg = "fg", bg = "bg" }
+	M.FloatBorder = { fg = "border", bg = "bg" }
 end
 
 return M
