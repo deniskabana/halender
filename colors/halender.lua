@@ -1,1 +1,1 @@
-require("halender.init").load()
+require("halender.init").load("dark")
