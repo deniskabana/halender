@@ -22,6 +22,7 @@
 ---@field strings? boolean italic strings
 ---@field types? boolean italic types
 ---@field function_call? boolean italic function calls
+---@field builtins? boolean italic builtin libs/methods
 
 ---@type HalenderOpts
 local M = {
@@ -39,7 +40,8 @@ local M = {
 		variables = false,
 		strings = true,
 		types = true,
-		function_call = true,
+		function_call = false,
+		builtins = true,
 	},
 
 	dim_inactive = true,
