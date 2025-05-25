@@ -542,7 +542,7 @@ local M = {
 
 	-- folke/flash.nvim
 	FlashBackdrop = { fg = "comments", bg = "contrast" },
-	FlashLabel = { bg = "fg", fg = "bg" },
+	FlashLabel = { bg = "pink", fg = "contrast", bold = true },
 
 	-- hrsh7th/nvim-cmp
 	-- TODO: cmp
