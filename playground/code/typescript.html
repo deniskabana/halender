@@ -14,46 +14,32 @@
         <p>
           <span class="keyword import">import</span>
           <span>&nbsp;</span>
-          <span class="punctuation bracket l1">{</span>
-          <span>&nbsp;</span>
-          <span class="variable">useState</span>
-          <span>&nbsp;</span>
-          <span class="punctuation bracket l1">}</span>
+          <span class="variable">path</span>
           <span>&nbsp;</span>
           <span class="keyword import">from</span>
           <span>&nbsp;</span>
-          <span class="string">'react'</span>
+          <span class="string">"path"</span>
           <span class="punctuation">;</span>
         </p>
         <p>
           <span class="keyword import">import</span>
           <span>&nbsp;</span>
           <span class="punctuation bracket l1">{</span>
+          <span>&nbsp;</span>
+          <span class="variable">ColumnDto</span>
+          <span>&nbsp;</span>
+          <span class="keyword import">as</span>
           <span>&nbsp;</span>
           <span class="variable">GridColumn</span>
           <span class="punctuation">,</span>
           <span>&nbsp;</span>
-          <span class="variable">GridPinnedColumns</span>
+          <span class="variable">PinnedColumns</span>
           <span>&nbsp;</span>
           <span class="punctuation bracket l1">}</span>
           <span>&nbsp;</span>
           <span class="keyword import">from</span>
           <span>&nbsp;</span>
-          <span class="string">'./types'</span>
-          <span class="punctuation">;</span>
-        </p>
-        <p>
-          <span class="keyword import">import</span>
-          <span>&nbsp;</span>
-          <span class="punctuation bracket l1">{</span>
-          <span>&nbsp;</span>
-          <span class="variable">gridIndexColumn</span>
-          <span>&nbsp;</span>
-          <span class="punctuation bracket l1">}</span>
-          <span>&nbsp;</span>
-          <span class="keyword import">from</span>
-          <span>&nbsp;</span>
-          <span class="string">'../utils/gridIndexColumn'</span>
+          <span class="string">"./types"</span>
           <span class="punctuation">;</span>
         </p>
         <p>&nbsp;</p>
@@ -61,6 +47,16 @@
           <span class="keyword">const</span>
           <span>&nbsp;</span>
           <span class="declaration">defaultPinnedColumns</span>
+          <span class="punctuation">:</span>
+          <span>&nbsp;</span>
+          <span class="type">Record</span>
+          <span class="punctuation bracket l1">&lt;</span>
+          <span class="type builtin">string</span>
+          <span class="punctuation">,</span>
+          <span>&nbsp;</span>
+          <span class="type builtin">unknown</span>
+          <span class="punctuation bracket l2">[]</span>
+          <span class="punctuation bracket l1">&gt;</span>
           <span>&nbsp;</span>
           <span class="operator">=</span>
           <span>&nbsp;</span>
@@ -81,15 +77,6 @@
           <span class="comment">// Default pinned column on the left</span>
         </p>
         <p>
-          <span>&nbsp;&nbsp;</span>
-          <span class="variable member">right</span>
-          <span class="punctuation">:</span>
-          <span>&nbsp;</span>
-          <span class="punctuation bracket l2">[</span>
-          <span class="punctuation bracket l2">]</span>
-          <span class="punctuation">,</span>
-        </p>
-        <p>
           <span class="punctuation bracket l1">}</span>
           <span>&nbsp;</span>
           <span class="operator">as</span>
@@ -98,25 +85,7 @@
           <span>&nbsp;</span>
           <span class="operator">satisfies</span>
           <span>&nbsp;</span>
-          <span class="type">GridPinnedColumns</span>
-          <span class="punctuation">;</span>
-        </p>
-        <p>&nbsp;</p>
-        <p>
-          <span class="keyword">const</span>
-          <span>&nbsp;</span>
-          <span class="declaration diagnostics-unused diagnostics-warning"><span>disabled</span></span>
-          <span class="punctuation">:</span>
-          <span>&nbsp;</span>
-          <span class="type builtin">boolean</span>
-          <span>&nbsp;</span>
-          <span class="punctuation">|</span>
-          <span>&nbsp;</span>
-          <span class="class builtin">undefined</span>
-          <span>&nbsp;</span>
-          <span class="operator">=</span>
-          <span>&nbsp;</span>
-          <span class="boolean">false</span>
+          <span class="type">PinnedColumns</span>
           <span class="punctuation">;</span>
         </p>
         <p class="current-line">&nbsp;<span class="cursor">&nbsp;</span></p>
@@ -135,7 +104,7 @@
         <p>
           <span class="keyword import">export</span>
           <span>&nbsp;</span>
-          <span class="keyword">function</span>
+          <span class="keyword">default function</span>
           <span>&nbsp;</span>
           <span class="function declaration">useColumnPinning</span>
           <span class="punctuation bracket l1">&lt;</span>
@@ -170,7 +139,7 @@
           <span>&nbsp;</span>
           <span class="function call">useState</span>
           <span class="punctuation bracket l2">&lt;</span>
-          <span class="type">GridPinnedColumns</span>
+          <span class="type">PinnedColumns</span>
           <span>&nbsp;</span>
           <span class="punctuation">|</span>
           <span>&nbsp;</span>
@@ -194,7 +163,7 @@
           <span class="declaration">newPinnedColumns</span>
           <span class="punctuation">:</span>
           <span>&nbsp;</span>
-          <span class="type">GridPinnedColumns</span>
+          <span class="type">PinnedColumns</span>
           <span class="punctuation bracket l2">)</span>
           <span>&nbsp;</span>
           <span class="operator">=&gt;</span>
@@ -226,11 +195,15 @@
           <span class="number">0</span>
           <span class="punctuation bracket l5">)</span>
           <span>&nbsp;</span>
-          <span class="operator">return</span>
+          <span class="operator">throw new</span>
           <span>&nbsp;</span>
-          <span class="punctuation bracket l5">{}</span>
+          <span class="keyword">Error</span>
+          <span class="punctuation bracket l5">(</span>
+          <span class="string">"Incorrect input."</span>
+          <span class="punctuation bracket l5">)</span>
           <span class="punctuation">;</span>
         </p>
+        <p>&nbsp;</p>
         <p>
           <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           <span class="keyword">const</span>
@@ -258,45 +231,36 @@
           <span class="variable">newPinnedColumns</span>
           <span class="punctuation">.</span>
           <span class="variable member">left</span>
-          <span class="punctuation bracket l5">[</span>
+          <span class="punctuation bracket l6">[</span>
           <span class="number">0</span>
-          <span class="punctuation bracket l5">]</span>
+          <span class="punctuation bracket l6">]</span>
           <span class="punctuation bracket l5">)</span>
           <span class="punctuation">;</span>
+          <span>&nbsp;</span>
+          <span class="comment">// Enforce always first</span>
         </p>
-        <p>&nbsp;</p>
         <p>
           <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           <span class="operator">return</span>
           <span>&nbsp;</span>
           <span class="punctuation bracket l5">{</span>
-        </p>
-        <p>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>&nbsp;</span>
           <span class="variable member">left</span>
           <span class="punctuation">:</span>
           <span>&nbsp;</span>
+          <span class="punctuation bracket l6">[</span>
           <span class="variable">newPinnedColumns</span>
           <span class="punctuation">.</span>
           <span class="variable member">left</span>
-          <span class="punctuation bracket l5">[</span>
+          <span class="punctuation bracket l1">[</span>
           <span class="number">0</span>
-          <span class="punctuation bracket l5">]</span>
+          <span class="punctuation bracket l1">]</span>
           <span class="punctuation">,</span>
           <span>&nbsp;</span>
-        </p>
-        <p>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-          <span class="variable member">right</span>
-          <span class="punctuation">:</span>
+          <span class="operator">...</span>
+          <span class="variable member">newLeft</span>
+          <span class="punctuation bracket l6">]</span>
           <span>&nbsp;</span>
-          <span class="variable">newPinnedColumns</span>
-          <span class="punctuation">.</span>
-          <span class="variable member">right</span>
-          <span class="punctuation">,</span>
-        </p>
-        <p>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
           <span class="punctuation bracket l5">}</span>
           <span class="punctuation">;</span>
         </p>
@@ -307,11 +271,28 @@
           <span class="punctuation">;</span>
         </p>
         <p>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>&nbsp;&nbsp;</span>
           <span class="punctuation bracket l2">}</span>
           <span class="punctuation">;</span>
         </p>
         <p>&nbsp;</p>
+        <p>
+          <span>&nbsp;&nbsp;</span>
+          <span class="operator">return</span>
+          <span>&nbsp;</span>
+          <span class="punctuation bracket l2">{</span>
+          <span>&nbsp;</span>
+          <span class="member declaration">handlePinnedColumnsChange</span>
+          <span class="punctuation">,</span>
+          <span>&nbsp;</span>
+          <span class="member declaration">pinnedColumns</span>
+          <span>&nbsp;</span>
+          <span class="punctuation bracket l2">}</span>
+          <span class="punctuation">;</span>
+        </p>
+        <p>
+          <span class="punctuation bracket l1">}</span>
+        </p>
       </code>
     </div>
   </body>

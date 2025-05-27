@@ -127,12 +127,13 @@ html {
   text-decoration: none;
   font-style: normal;
 }
-.code .declaration {
+.code .variable.declaration {
   color: var(--color-fg);
+}
+.code .declaration {
   font-weight: bold;
 }
 .code .member {
-  /* color: var(--color-yellow); */
   color: var(--color-fg);
 }
 .code .comment.jsdoc {
@@ -187,7 +188,7 @@ html {
 .code .cursor {
   background-color: var(--color-cursor);
   display: inline-block;
-  width: 0.75em;
+  width: 0.6em;
   margin-left: -0.1em;
   animation: blink 1s infinite;
   border: 1px solid var(--color-cursor);
