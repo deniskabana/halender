@@ -91,7 +91,7 @@ local M = {
 	TabLineFill = {}, -- tab pages line, where there are no labels
 	TabLineSel = { fg = "bg", bg = "accent" }, -- tab pages line, active tab page label
 	Title = { fg = "lime", bold = config.enable_bold }, -- titles for output from ":set all", ":autocmd" etc.
-	Visual = { bg = "selection" }, -- Visual mode selection
+	Visual = { bg = "purple2", fg = "bg" }, -- Visual mode selection
 	VisualNOS = { link = "Visual" }, -- Visual mode selection when vim is "Not Owning the Selection".
 	WarningMsg = { fg = "orange" }, -- warning messages
 	Whitespace = { link = "NonText" }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
@@ -252,8 +252,8 @@ local M = {
 	["@variable.parameter"] = { fg = "fg", bold = true }, -- For parameters of a function. -- FIX:
 	["@variable.parameter.builtin"] = { fg = "purple" }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
 
-	["@type"] = { fg = "blue", underline = true, bold = false, italic = true, nocombine = true },
-	["@type.builtin"] = { fg = "yellow", italic = true },
+	["@type"] = { fg = "blue", underline = true, bold = false, italic = config.italic.types, nocombine = true },
+	["@type.builtin"] = { fg = "yellow" },
 	["@type.definition"] = { fg = "blue", underline = true, italic = true, bold = false },
 
 	["@namespace.builtin"] = { link = "@variable.builtin" },
@@ -279,7 +279,7 @@ local M = {
 	-- ["@lsp.type.boolean"]                      = { link = "@boolean" },
 	-- ["@lsp.type.builtinType"]                  = { link = "@type.builtin" },
 	-- ["@lsp.type.comment"]                      = { link = "@comment" },
-	["@lsp.type.property"] = { underline = true, fg = "fg" },
+	["@lsp.type.property"] = { underline = true, fg = "blue2" },
 	["@lsp.type.function"] = {},
 	-- ["@lsp.type.decorator"]                    = { link = "@attribute" },
 	["@lsp.type.method"] = {},
@@ -301,7 +301,7 @@ local M = {
 	-- ["@lsp.type.string"]                       = { link = "@string" },
 	-- ["@lsp.type.typeAlias"]                    = { link = "@type.definition" },
 	-- ["@lsp.type.unresolvedReference"]          = { link = "@markup.link" },
-	["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
+	["@lsp.type.variable"] = { link = "@variable" }, -- use treesitter styles for regular variables
 	["@lsp.mod.variable"] = { fg = "cyan" },
 	-- ["@lsp.mod.local"]                       = { bold = false, nocombine = true },
 	-- ["@lsp.mod.readonly"]                 = { fg = "cyan" },
@@ -345,7 +345,7 @@ local M = {
 	["@lsp.typemod.member.defaultLibrary"] = { fg = "yellow" },
 	-- ["@lsp.typemod.parameter.declaration"] = { fg = "cyan", bold = false, italic = false, nocombine = true },
 	["@lsp.typemod.parameter.declaration"] = { fg = "fg", bold = true },
-	["@lsp.typemod.property.declaration"] = { fg = "cyan", bold = false, nocombine = true },
+	["@lsp.typemod.property.declaration"] = { fg = "yellow", nocombine = true },
 	["@lsp.typemod.enumMember"] = { fg = "fg", bold = true },
 	-- ["@lsp.typemod.property"]             = { fg = "fg", underline = false, bold = true, nocombine = true },
 	-- ["@lsp.typemod.variable.globalScope"] -- (global variables)
@@ -730,6 +730,10 @@ local M = {
 	-- debugPC = {}, -- used for highlighting the current line in terminal-debug
 	-- debugBreakpoint = {}, -- used for breakpoint colors in terminal-debug
 	dosIniLabel = { link = "@property" },
+
+	-- CUSTOM halender TS groups
+	["@custom.import"] = { fg = "cyan", nocombine = true },
+	["@custom.chain.delimiter"] = { fg = "orange", bold = true },
 }
 
 -- lsp symbol kind and completion kind highlights
@@ -814,9 +818,17 @@ if not vim.diagnostic then
 end
 
 -- Apply user-defined config
+if config.dim_inactive then
+	M.NormalNC = { bg = "sidebar", fg = "fg" }
+	M.VertSplit = { bg = "sidebar", fg = "fg" }
+	M.WinSeparator = { fg = "cursor", bg = "sidebar" }
+	M.NormalSB = { fg = "fg", bg = "bg" }
+	M.NormalFloat = { fg = "fg", bg = "bg" }
+	M.FloatBorder = { fg = "border", bg = "bg" }
+end
 if config.transparent.background then
 	M.Normal.bg = "NONE"
-	-- M.CursorLine = { bold = true, italic = true } -- if CursorLine is solid bg
+	M.NormalNC.bg = "NONE"
 end
 if config.transparent.float then
 	M.NormalFloat.bg = "NONE"
@@ -825,18 +837,9 @@ end
 if config.transparent.popup then
 	M.Pmenu.bg = "NONE"
 	M.PmenuSel = { bold = true, italic = true }
-	-- M.PmenuSel = { fg = "highlight", italic = true }
 end
 if config.transparent.sidebar then
 	M.NormalSB.bg = "NONE"
-end
-if config.dim_inactive then
-	M.NormalNC = { bg = "sidebar", fg = "fg" }
-	M.VertSplit = { bg = "sidebar", fg = "fg" }
-	M.WinSeparator = { fg = "cursor", bg = "sidebar" }
-	M.NormalSB = { fg = "fg", bg = "bg" }
-	M.NormalFloat = { fg = "fg", bg = "bg" }
-	M.FloatBorder = { fg = "border", bg = "bg" }
 end
 
 return M
