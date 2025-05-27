@@ -1,0 +1,220 @@
+body,
+html {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.syntax.dark {
+  /* Colorscheme */
+  --color-purple: #c3a6ff;
+  --color-yellow: #ffd580;
+  --color-orange: #ffae57;
+	--color-lime: #bae67e;
+	--color-cyan: #5ccfe6;
+	--color-silver: #a2aabc;
+	--color-pink: #dc73f1;
+	--color-blue: #2190f0;
+	--color-blue2: #2Ea3FF;
+	--color-gold: #EFE24D;
+	--color-purple2: #9066ce;
+	--color-white: #cfe3ef;
+	--color-red: #ef6b73;
+	--color-red2: #cf2a2c;
+	--color-green: #4aaa45;
+
+  --color-bg: #1d2433;
+	--color-sidebar: #171c28;
+	--color-float: var(--color-sidebar);
+	--color-black: #070c18;
+	--color-fg: #b2bacc;
+	--color-text: #8695aa;
+	--color-comments: #616d86;
+	--color-selection: #2f3b54;
+	--color-contrast: var(--color-sidebar);
+	--color-border: #515772;
+	--color-line_numbers: var(--color-border);
+	--color-highlight: var(--color-selection);
+	--color-disabled: var(--color-comments);
+	--color-cursor: var(--color-pink);
+	--color-accent: var(--color-yellow);
+	--color-error: #cf3a3c;
+	--color-warning: #EFE24D;
+	--color-info: #5ccfe6;
+	--color-link: #2e96ff;
+
+  --font-style-comments: italic;
+  --font-style-functions: normal;
+  --font-style-keywords: italic;
+  --font-style-variables: normal;
+  --font-style-strings: italic;
+  --font-style-types: italic;
+  --font-style-function_call: italic;
+  --font-style-builtins: italic;
+}
+
+.syntax .code {
+  display: block;
+  width: 100%;
+  background-color: var(--color-bg);
+  line-height: 1.7;
+  letter-spacing: 0.05px;
+  padding: 1em;
+  font-size: 15px;
+  /* Font */
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.syntax .code p {
+  margin: 0;
+}
+.syntax  .code span {
+  margin-right: -0.5em;
+}
+.code.rainbow-brackets .l1, .code.rainbow-brackets .l4 { color: var(--color-blue2); }
+.code.rainbow-brackets .l2, .code.rainbow-brackets .l5 { color: var(--color-pink); }
+.code.rainbow-brackets .l3, .code.rainbow-brackets .l6 { color: var(--color-gold); }
+
+
+.container {
+  min-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.syntax {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+.code .keyword {
+  color: var(--color-purple);
+  font-style: var(--font-style-keywords);
+}
+.code .keyword.import {
+  color: var(--color-purple2);
+}
+.code .punctuation {
+  color: var(--color-blue);
+  font-weight: bold;
+}
+.code .variable {
+  color: var(--color-cyan);
+}
+.code .string {
+  color: var(--color-lime);
+  font-style: var(--font-style-strings);
+}
+.code .comment {
+  color: var(--color-comments);
+  font-style: var(--font-style-comments);
+}
+.code .operator {
+  color: var(--color-orange);
+  font-weight: bold;
+}
+.code .property {
+  color: var(--color-blue);
+}
+.code .type {
+  color: var(--color-blue);
+  text-decoration: underline;
+  font-style: var(--font-style-types);
+}
+.code .type.builtin {
+  color: var(--color-yellow);
+  text-decoration: none;
+  font-style: normal;
+}
+.code .declaration {
+  color: var(--color-fg);
+  font-weight: bold;
+}
+.code .member {
+  /* color: var(--color-yellow); */
+  color: var(--color-fg);
+}
+.code .comment.jsdoc {
+  color: var(--color-purple);
+}
+.code .function {
+  color: var(--color-yellow);
+}
+.code .function.declaration {
+  text-decoration: underline;
+}
+.code .type.parameter {
+  color: var(--color-pink);
+}
+.code .function.call {
+  font-style: var(--font-style-function_call);
+  text-decoration: none;
+}
+.code .function.argument {
+  color: var(--color-cyan);
+}
+.code .class.builtin {
+  color: var(--color-purple);
+  font-weight: bold;
+}
+.code .number {
+  color: var(--color-purple);
+  font-weight: bold;
+}
+.code .boolean {
+  color: var(--color-purple);
+  font-weight: bold;
+}
+.code .diagnostics-unused > span {
+  color: var(--color-disabled);
+  margin: 0;
+}
+.code .diagnostics-warning {
+  text-decoration: underline;
+  text-decoration-color: var(--color-warning);
+  text-decoration-style: wavy;
+}
+
+
+/*
+ * Line numbers
+ */
+.code .current-line {
+  background-color: var(--color-highlight);
+  counter-set: loc 1;
+}
+.code .cursor {
+  background-color: var(--color-cursor);
+  display: inline-block;
+  width: 0.75em;
+  margin-left: -0.1em;
+  animation: blink 1s infinite;
+  border: 1px solid var(--color-cursor);
+}
+@keyframes blink {
+  0% { background-color: var(--color-cursor); }
+  50% { background-color: transparent; }
+  100% { background-color: var(--color-cursor); }
+}
+.code {
+  counter-reset: loc;
+  counter-set: loc 11;
+}
+.code > p::before {
+  display: inline-block;
+  width: 3rem;
+  counter-increment: loc -1;
+  content: counter(loc);
+  text-align: right;
+  padding-right: 0.5em;
+  color: var(--color-line_numbers);
+  font-weight: bold;
+}
+.code > p.current-line::before {
+  content: "11";
+  color: var(--color-fg);
+}
+.code > p.current-line ~ p::before {
+  counter-increment: loc 1;
+}
