@@ -499,12 +499,18 @@ local M = {
 
 	BufferLineWarningDiagnostic = { fg = "warning", bg = "black" },
 	BufferLineErrorDiagnostic = { fg = "error", bg = "black" },
-	BufferLineWarningDiagnosticSelected = { bg = "bg", fg = "warning", underline = true, sp = "yellow" },
-	BufferLineErrorDiagnosticSelected = { bg = "bg", fg = "error", underline = true, sp = "yellow" },
+	BufferLineWarningDiagnosticSelected = { bg = "highlight", fg = "warning", underline = true, sp = "yellow" },
+	BufferLineErrorDiagnosticSelected = { bg = "highlight", fg = "error", underline = true, sp = "yellow" },
 
-	BufferLineTabSelected = { fg = "white", bold = true, italic = false, underline = true, bg = "bg", sp = "yellow" },
-	BufferLineSeparatorSelected = { bg = "bg", fg = "black", sp = "yellow", underline = true },
-	BufferLineModifiedSelected = { bg = "bg", fg = "lime", sp = "yellow", underline = true },
+	BufferLineTabSelected = {
+		fg = "white",
+		bold = true,
+		underline = true,
+		bg = "highlight",
+		sp = "yellow",
+	},
+	BufferLineSeparatorSelected = { bg = "highlight", fg = "black", sp = "yellow", underline = true },
+	BufferLineModifiedSelected = { bg = "highlight", fg = "lime", sp = "yellow", underline = true },
 	BufferLineBufferSelected = { link = "BufferLineTabSelected" },
 	BufferLineErrorSelected = { link = "BufferLineTabSelected" },
 	BufferLineWarningSelected = { link = "BufferLineTabSelected" },
@@ -522,7 +528,7 @@ local M = {
 	BufferLineWarning = { link = "BufferLineBackground" },
 	BufferLineGroupLabel = { link = "BufferLineTabSelected" },
 	BufferLineDuplicateSelected = {
-		bg = "bg",
+		bg = "highlight",
 		sp = "yellow",
 		underline = true,
 		fg = "text",
