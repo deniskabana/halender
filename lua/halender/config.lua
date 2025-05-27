@@ -10,6 +10,7 @@
 
 ---@class (exact) HalenderTransparentOpts
 ---@field background? boolean do not render the main background
+---@field background_inactive? boolean do not render inactive split background
 ---@field float? boolean do not render the background in floating windows
 ---@field popup? boolean do not render the background in popup menus
 ---@field sidebar? boolean do not render the background in sidebars
@@ -26,31 +27,32 @@
 
 ---@type HalenderOpts
 local M = {
-  transparent = {
-    background = false,
-    float = false,
-    popup = false,
-    sidebar = false,
-  },
+	transparent = {
+		background = true,
+		background_inactive = false,
+		float = false,
+		popup = false,
+		sidebar = false,
+	},
 
-  italic = {
-    comments = true,
-    functions = false,
-    keywords = true,
-    variables = false,
-    strings = true,
-    types = true,
-    function_call = true,
-    builtins = true,
-  },
+	italic = {
+		comments = true,
+		functions = false,
+		keywords = true,
+		variables = false,
+		strings = true,
+		types = true,
+		function_call = true,
+		builtins = true,
+	},
 
-  dim_inactive = true,
+	dim_inactive = false,
 
-  enable_bold = true,
+	enable_bold = true,
 
-  disable_semantic_highlighting = false,
+	disable_semantic_highlighting = false,
 
-  signs = true,
+	signs = true,
 }
 
 return M

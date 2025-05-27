@@ -823,7 +823,8 @@ if not vim.diagnostic then
 	end
 end
 
--- Apply user-defined config
+-- USER CONFIG
+-- Dim colors if dim_inactive is enabled
 if config.dim_inactive then
 	M.NormalNC = { bg = "sidebar", fg = "fg" }
 	M.VertSplit = { bg = "sidebar", fg = "fg" }
@@ -832,8 +833,13 @@ if config.dim_inactive then
 	M.NormalFloat = { fg = "fg", bg = "bg" }
 	M.FloatBorder = { fg = "border", bg = "bg" }
 end
+-- Clear backgrounds if transparency is enabled
 if config.transparent.background then
 	M.Normal.bg = "NONE"
+	M.VertSplit.bg = "NONE"
+	M.WinSeparator.bg = "NONE"
+end
+if config.transparent.background_inactive then
 	M.NormalNC.bg = "NONE"
 end
 if config.transparent.float then
