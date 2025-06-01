@@ -13,7 +13,7 @@ M.dark = {
 	purple = "#c3a6ff", -- Keywords, constants
 	yellow = "#ffd580", -- Functions, classes, object literal keys
 	orange = "#ffae57", -- Constants, operators
-	lime = "#bae67e", -- Strings, MD headings
+	lime = "#a7d963", -- Strings, MD headings
 	cyan = "#5ccfe6", -- Special keywords, classes, markdown code
 	silver = "#a2aabc", -- Variables, property names, tags
 	pink = "#dc73f1", -- Arrows, braces, brackets
@@ -26,7 +26,7 @@ M.dark = {
 	red2 = "#cf2a2c", -- Error, requiring immediate action, destroy
 	green = "#4aaa45",
 
-	bg = "#1d2433",
+	bg = "#1a253d",
 	sidebar = "#171c28",
 	float = "#171c28",
 	black = "#070c18",
