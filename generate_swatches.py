@@ -23,7 +23,7 @@ def hex_to_rgb(hex_color):
     hex_color = hex_color.lstrip('#')
     return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
 
-def create_swatch_svg(hex_color, filename, size=50):
+def create_swatch_svg(hex_color, filename, size=32):
     """Create an SVG color swatch"""
     rgb = hex_to_rgb(hex_color)
     
@@ -32,7 +32,7 @@ def create_swatch_svg(hex_color, filename, size=50):
     border_color = "#000000" if brightness > 128 else "#666666"
     
     svg_content = f'''<svg width="{size}" height="{size}" xmlns="http://www.w3.org/2000/svg">
-  <rect width="{size}" height="{size}" rx="8" ry="8" 
+  <rect width="{size}" height="{size}" rx="4" ry="4" 
         fill="{hex_color}" 
         stroke="{border_color}" 
         stroke-width="1" 
@@ -50,47 +50,100 @@ def generate_color_table():
     swatches_dir = Path('assets/swatches')
     swatches_dir.mkdir(parents=True, exist_ok=True)
     
-    # Color categories for organization
-    color_categories = {
-        'Syntax Colors': ['PURPLE', 'YELLOW', 'ORANGE', 'LIME', 'CYAN', 'SILVER', 'PINK', 'BLUE', 'BLUE2', 'GOLD', 'PURPLE2', 'WHITE', 'RED', 'RED2', 'GREEN'],
-        'UI Colors': ['BG', 'SIDEBAR', 'FLOAT', 'BLACK', 'FG', 'TEXT', 'COMMENTS', 'SELECTION', 'CONTRAST', 'BORDER', 'LINE_NUMBERS', 'HIGHLIGHT', 'DISABLED', 'CURSOR', 'ACCENT'],
-        'Status Colors': ['ERROR', 'WARNING', 'INFO', 'LINK']
-    }
+    # Define unique colors with their purposes and categorization
+    # Format: (color_name, purpose, category, references_to_other_colors)
+    color_definitions = [
+        # Syntax/Text Colors
+        ('PURPLE', 'Keywords, constants, booleans', 'syntax', []),
+        ('YELLOW', 'Functions, classes', 'syntax', []),
+        ('ORANGE', 'Operators, constants', 'syntax', []),
+        ('LIME', 'Strings, markdown headings', 'syntax', []),
+        ('CYAN', 'Variables, special keywords', 'syntax', []),
+        ('SILVER', 'Property names, tags', 'syntax', []),
+        ('PINK', 'Punctuation, brackets', 'syntax', []),
+        ('BLUE', 'Types, properties', 'syntax', []),
+        ('BLUE2', 'Rainbow parentheses', 'syntax', []),
+        ('GOLD', 'Template literals, operators', 'syntax', []),
+        ('PURPLE2', 'Import/export keywords', 'syntax', []),
+        ('WHITE', 'Standout text', 'syntax', []),
+        ('RED', 'Passive errors, reminders', 'syntax', []),
+        ('RED2', 'Critical errors', 'syntax', []),
+        ('GREEN', 'Success states', 'syntax', []),
+        
+        # UI Colors
+        ('BG', 'Main background', 'ui', []),
+        ('SIDEBAR', 'Sidebar background', 'ui', []),
+        ('FLOAT', 'Floating window background', 'ui', ['SIDEBAR']),
+        ('BLACK', 'Deepest background', 'ui', []),
+        ('FG', 'Primary text', 'ui', []),
+        ('TEXT', 'Secondary text', 'ui', []),
+        ('COMMENTS', 'Comments, muted text', 'ui', []),
+        ('SELECTION', 'Text selection', 'ui', []),
+        ('CONTRAST', 'High contrast background', 'ui', ['SIDEBAR']),
+        ('BORDER', 'Borders, separators', 'ui', []),
+        ('LINE_NUMBERS', 'Line numbers', 'ui', ['BORDER']),
+        ('HIGHLIGHT', 'Current line highlight', 'ui', ['SELECTION']),
+        ('DISABLED', 'Disabled elements', 'ui', ['BORDER']),
+        ('CURSOR', 'Cursor color', 'ui', ['PINK']),
+        ('ACCENT', 'Accent color', 'ui', ['YELLOW']),
+        ('ERROR', 'Error indicators', 'ui', []),
+        ('WARNING', 'Warning indicators', 'ui', ['GOLD']),
+        ('INFO', 'Info indicators', 'ui', ['CYAN']),
+        ('LINK', 'Links, URLs', 'ui', []),
+    ]
     
     markdown_content = "## Color Palette\n\n"
     
-    for category, color_names in color_categories.items():
-        markdown_content += f"### {category}\n\n"
-        markdown_content += "| Color | Dark | Light | Variable Name |\n"
-        markdown_content += "|-------|------|-------|---------------|\n"
+    # Generate separate sections for dark and light themes
+    for theme in ['dark', 'light']:
+        theme_title = "Dark Theme" if theme == 'dark' else "Light Theme"
+        markdown_content += f"<details>\n<summary><h3>{theme_title}</h3></summary>\n\n"
         
-        for color_name in color_names:
-            dark_key = f"H_DARK_{color_name}"
-            light_key = f"H_LIGHT_{color_name}"
+        # Group colors by category
+        syntax_colors = [c for c in color_definitions if c[2] == 'syntax']
+        ui_colors = [c for c in color_definitions if c[2] == 'ui']
+        
+        for category_name, color_list in [("Syntax & Text Colors", syntax_colors), ("UI Colors", ui_colors)]:
+            markdown_content += f"#### {category_name}\n\n"
+            markdown_content += "| Swatch | Name | Hex | Variable | Purpose |\n"
+            markdown_content += "|--------|------|-----|----------|----------|\n"
             
-            if dark_key in colors and light_key in colors:
-                dark_color = colors[dark_key]
-                light_color = colors[light_key]
+            for color_name, purpose, category, references in color_list:
+                theme_key = f"H_{theme.upper()}_{color_name}"
                 
-                # Generate swatch files
-                dark_swatch = f"assets/swatches/dark_{color_name.lower()}.svg"
-                light_swatch = f"assets/swatches/light_{color_name.lower()}.svg"
-                
-                create_swatch_svg(dark_color, dark_swatch)
-                create_swatch_svg(light_color, light_swatch)
-                
-                # Format color name nicely
-                display_name = color_name.replace('_', ' ').title()
-                if color_name.endswith('2'):
-                    display_name = display_name[:-1] + ' 2'
-                
-                # Use leading slash for URLs
-                dark_swatch_url = f"/{dark_swatch}"
-                light_swatch_url = f"/{light_swatch}"
-                
-                markdown_content += f"| **{display_name}** | ![{dark_color}]({dark_swatch_url}) `{dark_color}` | ![{light_color}]({light_swatch_url}) `{light_color}` | `{color_name}` |\n"
+                if theme_key in colors:
+                    hex_color = colors[theme_key]
+                    
+                    # Check if this color is referenced by others (skip if it's a duplicate)
+                    is_referenced = any(color_name in ref_list for _, _, _, ref_list in color_definitions)
+                    if is_referenced and references:
+                        # This is a duplicate, show reference instead
+                        ref_name = references[0] if references else color_name
+                        purpose_text = f"Same as {ref_name.title()}"
+                        continue  # Skip duplicate colors
+                    
+                    # Generate swatch file
+                    swatch_filename = f"assets/swatches/{theme}_{color_name.lower()}.svg"
+                    create_swatch_svg(hex_color, swatch_filename)
+                    swatch_url = f"/{swatch_filename}"
+                    
+                    # Format display name
+                    display_name = color_name.replace('_', ' ').title()
+                    if color_name.endswith('2'):
+                        display_name = display_name[:-1] + ' 2'
+                    
+                    # Add references to purpose if they exist
+                    if references:
+                        ref_text = ", ".join([ref.title() for ref in references])
+                        purpose_with_refs = f"{purpose} (uses {ref_text})"
+                    else:
+                        purpose_with_refs = purpose
+                    
+                    markdown_content += f"| ![{hex_color}]({swatch_url}) | **{display_name}** | `{hex_color}` | `{color_name}` | {purpose_with_refs} |\n"
+            
+            markdown_content += "\n"
         
-        markdown_content += "\n"
+        markdown_content += "</details>\n\n"
     
     return markdown_content
 
