@@ -51,8 +51,8 @@ local M = {
 	-- TermCursorNC = {}, -- cursor in an unfocused terminal
 	Comment = { fg = "comments", italic = config.italic.comments }, -- any comment
 	ErrorMsg = { fg = "error" }, -- error messages on the command line
-	VertSplit = { fg = "cursor", bg = "bg" }, -- the column separating vertically split windows
-	WinSeparator = { fg = "cursor", bg = "bg" }, -- the column separating vertically split windows
+	VertSplit = { fg = "border", bg = "bg" }, -- the column separating vertically split windows
+	WinSeparator = { fg = "border", bg = "bg" }, -- the column separating vertically split windows
 	Folded = { fg = "disabled", italic = true }, -- line used for closed folds
 	FoldColumn = { fg = "accent" }, -- 'foldcolumn'
 	SignColumn = { fg = "fg" }, -- column where |signs| are displayed
@@ -69,7 +69,7 @@ local M = {
 	Normal = { fg = "fg", bg = "bg" }, -- normal text
 	NormalSB = { fg = "fg", bg = "sidebar" }, -- normal text in sidebar
 	NormalFloat = { fg = "fg", bg = "float" }, -- Normal text in floating windows.
-	FloatBorder = { fg = "cursor", bg = "float" },
+	FloatBorder = { fg = "border", bg = "float" },
 	-- FloatTitle = {},
 	Pmenu = { fg = "text", bg = "contrast" }, -- Popup menu: normal item.
 	PmenuSel = { bg = "selection" }, -- Popup menu: selected item.
@@ -220,7 +220,7 @@ local M = {
 	--- Functions
 	["@function"] = { link = "Function" },
 	["@function.builtin"] = { bold = true, fg = "yellow", nocombine = true },
-	["@function.call"] = { nocombine = true, fg = "yellow", italic = config.italic.function_call },
+	["@function.call"] = { nocombine = true, fg = "yellow", italic = config.italic.function_call, underline = true },
 	["@function.macro"] = { link = "Macro" },
 	["@function.method"] = { bold = true, underline = true },
 	["@function.method.call"] = { link = "@function.call" },
@@ -345,7 +345,7 @@ local M = {
 	["@lsp.typemod.member.defaultLibrary"] = { fg = "yellow" },
 	-- ["@lsp.typemod.parameter.declaration"] = { fg = "cyan", bold = false, italic = false, nocombine = true },
 	["@lsp.typemod.parameter.declaration"] = { fg = "fg", bold = true },
-	["@lsp.typemod.property.declaration"] = { fg = "yellow", nocombine = true },
+	["@lsp.typemod.property.declaration"] = { fg = "fg", nocombine = true },
 	["@lsp.typemod.enumMember"] = { link = "@lsp.type.enumMember" },
 	-- ["@lsp.typemod.property"]             = { fg = "fg", underline = false, bold = true, nocombine = true },
 	-- ["@lsp.typemod.variable.globalScope"] -- (global variables)
@@ -828,7 +828,7 @@ end
 if config.dim_inactive then
 	M.NormalNC = { bg = "sidebar", fg = "fg" }
 	M.VertSplit = { bg = "sidebar", fg = "fg" }
-	M.WinSeparator = { fg = "cursor", bg = "sidebar" }
+	M.WinSeparator = { fg = "border", bg = "sidebar" }
 	M.NormalSB = { fg = "fg", bg = "bg" }
 	M.NormalFloat = { fg = "fg", bg = "bg" }
 	M.FloatBorder = { fg = "border", bg = "bg" }

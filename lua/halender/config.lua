@@ -28,7 +28,7 @@
 ---@type HalenderOpts
 local M = {
 	transparent = {
-		background = true,
+		background = false,
 		background_inactive = false,
 		float = false,
 		popup = false,

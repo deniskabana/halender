@@ -23,7 +23,7 @@ html {
 	--color-red2: #cf2a2c;
 	--color-green: #4aaa45;
 
-  --color-bg: #1d2433;
+  --color-bg: #1a253d;
 	--color-sidebar: #171c28;
 	--color-float: var(--color-sidebar);
 	--color-black: #070c18;
@@ -51,27 +51,34 @@ html {
   --font-style-types: italic;
   --font-style-function_call: italic;
   --font-style-builtins: italic;
-}
 
+  --font-weight-regular: 500;
+  --font-weight-bold: 700;
+}
+.syntax.disable-bold {
+  --font-weight-bold: var(--font-weight-regular);
+}
 .syntax .code {
+  white-space: nowrap;
   display: block;
   width: 100%;
   background-color: var(--color-bg);
-  line-height: 1.7;
-  letter-spacing: 0.05px;
   padding: 1em;
-  font-size: 15px;
+
   /* Font */
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
-  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-weight: var(--font-weight-regular);
   font-style: normal;
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  line-height: 1.7;
 }
 .syntax .code p {
   margin: 0;
-}
-.syntax  .code span {
-  margin-right: -0.5em;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .code.rainbow-brackets .l1, .code.rainbow-brackets .l4 { color: var(--color-blue2); }
 .code.rainbow-brackets .l2, .code.rainbow-brackets .l5 { color: var(--color-pink); }
@@ -79,7 +86,7 @@ html {
 
 
 .container {
-  min-width: 800px;
+  min-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -97,7 +104,7 @@ html {
 }
 .code .punctuation {
   color: var(--color-blue);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
 }
 .code .variable {
   color: var(--color-cyan);
@@ -112,7 +119,7 @@ html {
 }
 .code .operator {
   color: var(--color-orange);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
 }
 .code .property {
   color: var(--color-blue);
@@ -121,6 +128,12 @@ html {
   color: var(--color-blue);
   text-decoration: underline;
   font-style: var(--font-style-types);
+}
+.code .constant.builtin {
+  color: var(--color-purple);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  font-style: normal;
 }
 .code .type.builtin {
   color: var(--color-yellow);
@@ -131,13 +144,13 @@ html {
   color: var(--color-fg);
 }
 .code .declaration {
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
 }
 .code .member {
   color: var(--color-fg);
 }
 .code .comment.jsdoc {
-  color: var(--color-purple);
+  color: var(--color-cyan);
 }
 .code .function {
   color: var(--color-yellow);
@@ -150,25 +163,25 @@ html {
 }
 .code .function.call {
   font-style: var(--font-style-function_call);
-  text-decoration: none;
+  text-decoration: underline;
 }
 .code .function.argument {
   color: var(--color-cyan);
 }
 .code .class.builtin {
   color: var(--color-purple);
-  font-weight: bold;
+  font-style: var(--font-style-builtins);
 }
 .code .number {
   color: var(--color-purple);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
 }
 .code .boolean {
   color: var(--color-purple);
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
 }
 .code .diagnostics-unused > span {
-  color: var(--color-disabled);
+  color: var(--color-comments);
   margin: 0;
 }
 .code .diagnostics-warning {
@@ -209,13 +222,20 @@ html {
   content: counter(loc);
   text-align: right;
   padding-right: 0.5em;
+  margin-right: 1em;
   color: var(--color-line_numbers);
-  font-weight: bold;
+  border-right: 1px solid var(--color-border);
 }
 .code > p.current-line::before {
-  content: "11";
+  content: "124";
   color: var(--color-fg);
 }
 .code > p.current-line ~ p::before {
   counter-increment: loc 1;
+}
+.code .indent-guide {
+  width: 0px;
+  border-left: 1px solid var(--color-border);
+  display: inline-block;
+  height: 100%;
 }

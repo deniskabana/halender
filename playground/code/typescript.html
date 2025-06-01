@@ -6,11 +6,11 @@
     <link href="/css/syntax.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   </head>
   <body class="syntax dark" style="background:black">
     <div class="container">
-      <code class="code rainbow-brackets">
+      <code class="code rainbow-brackets font-1">
         <p>
           <span class="keyword import">import</span>
           <span>&nbsp;</span>
@@ -40,6 +40,16 @@
           <span class="keyword import">from</span>
           <span>&nbsp;</span>
           <span class="string">"./types"</span>
+          <span class="punctuation">;</span>
+        </p>
+        <p>
+          <span class="keyword import">import</span>
+          <span>&nbsp;</span>
+          <span class="variable">MyComponent</span>
+          <span>&nbsp;</span>
+          <span class="keyword import">from</span>
+          <span>&nbsp;</span>
+          <span class="string">"../../src/components/MyComponent"</span>
           <span class="punctuation">;</span>
         </p>
         <p>&nbsp;</p>
@@ -88,7 +98,7 @@
           <span class="type">PinnedColumns</span>
           <span class="punctuation">;</span>
         </p>
-        <p class="current-line">&nbsp;<span class="cursor">&nbsp;</span></p>
+        <p class="current-line"><span class="cursor">&nbsp;</span></p>
         <p>
           <span class="comment">/**</span>
         </p>
@@ -96,7 +106,7 @@
           <span class="comment">&nbsp;* The pinning of columns in data grid (feature design)</span>
         </p>
         <p>
-          <span class="comment">&nbsp;* <span class="comment jsdoc">@warning&nbsp;</span> Will always pin index column first</span>
+          <span class="comment">&nbsp;* <span class="comment jsdoc">@warning</span> Will always pin index column first</span>
         </p>
         <p>
           <span class="comment">&nbsp;*/</span>
@@ -120,6 +130,13 @@
           <span class="punctuation">:</span>
           <span>&nbsp;</span>
           <span class="type parameter">Cols</span>
+          <span class="punctuation">,</span>
+          <span>&nbsp;</span>
+          <span class="declaration diagnostics-warning diagnostics-unused"><span>unusedVariable</span></span>
+          <span class="operator">?</span>
+          <span class="punctuation">:</span>
+          <span>&nbsp;</span>
+          <span class="type builtin">any</span>
           <span class="punctuation bracket l1">)</span>
           <span>&nbsp;</span>
           <span class="punctuation bracket l1">{</span>
@@ -143,10 +160,10 @@
           <span>&nbsp;</span>
           <span class="punctuation">|</span>
           <span>&nbsp;</span>
-          <span class="class builtin">null</span>
+          <span class="constant builtin">null</span>
           <span class="punctuation bracket l2">&gt;</span>
           <span class="punctuation bracket l2">(</span>
-          <span class="class builtin">null</span>
+          <span class="constant builtin">null</span>
           <span class="punctuation bracket l2">)</span>
           <span class="punctuation">;</span>
         </p>
@@ -171,7 +188,7 @@
           <span class="punctuation bracket l2">{</span>
         </p>
         <p>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;</span>
           <span class="function call">setPinnedColumns</span>
           <span class="punctuation bracket l3">(</span>
           <span class="punctuation bracket l4">(</span>
@@ -182,7 +199,7 @@
           <span class="punctuation bracket l4">{</span>
         </p>
         <p>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;</span>
           <span class="operator">if</span>
           <span>&nbsp;</span>
           <span class="punctuation bracket l5">(</span>
@@ -197,15 +214,17 @@
           <span>&nbsp;</span>
           <span class="operator">throw new</span>
           <span>&nbsp;</span>
-          <span class="keyword">Error</span>
+          <span class="class builtin">Error</span>
           <span class="punctuation bracket l5">(</span>
           <span class="string">"Incorrect input."</span>
           <span class="punctuation bracket l5">)</span>
           <span class="punctuation">;</span>
         </p>
-        <p>&nbsp;</p>
         <p>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;</span>
+        </p>
+        <p>
+          <span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;</span>
           <span class="keyword">const</span>
           <span>&nbsp;</span>
           <span class="variable declaration">newLeft</span>
@@ -217,13 +236,13 @@
           <span class="class builtin">Set</span>
           <span class="punctuation bracket l5">(</span>
           <span class="variable">newPinnedColumns</span>
-          <span class="punctuation">.</span>
+          <span class="operator">?.</span>
           <span class="variable member">left</span>
           <span class="punctuation bracket l5">)</span>
           <span class="punctuation">;</span>
         </p>
         <p>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;</span>
           <span class="variable">newLeft</span>
           <span class="punctuation">.</span>
           <span class="function call">delete</span>
@@ -240,7 +259,7 @@
           <span class="comment">// Enforce always first</span>
         </p>
         <p>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;</span>
           <span class="operator">return</span>
           <span>&nbsp;</span>
           <span class="punctuation bracket l5">{</span>
@@ -265,7 +284,7 @@
           <span class="punctuation">;</span>
         </p>
         <p>
-          <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <span>&nbsp;&nbsp;<span class="indent-guide"></span>&nbsp;&nbsp;</span>
           <span class="punctuation bracket l4">}</span>
           <span class="punctuation bracket l3">)</span>
           <span class="punctuation">;</span>
