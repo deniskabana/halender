@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   </head>
-  <body class="syntax dark" style="background:black">
+  <body class="syntax" style="background:black">
     <div class="container">
-      <code class="code rainbow-brackets font-1">
+      <code class="code dark rainbow-brackets font-1">
         <p>
           <span class="keyword import">import</span>
           <span>&nbsp;</span>
@@ -313,6 +313,17 @@
           <span class="punctuation bracket l1">}</span>
         </p>
       </code>
+      <script>
+      // Self invoking fn (document is ready)
+      (function() {
+        const container = document.querySelector('.container');
+        const codeElemDark = document.querySelector('.code');
+        const codeElemLight = codeElemDark.cloneNode(true);
+        codeElemLight.classList.remove('dark');
+        codeElemLight.classList.add('light');
+        container.appendChild(codeElemLight);
+      })();
+      </script>
     </div>
   </body>
 </html>

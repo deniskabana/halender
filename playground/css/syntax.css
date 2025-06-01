@@ -5,7 +5,7 @@ html {
   margin: 0;
 }
 
-.syntax.dark {
+.code.dark {
   /* Colorscheme */
   --color-purple: #c3a6ff;
   --color-yellow: #ffd580;
@@ -55,10 +55,60 @@ html {
   --font-weight-regular: 500;
   --font-weight-bold: 700;
 }
-.syntax.disable-bold {
+.code.light {
+  /* Colorscheme */
+  --color-purple: #9a40b3;
+  --color-yellow: #907002;
+  --color-orange: #bf4030;
+  --color-lime: #339425;
+  --color-cyan: #007ac5;
+  --color-silver: #a2aabc;
+  --color-pink: #bc42ba;
+  --color-blue: #0010b5;
+  --color-blue2: #2590EC;
+  --color-gold: #c98005;
+  --color-purple2: #6f1f7f;
+  --color-white: #171c28;
+  --color-red: #cf2a2c;
+  --color-red2: #cf2a2c;
+  --color-green: #4aaa45;
+
+  --color-bg: #d7dff5;
+  --color-sidebar: #c9d4ea;
+  --color-float: var(--color-sidebar);
+  --color-black: #cad9ed;
+  --color-fg: #223949;
+  --color-text: #223949;
+  --color-comments: #818da6;
+  --color-selection: #b2bacc;
+  --color-contrast: #d2daf8;
+  --color-border: #515772;
+  --color-line_numbers: #a1add6;
+  --color-highlight: #c7cfe5;
+  --color-disabled: #818da6;
+  --color-cursor: #a19bb5;
+  --color-accent: #b29328;
+  --color-error: #cf2a2c;
+  --color-warning: #cfa03a;
+  --color-info: #0070c3;
+  --color-link: #002fc0;
+
+  --font-style-comments: italic;
+  --font-style-functions: normal;
+  --font-style-keywords: italic;
+  --font-style-variables: normal;
+  --font-style-strings: italic;
+  --font-style-types: italic;
+  --font-style-function_call: italic;
+  --font-style-builtins: italic;
+
+  --font-weight-regular: 500;
+  --font-weight-bold: 700;
+}
+.code.disable-bold {
   --font-weight-bold: var(--font-weight-regular);
 }
-.syntax .code {
+.code {
   white-space: nowrap;
   display: block;
   width: 100%;
@@ -75,7 +125,7 @@ html {
   letter-spacing: -0.1px;
   line-height: 1.7;
 }
-.syntax .code p {
+.code p {
   margin: 0;
   display: flex;
   flex-wrap: nowrap;
@@ -145,6 +195,7 @@ html {
 }
 .code .declaration {
   font-weight: var(--font-weight-bold);
+  color: var(--color-fg);
 }
 .code .member {
   color: var(--color-fg);
