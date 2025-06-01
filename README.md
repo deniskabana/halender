@@ -17,6 +17,10 @@ A beautiful, carefully crafted colorscheme for Neovim with support for multiple 
 
 ![Code highlight](assets/screenshots/code-preview.png)
 
+### Color Palette
+
+View the complete color palette with swatches: **[📋 Color Documentation](docs/colors.md)**
+
 ## Theme Generation System
 
 This repository uses a centralized color generation system that ensures consistency across all theme variants.
@@ -45,7 +49,9 @@ This will generate:
 - `playground/css/syntax.css` - CSS for web playground
 - `terminal/Halender.ghostty.conf` - Ghostty terminal theme
 - `terminal/HalenderKitty.conf` - Kitty terminal theme
-- `terminal/Halender.itermcolors` - iTerm2 color scheme (if python available)
+- `terminal/Halender.itermcolors` - iTerm2 color scheme
+- `docs/colors.md` - Color palette documentation with swatches
+- `assets/swatches/*.svg` - Individual color swatch images
 
 ### Adding New Themes
 

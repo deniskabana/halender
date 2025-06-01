@@ -109,11 +109,12 @@ generate_from_template "playground/css/syntax.css.template" "playground/css/synt
 generate_from_template "terminal/Halender.ghostty.conf.template" "terminal/Halender.ghostty.conf"
 generate_from_template "terminal/Halender.kitty.conf.template" "terminal/Halender.kitty.conf"
 
-# Generate iTerm colors using Python script
+# Generate iTerm colors and swatches using Python scripts
 if command -v python3 &>/dev/null; then
   python3 generate_iterm.py
+  python3 generate_swatches.py
 else
-  echo "  ⚠️  Python3 not found, skipping iTerm colors generation"
+  echo "  ⚠️  Python3 not found, skipping iTerm colors and swatch generation"
 fi
 
 echo "✅ All themes generated successfully!"
@@ -123,6 +124,8 @@ echo "  📄 playground/css/syntax.css"
 echo "  🖥️  terminal/Halender.ghostty.conf"
 echo "  🖥️  terminal/Halender.kitty.conf"
 echo "  🖥️  terminal/Halender.itermcolors"
+echo "  🎨 docs/colors.md (color palette documentation)"
+echo "  🎨 assets/swatches/*.svg (color swatch images)"
 echo ""
 echo "To update colors, edit colors.sh and run ./generate.sh again"
 
