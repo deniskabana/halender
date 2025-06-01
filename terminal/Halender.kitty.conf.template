@@ -1,0 +1,41 @@
+# Halender Colorscheme for Kitty
+
+foreground            @@H_DARK_FG@@
+background            @@H_DARK_BG@@
+selection_foreground  @@H_DARK_BG@@
+selection_background  @@H_DARK_PURPLE@@
+url_color             @@H_DARK_LINK@@
+cursor                @@H_DARK_CURSOR@@
+cursor_text_color     @@H_DARK_BG@@
+
+# black
+color0   @@H_DARK_SIDEBAR@@
+color8   @@H_DARK_COMMENTS@@
+
+# red
+color1   @@H_DARK_RED@@
+color9   @@H_DARK_RED@@
+
+# green
+color2   @@H_DARK_LIME@@
+color10  @@H_DARK_LIME@@
+
+# yellow
+color3   @@H_DARK_YELLOW@@
+color11  @@H_DARK_YELLOW@@
+
+# blue
+color4  @@H_DARK_LINK@@
+color12 @@H_DARK_LINK@@
+
+# magenta
+color5   @@H_DARK_PURPLE@@
+color13  @@H_DARK_PURPLE@@
+
+# cyan
+color6   @@H_DARK_CYAN@@
+color14  @@H_DARK_CYAN@@
+
+# white
+color7   @@H_DARK_FG@@
+color15  @@H_DARK_COMMENTS@@
