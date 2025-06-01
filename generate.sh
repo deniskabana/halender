@@ -109,12 +109,13 @@ generate_from_template "playground/css/syntax.css.template" "playground/css/synt
 generate_from_template "terminal/Halender.ghostty.conf.template" "terminal/Halender.ghostty.conf"
 generate_from_template "terminal/Halender.kitty.conf.template" "terminal/Halender.kitty.conf"
 
-# Generate iTerm colors and swatches using Python scripts
+# Generate iTerm colors, Apple Terminal, and swatches using Python scripts
 if command -v python3 &>/dev/null; then
   python3 generate_iterm.py
+  python3 generate_apple_terminal.py
   python3 generate_swatches.py
 else
-  echo "  ⚠️  Python3 not found, skipping iTerm colors and swatch generation"
+  echo "  ⚠️  Python3 not found, skipping iTerm, Apple Terminal, and swatch generation"
 fi
 
 echo "✅ All themes generated successfully!"
@@ -124,6 +125,7 @@ echo "  📄 playground/css/syntax.css"
 echo "  🖥️  terminal/Halender.ghostty.conf"
 echo "  🖥️  terminal/Halender.kitty.conf"
 echo "  🖥️  terminal/Halender.itermcolors"
+echo "  🖥️  terminal/Halender.terminal (Apple Terminal)"
 echo "  🎨 docs/colors.md (color palette documentation)"
 echo "  🎨 assets/swatches/*.svg (color swatch images)"
 echo ""

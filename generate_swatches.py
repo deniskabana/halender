@@ -84,7 +84,11 @@ def generate_color_table():
                 if color_name.endswith('2'):
                     display_name = display_name[:-1] + ' 2'
                 
-                markdown_content += f"| **{display_name}** | ![{dark_color}]({dark_swatch}) `{dark_color}` | ![{light_color}]({light_swatch}) `{light_color}` | `{color_name}` |\n"
+                # Use leading slash for URLs
+                dark_swatch_url = f"/{dark_swatch}"
+                light_swatch_url = f"/{light_swatch}"
+                
+                markdown_content += f"| **{display_name}** | ![{dark_color}]({dark_swatch_url}) `{dark_color}` | ![{light_color}]({light_swatch_url}) `{light_color}` | `{color_name}` |\n"
         
         markdown_content += "\n"
     

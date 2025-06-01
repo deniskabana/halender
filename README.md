@@ -50,6 +50,7 @@ This will generate:
 - `terminal/Halender.ghostty.conf` - Ghostty terminal theme
 - `terminal/HalenderKitty.conf` - Kitty terminal theme
 - `terminal/Halender.itermcolors` - iTerm2 color scheme
+- `terminal/Halender.terminal` - Apple Terminal theme
 - `docs/colors.md` - Color palette documentation with swatches
 - `assets/swatches/*.svg` - Individual color swatch images
 
