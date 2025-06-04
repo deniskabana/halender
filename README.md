@@ -67,8 +67,10 @@ Terminals:
 <table>
   <tr>
     <td>
-      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
-      <a href="./terminals/kitty/">Kitty</a>
+      <a href="./terminals/kitty/" display="block" width="100" align="center">
+        <img src="./assets/logos/logo-kitty.png" height="20" /><br />
+        Kitty
+      </a>
     </td>
     <td>
       <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
