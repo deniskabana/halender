@@ -42,7 +42,7 @@ Editors:
 <br /></br />
 <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="20" /></a>
 <a href="./editors/nvim/">Neovim</a>
-·
+&nbsp;·&nbsp;
 <a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" height="20" /></a>
 <a href="./editors/vscode/">VSCode</a>
 <i>(coming soon)</i>
@@ -51,85 +51,18 @@ Editors:
 <h6>
 Terminals:
 <br /></br />
-<a href="./terminals/kitty/" display="block" width="100" align="center">
-  <img src="./assets/logos/logo-kitty.png" height="20" /><br />
-  Kitty
-</a>
-·
+<a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
+<a href="./terminals/kitty/">Kitty</a>
+&nbsp;·&nbsp;
 <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
 <a href="./terminals/ghostty/">Ghostty</a>
-·
+&nbsp;·&nbsp;
 <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
 <a href="./terminals/iterm2/">iTerm 2</a>
 ·
 <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
 <a href="./terminals/apple-terminal/">Apple terminal</a>
 </h6>
-
-<table>
-  <tr>
-    <td>
-      <a href="./terminals/kitty/" display="block" width="100" align="center">
-        <img src="./assets/logos/logo-kitty.png" height="20" /><br />
-        Kitty
-      </a>
-    </td>
-    <td>
-      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
-      <a href="./terminals/ghostty/">Ghostty</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
-      <a href="./terminals/kitty/">Kitty</a>
-    </td>
-    <td>
-      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
-      <a href="./terminals/ghostty/">Ghostty</a>
-    </td>
-    <td>
-      <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
-      <a href="./terminals/iterm2/">iTerm 2</a>
-    </td>
-    <td>
-      <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
-      <a href="./terminals/apple-terminal/">Apple terminal</a>
-    </td>
-    <td>
-      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
-      <a href="./terminals/kitty/">Kitty</a>
-    </td>
-    <td>
-      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
-      <a href="./terminals/ghostty/">Ghostty</a>
-    </td>
-    <td>
-      <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
-      <a href="./terminals/iterm2/">iTerm 2</a>
-    </td>
-    <td>
-      <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
-      <a href="./terminals/apple-terminal/">Apple terminal</a>
-    </td>
-    <td>
-      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
-      <a href="./terminals/kitty/">Kitty</a>
-    </td>
-    <td>
-      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
-      <a href="./terminals/ghostty/">Ghostty</a>
-    </td>
-    <td>
-      <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
-      <a href="./terminals/iterm2/">iTerm 2</a>
-    </td>
-    <td>
-      <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
-      <a href="./terminals/apple-terminal/">Apple terminal</a>
-    </td>
-  </tr>
-</table>
 
 &nbsp;
 
