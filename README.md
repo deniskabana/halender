@@ -37,32 +37,34 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 ### 📀 Ports
 
-<h6>
-Editors:
-<ul>
-<li>
-  <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="20" /></a>
-  <a href="./editors/nvim/">Neovim</a>
-</li>
-<li>
-  <a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" height="20" /></a>
-  <a href="./editors/vscode/">VSCode</a>
-  <i>(coming soon)</i>
-</li>
-</ul>
-</h6>
+<table>
+  <tr>
+    <th>Editors</th>
+    <th>Terminals</th>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>
+          <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="22" /></a>
+          <a href="./editors/nvim/">Neovim</a>
+        </li>
+        <li>
+          <a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" height="22" /></a>
+          <a href="./editors/vscode/">VSCode</a>
+          <i>(coming soon)</i>
+        </li>
+      </ul>
+    </td>
+    <td>
+      <div><a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a><br /><a href="./terminals/kitty/">Kitty</a></div>
+      <div><a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a><br /><a href="./terminals/ghostty/">Ghostty</a></div>
+      <div><a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a><br /><a href="./terminals/iterm2/">iTerm 2</a></div>
+      <div><a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a><br /><a href="./terminals/apple-terminal/">Apple&nbsp;terminal</a></div>
+    </td>
 
-<h6>
-Terminals:
-<br /></br />
-<span><a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a><br /><a href="./terminals/kitty/">Kitty</a></span>
-&nbsp;·&nbsp;
-<span><a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a><br /><a href="./terminals/ghostty/">Ghostty</a></span>
-&nbsp;·&nbsp;
-<span><a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a><br /><a href="./terminals/iterm2/">iTerm 2</a></span>
-&nbsp;·&nbsp;
-<span><a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a><br /><a href="./terminals/apple-terminal/">Apple&nbsp;terminal</a></span>
-</h6>
+  </tr>
+</table>
 
 &nbsp;
 
