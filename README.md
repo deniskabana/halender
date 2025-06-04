@@ -39,42 +39,54 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 <table width="100%">
   <tr>
-    <th>Editors</th>
-    <th>Terminals</th>
+    <th colspan="2">Editors</th>
+    <th colspan="2">Terminals</th>
   </tr>
   <tr>
-    <td valign="top">
-      <ul>
-        <li>
-          <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="20" /></a>
-          <a href="./editors/nvim/">Neovim</a>
-        </li>
-        <li>
-          <a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" height="20" /></a>
-          <a href="./editors/vscode/">VSCode</a>
-          <i>(coming soon)</i>
-        </li>
-      </ul>
+    <td>
+      <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="20" /></a>
     </td>
     <td>
-      <ul>
-        <li>
-          <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
-          <a href="./terminals/kitty/">Kitty</a>
-        </li>
-        <li>
+      <a href="./editors/nvim/">Neovim</a>
+    </td>
+    <td>
+      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
+    <td>
+    </td>
+      <a href="./terminals/kitty/">Kitty</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" height="20" /></a>
+    </td>
+    <td>
+      <a href="./editors/vscode/">VSCode</a>
+      <i>(coming soon)</i>
+    </td>
+        <td>
           <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
+        <td>
+        </td>
           <a href="./terminals/ghostty/">Ghostty</a>
-        </li>
-        <li>
-          <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
-          <a href="./terminals/iterm2/">iTerm 2</a>
-        </li>
-        <li>
-          <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
-          <a href="./terminals/apple-terminal/">Apple&nbsp;terminal</a>
-        </li>
-      </ul>
+        </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>
+      <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
+    <td>
+    </td>
+      <a href="./terminals/iterm2/">iTerm 2</a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>
+      <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
+    <td>
+    </td>
+      <a href="./terminals/apple-terminal/">Apple&nbsp;terminal</a>
     </td>
   </tr>
 </table>
