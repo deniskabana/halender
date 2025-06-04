@@ -48,6 +48,8 @@ Editors:
 <i>(coming soon)</i>
 </h6>
 
+&nbsp;
+
 <h6>
 Terminals:
 <br /></br />
@@ -59,7 +61,7 @@ Terminals:
 &nbsp;·&nbsp;
 <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
 <a href="./terminals/iterm2/">iTerm 2</a>
-·
+&nbsp;·&nbsp;
 <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
 <a href="./terminals/apple-terminal/">Apple terminal</a>
 </h6>
