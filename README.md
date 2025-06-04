@@ -1,8 +1,8 @@
-## Halender
+# Halender
 
-> !CAUTION
-> This section is still WIP.
+> [!CAUTION]
+> This section of the docs is under construction.
 
-### Color Palette
+## Color Palette
 
 View the complete color palette with swatches: **[📋 Color Documentation](docs/colors.md)**

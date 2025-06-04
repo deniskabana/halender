@@ -1,0 +1,1 @@
+# Halender for Ghostty

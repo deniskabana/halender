@@ -1,16 +1,24 @@
-> !CAUTION
-> This section is still WIP.
+# Development Documentation
+
+> [!CAUTION]
+> This section of the docs is under construction.
+
+## playground
+
+The playground is simply said a website. For now it's a showcase of the theme on a code and it supports CSS variable modification to allow live theme and options switching.
+
+_Note: This will probably be switched out for live Monaco editor with the theme applied in the future once VSCode theme is ready to be shipped._
 
 ## Theme Generation System
 
-This repository uses a centralized color generation system that ensures consistency across all theme variants.
+**Halender uses a centralized color generation system.** This makes maintaining multiple ports possible on short time. Adding any port also means adding an option to generate a new theme file for it.
 
 ### Source of Truth
 
-All colors are defined in `colors.sh` which exports environment variables for all theme colors:
+> [!IMPORTANT]
+> TODO: A different approach for storing the palette. Ideally alongside meta, like csv or json.
 
-> [!CAUTION]
-> TODO: Better source of truth format, safer evaluation
+All colors are defined in `colors.sh` which exports environment variables for all theme colors:
 
 ```bash
 # Dark theme colors
@@ -21,6 +29,11 @@ export H_DARK_YELLOW="#ffd580"
 
 ### Generating Themes
 
+> [!CAUTION]
+> TODO: Generating and managing themes needs to be more consistent and predictable.
+
+**Pre-requisites:** `bash` and `python 3.9`
+
 To generate all theme files from the color definitions:
 
 ```bash
@@ -29,30 +42,14 @@ To generate all theme files from the color definitions:
 
 This will generate:
 
-- `playground/css/syntax.css` - CSS for web playground
-- `terminal/Halender.ghostty.conf` - Ghostty terminal theme
-- `terminal/HalenderKitty.conf` - Kitty terminal theme
-- `terminal/Halender.itermcolors` - iTerm2 color scheme
-- `terminal/Halender.terminal` - Apple Terminal theme
-- `docs/colors.md` - Color palette documentation with swatches
-- `assets/swatches/*.svg` - Individual color swatch images
-
-### Adding New Themes
-
-1. **Create a template file** with placeholder tokens like `@@H_DARK_PURPLE@@`
-2. **Update `generate.sh`** to process your template
-3. **Run `./generate.sh`** to generate the final theme file
-
-> [!NOTE]
-> For complex formats (like iTerm3's XML), consider creating a dedicated generator script (see `generate_iterm.py`).
-
-## Development
-
-Requires `bash` and `python3` for script execution.
-
-### Development Workflow
-
-1. Edit colors in `colors.sh`
-2. Run `./generate.sh` to update all theme files
-3. Test themes across different applications
-4. Commit changes when satisfied
+- 🖥️ Web Playground CSS in `dev/playground/css/syntax.css`
+- 📚 Documentation (repo docs)
+  - Color palette documentation in `docs/colors.md` **TODO: Consider moving to main README.md**
+  - Color swatch images in `assets/swatches`
+- 🛠️ Editor themes
+  - Neovim in `editors/nvim`
+- 📟 Terminal themes
+  - Ghostty in `terminals/ghostty`
+  - Kitty in `terminals/kitty`
+  - iTerm2 in `terminals/iterm2`
+  - Apple Terminal in `terminals/apple-terminal`
