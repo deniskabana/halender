@@ -40,15 +40,16 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 <table>
   <tr>
     <th>Editors</th>
-    <td>
-      <a href="./editors/nvim/">
-        <img src="./assets/logos/logo-neovim.png" height="32" />
+    <td valign="center">
+      <a href="./editors/nvim/" align="center">
+        <img src="./assets/logos/logo-neovim.png" height="26" />
         Neovim
       </a>
-    </td>
-    <td>
-      <img src="./assets/logos/logo-vscode.png" height="32" />
-      VSCode
+      ·
+      <a href="./editors/vscode/" align="center">
+        <img src="./assets/logos/logo-vscode.png" height="26" />
+        VSCode (coming soon!)
+      </a>
     </td>
   </tr>
   <tr>
