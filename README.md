@@ -44,13 +44,13 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
   </tr>
   <tr>
     <td>
-      <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="20" /></a>
+      <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="20" /></a>
     </td>
     <td>
       <a href="./editors/nvim/">Neovim</a>
     </td>
     <td>
-      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
+      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" width="20" /></a>
     </td>
     <td>
       <a href="./terminals/kitty/">Kitty</a>
@@ -58,14 +58,14 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
   </tr>
   <tr>
     <td>
-      <a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" height="20" /></a>
+      <a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" width="20" /></a>
     </td>
     <td>
       <a href="./editors/vscode/">VSCode</a>
       <i>(coming soon)</i>
     </td>
     <td>
-      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
+      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" width="20" /></a>
     </td>
     <td>
       <a href="./terminals/ghostty/">Ghostty</a>
@@ -74,7 +74,7 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
   <tr>
     <td colspan="2"></td>
     <td>
-      <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
+      <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" width="20" /></a>
     </td>
     <td>
       <a href="./terminals/iterm2/">iTerm 2</a>
@@ -83,7 +83,7 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
   <tr>
     <td colspan="2"></td>
     <td>
-      <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
+      <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" width="20" /></a>
     </td>
     <td>
       <a href="./terminals/apple-terminal/">Apple&nbsp;terminal</a>
