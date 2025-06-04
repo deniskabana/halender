@@ -37,7 +37,7 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 ### 📀 Ports
 
-<table>
+<table width="100%">
   <tr>
     <th>Editors</th>
     <th>Terminals</th>
