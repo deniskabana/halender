@@ -39,13 +39,17 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 <h6>
 Editors:
-<br /></br />
-<a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="20" /></a>
-<a href="./editors/nvim/">Neovim</a>
-&nbsp;·&nbsp;
-<a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" height="20" /></a>
-<a href="./editors/vscode/">VSCode</a>
-<i>(coming soon)</i>
+<ul>
+<li>
+  <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="20" /></a>
+  <a href="./editors/nvim/">Neovim</a>
+</li>
+<li>
+  <a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" height="20" /></a>
+  <a href="./editors/vscode/">VSCode</a>
+  <i>(coming soon)</i>
+</li>
+</ul>
 </h6>
 
 <h6>
