@@ -48,22 +48,16 @@ Editors:
 <i>(coming soon)</i>
 </h6>
 
-&nbsp;
-
 <h6>
 Terminals:
 <br /></br />
-<a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
-<a href="./terminals/kitty/">Kitty</a>
+<span><a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>&nbsp;<a href="./terminals/kitty/">Kitty</a></span>
 &nbsp;·&nbsp;
-<a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
-<a href="./terminals/ghostty/">Ghostty</a>
+<span><a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>&nbsp;<a href="./terminals/ghostty/">Ghostty</a></span>
 &nbsp;·&nbsp;
-<a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
-<a href="./terminals/iterm2/">iTerm 2</a>
+<span><a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>&nbsp;<a href="./terminals/iterm2/">iTerm 2</a></span>
 &nbsp;·&nbsp;
-<a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
-<a href="./terminals/apple-terminal/">Apple terminal</a>
+<span><a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>&nbsp;<a href="./terminals/apple-terminal/">Apple&nbsp;terminal</a></span>
 </h6>
 
 &nbsp;
