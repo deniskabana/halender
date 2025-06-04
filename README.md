@@ -64,6 +64,69 @@ Terminals:
 <a href="./terminals/apple-terminal/">Apple terminal</a>
 </h6>
 
+<table>
+  <tr>
+    <td>
+      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
+      <a href="./terminals/kitty/">Kitty</a>
+    </td>
+    <td>
+      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
+      <a href="./terminals/ghostty/">Ghostty</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
+      <a href="./terminals/kitty/">Kitty</a>
+    </td>
+    <td>
+      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
+      <a href="./terminals/ghostty/">Ghostty</a>
+    </td>
+    <td>
+      <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
+      <a href="./terminals/iterm2/">iTerm 2</a>
+    </td>
+    <td>
+      <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
+      <a href="./terminals/apple-terminal/">Apple terminal</a>
+    </td>
+    <td>
+      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
+      <a href="./terminals/kitty/">Kitty</a>
+    </td>
+    <td>
+      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
+      <a href="./terminals/ghostty/">Ghostty</a>
+    </td>
+    <td>
+      <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
+      <a href="./terminals/iterm2/">iTerm 2</a>
+    </td>
+    <td>
+      <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
+      <a href="./terminals/apple-terminal/">Apple terminal</a>
+    </td>
+    <td>
+      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
+      <a href="./terminals/kitty/">Kitty</a>
+    </td>
+    <td>
+      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
+      <a href="./terminals/ghostty/">Ghostty</a>
+    </td>
+    <td>
+      <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
+      <a href="./terminals/iterm2/">iTerm 2</a>
+    </td>
+    <td>
+      <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
+      <a href="./terminals/apple-terminal/">Apple terminal</a>
+    </td>
+  </tr>
+</table>
+
 &nbsp;
 
 ### 🎨 Palette
