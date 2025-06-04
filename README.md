@@ -40,26 +40,27 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 <h6 align="center">
 Editors:
 <br /></br />
-<a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="18" /></a>
+<a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="20" /></a>
 <a href="./editors/nvim/">Neovim</a>
 ·
-<a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" height="18" /></a>
+<a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" height="20" /></a>
 <a href="./editors/vscode/">VSCode</a>
 <i>(coming soon)</i>
 </h6>
-<hr />
-<h6 align="center">Terminals</h6>
+
 <h6 align="center">
-<a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="18" /></a>
+Terminals:
+<br /></br />
+<a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
 <a href="./terminals/kitty/">Kitty</a>
 ·
-<a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="18" /></a>
+<a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
 <a href="./terminals/ghostty/">Ghostty</a>
 ·
-<a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="18" /></a>
+<a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
 <a href="./terminals/iterm2/">iTerm 2</a>
 ·
-<a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="18" /></a>
+<a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
 <a href="./terminals/apple-terminal/">Apple terminal</a>
 </h6>
 
