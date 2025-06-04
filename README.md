@@ -37,38 +37,38 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 ### 📀 Ports
 
-<div align="center">
-  <table>
-    <tr>
-      <th>Editor</th>
-      <th>Terminal</th>
-    </tr>
-    <tr>
-      <td>
-        <div>
-          Neovim
-        </div>
-        <div>
-          VSCode
-        </div>
-      </td>
-      <td>
-        <div>
-          Ghostty
-        </div>
-        <div>
-          iTerm 2
-        </div>
-        <div>
-          Kitty
-        </div>
-        <div>
-          Apple terminal
-        </div>
-      </td>
-    </tr>
-  </table>
-</div>
+<table>
+  <tr>
+    <th>Editors</th>
+    <td>
+      <img src="./assets/logos/logo-neovim.png" height="48" />
+      Neovim
+    </td>
+    <td>
+      <img src="./assets/logos/logo-vscode.png" height="48" />
+      VSCode
+    </td>
+  </tr>
+  <tr>
+    <th>Terminals</th>
+    <td>
+      <img src="./assets/logos/logo-kitty.png" height="48" />
+      Kitty
+    </td>
+    <td>
+      <img src="./assets/logos/logo-ghostty.png" height="48" />
+      Ghostty
+    </td>
+    <td>
+      <img src="./assets/logos/logo-iterm.png" height="48" />
+      iTerm 2
+    </td>
+    <td>
+      <img src="./assets/logos/logo-apple-terminal.png" height="48" />
+      Apple terminal
+    </td>
+  </tr>
+</table>
 
 &nbsp;
 
