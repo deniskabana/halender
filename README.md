@@ -37,18 +37,24 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 ### 📀 Ports
 
+**Editors**:
+<a href="./editors/nvim/">
+<img src="./assets/logos/logo-neovim.png" height="18" />
+Neovim
+</a>
+
 <table>
   <tr>
     <th>Editors</th>
     <td valign="center">
-      <img src="./assets/logos/logo-neovim.png" height="26" />
+      <img src="./assets/logos/logo-neovim.png" height="18" />
       <a href="./editors/nvim/">
         Neovim
       </a>
       &nbsp;
       ·
       &nbsp;
-      <img src="./assets/logos/logo-vscode.png" height="26" />
+      <img src="./assets/logos/logo-vscode.png" height="16" />
       <a href="./editors/vscode/">
         VSCode
       </a>
