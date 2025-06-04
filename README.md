@@ -51,8 +51,8 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
     </td>
     <td>
       <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
-    <td>
     </td>
+    <td>
       <a href="./terminals/kitty/">Kitty</a>
     </td>
   </tr>
@@ -64,19 +64,19 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
       <a href="./editors/vscode/">VSCode</a>
       <i>(coming soon)</i>
     </td>
-        <td>
-          <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
-        <td>
-        </td>
-          <a href="./terminals/ghostty/">Ghostty</a>
-        </td>
+    <td>
+      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
+    </td>
+    <td>
+      <a href="./terminals/ghostty/">Ghostty</a>
+    </td>
   </tr>
   <tr>
     <td colspan="2"></td>
     <td>
       <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" height="20" /></a>
-    <td>
     </td>
+    <td>
       <a href="./terminals/iterm2/">iTerm 2</a>
     </td>
   </tr>
@@ -84,8 +84,8 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
     <td colspan="2"></td>
     <td>
       <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" height="20" /></a>
-    <td>
     </td>
+    <td>
       <a href="./terminals/apple-terminal/">Apple&nbsp;terminal</a>
     </td>
   </tr>
