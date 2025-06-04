@@ -37,7 +37,7 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 ### 📀 Ports
 
-<h6 align="center">
+<h6>
 Editors:
 <br /></br />
 <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="20" /></a>
@@ -48,11 +48,13 @@ Editors:
 <i>(coming soon)</i>
 </h6>
 
-<h6 align="center">
+<h6>
 Terminals:
 <br /></br />
-<a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" height="20" /></a>
-<a href="./terminals/kitty/">Kitty</a>
+<a href="./terminals/kitty/" display="block" width="100" align="center">
+  <img src="./assets/logos/logo-kitty.png" height="20" /><br />
+  Kitty
+</a>
 ·
 <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" height="20" /></a>
 <a href="./terminals/ghostty/">Ghostty</a>
