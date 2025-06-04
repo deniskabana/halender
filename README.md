@@ -41,11 +41,13 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
   <tr>
     <th>Editors</th>
     <td>
-      <img src="./assets/logos/logo-neovim.png" height="48" />
-      Neovim
+      <a href="./editors/nvim/">
+        <img src="./assets/logos/logo-neovim.png" height="32" />
+        Neovim
+      </a>
     </td>
     <td>
-      <img src="./assets/logos/logo-vscode.png" height="48" />
+      <img src="./assets/logos/logo-vscode.png" height="32" />
       VSCode
     </td>
   </tr>
