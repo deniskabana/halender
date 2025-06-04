@@ -37,36 +37,19 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 ### 📀 Ports
 
-**Editors**:
-&nbsp;
-<a href="./editors/nvim/"> <img src="./assets/logos/logo-neovim.png" height="18" /> </a>
-<a href="./editors/nvim/"> Neovim </a>
-&nbsp;
+<h6 align="center">
+Editors
+
+<a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" height="18" /></a>
+<a href="./editors/nvim/">Neovim</a>
 ·
-&nbsp;
-<a href="./editors/vscode/"> <img src="./assets/logos/logo-vscode.png" height="18" /> </a>
-<a href="./editors/vscode/"> VSCode </a>
+<a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" height="18" /></a>
+<a href="./editors/vscode/">VSCode</a>
 <i>(coming soon)</i>
 
-<table>
-  <tr>
-    <th>Editors</th>
-    <td valign="center">
-      <img src="./assets/logos/logo-neovim.png" height="18" />
-      <a href="./editors/nvim/">
-        Neovim
-      </a>
-      &nbsp;
-      ·
-      &nbsp;
-      <img src="./assets/logos/logo-vscode.png" height="16" />
-      <a href="./editors/vscode/">
-        VSCode
-      </a>
-      <i>(coming soon)</i>
-    </td>
-  </tr>
+</h6>
 
+<table>
   <tr>
     <th>Terminals</th>
     <td>
