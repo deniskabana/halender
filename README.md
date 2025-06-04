@@ -41,34 +41,40 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
   <tr>
     <th>Editors</th>
     <td valign="center">
-      <a href="./editors/nvim/" align="center">
+      <a href="./editors/nvim/">
         <img src="./assets/logos/logo-neovim.png" height="26" />
         Neovim
       </a>
       ·
-      <a href="./editors/vscode/" align="center">
+      <a href="./editors/vscode/">
         <img src="./assets/logos/logo-vscode.png" height="26" />
         VSCode (coming soon!)
       </a>
     </td>
   </tr>
+
   <tr>
     <th>Terminals</th>
     <td>
-      <img src="./assets/logos/logo-kitty.png" height="48" />
-      Kitty
-    </td>
-    <td>
-      <img src="./assets/logos/logo-ghostty.png" height="48" />
-      Ghostty
-    </td>
-    <td>
-      <img src="./assets/logos/logo-iterm.png" height="48" />
-      iTerm 2
-    </td>
-    <td>
-      <img src="./assets/logos/logo-apple-terminal.png" height="48" />
-      Apple terminal
+      <a href="./terminals/kitty/">
+        <img src="./assets/logos/logo-kitty.png" height="26" />
+        Kitty
+      </a>
+      ·
+      <a href="./terminals/ghostty/">
+        <img src="./assets/logos/logo-ghostty.png" height="26" />
+        Ghostty
+      </a>
+      ·
+      <a href="./terminals/iterm2/">
+        <img src="./assets/logos/logo-iterm.png" height="26" />
+        iTerm 2
+      </a>
+      ·
+      <a href="./terminals/apple-terminal/">
+        <img src="./assets/logos/logo-apple-terminal.png" height="26" />
+        Apple terminal
+      </a>
     </td>
   </tr>
 </table>
