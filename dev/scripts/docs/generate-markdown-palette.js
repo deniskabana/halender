@@ -19,7 +19,7 @@ async function init() {
     throw new Error(`File ${outputPath} does not contain the required flags: ${flagStart} and ${flagEnd}`);
   }
 
-  let md = '<details>\n<summary>🌙 Dark mode</summary>\n<table>\n  <tr>\n    <th>Color</th>\n    <th>Hex</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
+  let md = '<details>\n<summary><h4>🌙 Dark mode</h4></summary>\n<table>\n  <tr>\n    <th>Color</th>\n    <th>Hex</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
 
   // TODO: Generate multiple tables for each group and for dark/light mode
   palette.forEach(color => {

@@ -87,7 +87,7 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 <!-- GEN:PALETTE:START -->
 
 <details>
-<summary>🌙 Dark mode</summary>
+<summary><h4>🌙 Dark mode</h4></summary>
 <table>
   <tr>
     <th>Color</th>
