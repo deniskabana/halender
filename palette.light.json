@@ -9,7 +9,7 @@
     "group": "accent",
     "hex": "#cf2a2c",
     "name": "ruby",
-    "description": "Error, Danger, Critical action"
+    "description": "Status - Error, Danger, Critical action"
   },
   {
     "group": "accent",
@@ -27,7 +27,7 @@
     "group": "accent",
     "hex": "#c98005",
     "name": "citrine",
-    "description": "Warning, CTA"
+    "description": "Status - Warning, CTA"
   },
   {
     "group": "accent",
@@ -39,7 +39,7 @@
     "group": "accent",
     "hex": "#4aaa45",
     "name": "forest",
-    "description": "Success, Positive action"
+    "description": "Status - Success, Positive action"
   },
   {
     "group": "accent",
@@ -57,7 +57,7 @@
     "group": "accent",
     "hex": "#2590EC",
     "name": "cobalt",
-    "description": "TBD, CTA"
+    "description": "Status - Info, CTA"
   },
   {
     "group": "accent",
@@ -76,5 +76,53 @@
     "hex": "#bc42ba",
     "name": "magenta",
     "description": "Decorator, Generic Type, Uncommon keyword, Secondary accent, CTA"
+  },
+  {
+    "group": "text",
+    "hex": "#222939",
+    "name": "mist",
+    "description": "Default text, Variable declaration"
+  },
+  {
+    "group": "text",
+    "hex": "#171c28",
+    "name": "snow",
+    "description": "High contrast text (RARE)"
+  },
+  {
+    "group": "text",
+    "hex": "#223949",
+    "name": "slate",
+    "description": "Dark text, Muted text, Inline suggestion"
+  },
+  {
+    "group": "text",
+    "hex": "#818da6",
+    "name": "storm",
+    "description": "Comment, Disabled text, Less important text"
+  },
+  {
+    "group": "text",
+    "hex": "#a1add6",
+    "name": "iron",
+    "description": "Line number, Inactive text, Inactive UI element"
+  },
+  {
+    "group": "surface",
+    "hex": "#e7dff5",
+    "name": "midnight",
+    "description": "Background, Main surface, Editor background"
+  },
+  {
+    "group": "surface",
+    "hex": "#c9d4ea",
+    "name": "obsidian",
+    "description": "Sidebar, Panel, Secondary surface"
+  },
+  {
+    "group": "surface",
+    "hex": "#b2bacc",
+    "name": "dusk",
+    "description": "Selection, Highlight, Active line, Elevated surface"
   }
 ]

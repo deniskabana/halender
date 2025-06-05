@@ -1,0 +1,56 @@
+{
+  "name": "halender-vscode",
+  "displayName": "Halender Theme",
+  "description": "A dark blue theme for VS Code based on the Halcyon theme for VSCode",
+  "version": "0.0.1",
+  "publisher": "deniskabana",
+  "icon": "images/logo.png",
+  "author": {
+    "name": "Denis Kabana",
+    "email": "denis.kabana@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deniskabana/halender/tree/add-vscode-theme/editors/vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/deniskabana/halender/issues",
+    "email": "denis.kabana@gmail.com"
+  },
+  "homepage": "https://github.com/deniskabana/halender/blob/add-vscode-theme/editors/vscode/README.md",
+  "galleryBanner": {
+    "color": "#1a253d",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.18.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "Themes",
+    "Dark Theme",
+    "color-theme",
+    "Halender"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Halender",
+        "uiTheme": "vs-dark",
+        "path": "./themes/halender-color-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/eslint-parser": "^7.22.5",
+    "@upstatement/eslint-config": "^2.0.0",
+    "@upstatement/prettier-config": "^1.1.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
+    "vsce": "^2.15.0"
+  }
+}
