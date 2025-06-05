@@ -17,7 +17,7 @@ async function init() {
 
   // Generate SVG
   const size = 20;
-  const radius = 4;
+  const radius = 6;
   const borderColor = "#666666"
 
   paletteDark.forEach(color => {
