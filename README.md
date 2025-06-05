@@ -23,18 +23,6 @@
 
 &nbsp;
 
-### 🧠 Design Philosophy
-
-- **Colorful is better than colorless**: the colorfulness of something contributes to the distinction amongst the parts
-  of that _something_, making it marginally easier to understand how things are structured.
-- **There should be balance**: not too dull, not too bright. Suitability under various light conditions is a must.
-- **Harmony is superior to dissonance**: vivacious colors must complement each other.
-- **Contrast and priority correlation**: use visual recognition patterns to convey the importance of elements.
-
-_Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catppuccin) project._
-
-&nbsp;
-
 ### 📀 Ports
 
 <h5>Editors</h5>
@@ -76,8 +64,22 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 &nbsp;
 
+### 🧠 Design Philosophy
+
+- **Colorful is better than colorless**: the colorfulness of something contributes to the distinction amongst the parts
+  of that _something_, making it marginally easier to understand how things are structured.
+- **There should be balance**: not too dull, not too bright. Suitability under various light conditions is a must.
+- **Harmony is superior to dissonance**: vivacious colors must complement each other.
+- **Contrast and priority correlation**: use visual recognition patterns to convey the importance of elements.
+
+_Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catppuccin) project._
+
+&nbsp;
+
 ### 🎨 Palette
+
+<!-- GEN:PALETTE:START -->
 
 View the complete color palette with swatches: **[📋 Color Documentation](docs/colors.md)**
 
-<!-- This is a markdown comment that should not get rendered -->
+<!-- GEN:PALETTE:END -->
