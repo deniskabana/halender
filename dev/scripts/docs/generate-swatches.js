@@ -15,13 +15,13 @@ async function init() {
   fs.readdirSync(outputDir).forEach(file => fs.rmSync(`${outputDir}/${file}`));
 
   // Generate SVG
-  const size = 28;
-  const radius = 14;
+  const size = 20;
+  const radius = 4;
   const borderColor = "#666666"
 
   palette.forEach(color => {
     let svg = `<svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">\n`;
-    svg += `  <circle cx="${radius}" cy="${radius}" r="${radius}" fill="${color.hex}" stroke="${borderColor}" stroke-width="1" />\n`;
+    svg += `  <rect width="${size}" height="${size}" ry="${radius}" rx="${radius}" fill="${color.hex}" stroke="${borderColor}" stroke-width="1" />\n`;
     svg += `</svg>`;
     fs.writeFileSync(path.join(outputDir, `${color.name}_dark.svg`), svg);
   });

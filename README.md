@@ -89,95 +89,92 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
     <th>Description</th>
   </tr>
   <tr>
-    <td colspan="4" style="background-color: #f0f0f0; font-weight: bold;">accent</td>
-  </tr>
-  <tr>
     <td><img src="./assets/swatches/crimson_dark.svg" alt="#ef6b73" /></td>
-    <td>`#ef6b73`</td>
+    <td><h6><code>#ef6b73</code></h6></td>
     <td><h6>Crimson</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>TBD</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/ruby_dark.svg" alt="#cf2a2c" /></td>
-    <td>`#cf2a2c`</td>
+    <td><h6><code>#cf2a2c</code></h6></td>
     <td><h6>Ruby</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>Error, Danger, Critical action</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/amber_dark.svg" alt="#ffae57" /></td>
-    <td>`#ffae57`</td>
+    <td><h6><code>#ffae57</code></h6></td>
     <td><h6>Amber</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>Number, Operators, Decisive keyword (e.g. return)</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/gold_dark.svg" alt="#ffd580" /></td>
-    <td>`#ffd580`</td>
+    <td><h6><code>#ffd580</code></h6></td>
     <td><h6>Gold</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>Function, Method, Primary accent</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/citrine_dark.svg" alt="#eFE24D" /></td>
-    <td>`#eFE24D`</td>
+    <td><h6><code>#eFE24D</code></h6></td>
     <td><h6>Citrine</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>Warning, CTA</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/lime_dark.svg" alt="#a7d963" /></td>
-    <td>`#a7d963`</td>
+    <td><h6><code>#a7d963</code></h6></td>
     <td><h6>Lime</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>String</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/forest_dark.svg" alt="#4aaa45" /></td>
-    <td>`#4aaa45`</td>
+    <td><h6><code>#4aaa45</code></h6></td>
     <td><h6>Forest</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>Success, Positive action</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/cyan_dark.svg" alt="#5ccfe6" /></td>
-    <td>`#5ccfe6`</td>
+    <td><h6><code>#5ccfe6</code></h6></td>
     <td><h6>Cyan</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>Property, Parameter, Argument, Member</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/azure_dark.svg" alt="#2190f0" /></td>
-    <td>`#2190f0`</td>
+    <td><h6><code>#2190f0</code></h6></td>
     <td><h6>Azure</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>Type, Class, Interface, Namespace, Accessed property</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/cobalt_dark.svg" alt="#2Ea3FF" /></td>
-    <td>`#2Ea3FF`</td>
+    <td><h6><code>#2Ea3FF</code></h6></td>
     <td><h6>Cobalt</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>TBD, CTA</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/lavender_dark.svg" alt="#c3a6ff" /></td>
-    <td>`#c3a6ff`</td>
+    <td><h6><code>#c3a6ff</code></h6></td>
     <td><h6>Lavender</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>Keyword, Control flow, Loop, Conditional</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/amethyst_dark.svg" alt="#9066ce" /></td>
-    <td>`#9066ce`</td>
+    <td><h6><code>#9066ce</code></h6></td>
     <td><h6>Amethyst</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>Secondary keyword (e.g. include), Built-in members</i></h6></td>
   </tr>
   <tr>
     <td><img src="./assets/swatches/magenta_dark.svg" alt="#dc73f1" /></td>
-    <td>`#dc73f1`</td>
+    <td><h6><code>#dc73f1</code></h6></td>
     <td><h6>Magenta</h6></td>
     <td><h6>Accent</h6></td>
     <td><h6><i>Decorator, Generic Type, Uncommon keyword, Secondary accent, CTA</i></h6></td>

@@ -10,9 +10,6 @@ const name = "generate-markdown-palette";
 async function init() {
   const palette = require(path.join(__dirname, "../../../palette.dark.json"));
   const outputPath = path.join(__dirname, "../../../README.md");
-  const paletteByGroup = palette.reduce((acc, color) => {
-    return acc[color.group] ? acc[color.group].push(color) : (acc[color.group] = [color]), acc;
-  }, {});
 
   const flagStart = '<!-- GEN:PALETTE:START -->';
   const flagEnd = '<!-- GEN:PALETTE:END -->';
@@ -25,14 +22,12 @@ async function init() {
   let md = '<table>\n  <tr>\n    <th>Color</th>\n    <th>Hex</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
 
   // TODO: Generate multiple tables for each group and for dark/light mode
-  Object.values(paletteByGroup).forEach(([_group, colors]) => {
-    colors.forEach(color => {
-      md += `  <tr>\n    <td><img src="./assets/swatches/${color.name}_dark.svg" alt="${color.hex}" /></td>\n`;
-      md += `    <td><h6><code>${color.hex}</code></h6></td>\n`;
-      md += `    <td><h6>${color.name[0].toLocaleUpperCase() + color.name.slice(1)}</h6></td>\n`;
-      md += `    <td><h6>${color.group[0].toLocaleUpperCase() + color.group.slice(1)}</h6></td>\n`;
-      md += `    <td><h6><i>${color.description || ''}</i></h6></td>\n  </tr>\n`;
-    });
+  palette.forEach(color => {
+    md += `  <tr>\n    <td><img src="./assets/swatches/${color.name}_dark.svg" alt="${color.hex}" /></td>\n`;
+    md += `    <td><h6><code>${color.hex}</code></h6></td>\n`;
+    md += `    <td><h6>${color.name[0].toLocaleUpperCase() + color.name.slice(1)}</h6></td>\n`;
+    md += `    <td><h6>${color.group[0].toLocaleUpperCase() + color.group.slice(1)}</h6></td>\n`;
+    md += `    <td><h6><i>${color.description || ''}</i></h6></td>\n  </tr>\n`;
   });
 
   md += '</table>';
