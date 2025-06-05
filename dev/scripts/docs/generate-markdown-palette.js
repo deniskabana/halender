@@ -35,7 +35,7 @@ async function init() {
 
   // Light mode
   md += '<details>\n<summary><strong>🔅 Light mode</strong></summary>\n<br />\n<table>\n  <tr>\n    <th>Color</th>\n    <th>Hex</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
-  paletteDark.forEach(color => {
+  paletteLight.forEach(color => {
     md += `  <tr>\n    <td><img src="./assets/swatches/${color.name}_light.svg" alt="${color.hex}" /></td>\n`;
     md += `    <td><code>${color.hex}</code></td>\n`;
     md += `    <td><strong>${color.name[0].toLocaleUpperCase() + color.name.slice(1)}</strong></td>\n`;
