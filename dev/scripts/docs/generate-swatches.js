@@ -8,7 +8,8 @@ const path = require("path");
 const name = "generate-swatches";
 
 async function init() {
-  const palette = require(path.join(__dirname, "../../../palette.dark.json"));
+  const paletteDark = require(path.join(__dirname, "../../../palette.dark.json"));
+  const paletteLight = require(path.join(__dirname, "../../../palette.light.json"));
   const outputDir = path.join(__dirname, "../../../assets/swatches/");
 
   // Clear out output dir before exporting
@@ -19,14 +20,20 @@ async function init() {
   const radius = 4;
   const borderColor = "#666666"
 
-  palette.forEach(color => {
+  paletteDark.forEach(color => {
     let svg = `<svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">\n`;
     svg += `  <rect width="${size}" height="${size}" ry="${radius}" rx="${radius}" fill="${color.hex}" stroke="${borderColor}" stroke-width="1" />\n`;
     svg += `</svg>`;
     fs.writeFileSync(path.join(outputDir, `${color.name}_dark.svg`), svg);
   });
+  paletteLight.forEach(color => {
+    let svg = `<svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">\n`;
+    svg += `  <rect width="${size}" height="${size}" ry="${radius}" rx="${radius}" fill="${color.hex}" stroke="${borderColor}" stroke-width="1" />\n`;
+    svg += `</svg>`;
+    fs.writeFileSync(path.join(outputDir, `${color.name}_light.svg`), svg);
+  });
 
-  return `${palette.length} swatches created in ${outputDir}`;
+  return `${paletteDark.length + paletteLight.length} swatches created in ${outputDir}`;
 }
 
 // ==================================================
