@@ -8,7 +8,8 @@ const path = require("path");
 const name = "generate-markdown-palette";
 
 async function init() {
-  const palette = require(path.join(__dirname, "../../../palette.dark.json"));
+  const paletteDark = require(path.join(__dirname, "../../../palette.dark.json"));
+  const paletteLight = require(path.join(__dirname, "../../../palette.dark.json"));
   const outputPath = path.join(__dirname, "../../../README.md");
 
   const flagStart = '<!-- GEN:PALETTE:START -->';
@@ -19,18 +20,30 @@ async function init() {
     throw new Error(`File ${outputPath} does not contain the required flags: ${flagStart} and ${flagEnd}`);
   }
 
-  let md = '<details>\n<summary><h4>🌙 Dark mode</h4></summary>\n<table>\n  <tr>\n    <th>Color</th>\n    <th>Hex</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
+  let md = ''
 
-  // TODO: Generate multiple tables for each group and for dark/light mode
-  palette.forEach(color => {
+  // Dark mode
+  md += '<details>\n<summary><strong>🌙 Dark mode</strong></summary>\n<br />\n<table>\n  <tr>\n    <th>Color</th>\n    <th>Hex</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
+  paletteDark.forEach(color => {
     md += `  <tr>\n    <td><img src="./assets/swatches/${color.name}_dark.svg" alt="${color.hex}" /></td>\n`;
     md += `    <td><code>${color.hex}</code></td>\n`;
     md += `    <td><strong>${color.name[0].toLocaleUpperCase() + color.name.slice(1)}</strong></td>\n`;
     md += `    <td>${color.group[0].toLocaleUpperCase() + color.group.slice(1)}</td>\n`;
     md += `    <td><i>${color.description || ''}</i></td>\n  </tr>\n`;
   });
+  md += '</table>\n</details>\n\n';
 
+  // Light mode
+  md += '<details>\n<summary><strong>🔅 Light mode</strong></summary>\n<br />\n<table>\n  <tr>\n    <th>Color</th>\n    <th>Hex</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
+  paletteDark.forEach(color => {
+    md += `  <tr>\n    <td><img src="./assets/swatches/${color.name}_light.svg" alt="${color.hex}" /></td>\n`;
+    md += `    <td><code>${color.hex}</code></td>\n`;
+    md += `    <td><strong>${color.name[0].toLocaleUpperCase() + color.name.slice(1)}</strong></td>\n`;
+    md += `    <td>${color.group[0].toLocaleUpperCase() + color.group.slice(1)}</td>\n`;
+    md += `    <td><i>${color.description || ''}</i></td>\n  </tr>\n`;
+  });
   md += '</table>\n</details>';
+
 
   outputBeforeFlag = originalFileContent.split(flagStart)[0];
   outputAfterFlag = originalFileContent.split(flagEnd)[1];
