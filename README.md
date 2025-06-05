@@ -80,6 +80,94 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 <!-- GEN:PALETTE:START -->
 
-View the complete color palette with swatches: **[📋 Color Documentation](docs/colors.md)**
+<table>
+  <tr>
+    <th>Color</th>
+    <th>Name</th>
+    <th>Group</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td colspan="4" style="background-color: #f0f0f0; font-weight: bold;">accent</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ef6b73; width: 100px;"></td>
+    <td>Crimson</td>
+    <td>accent</td>
+    <td>TBD</td>
+  </tr>
+  <tr>
+    <td style="background-color: #cf2a2c; width: 100px;"></td>
+    <td>Ruby</td>
+    <td>accent</td>
+    <td>Error, Danger, Critical action</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffae57; width: 100px;"></td>
+    <td>Amber</td>
+    <td>accent</td>
+    <td>Number, Operators, Decisive keyword (e.g. return)</td>
+  </tr>
+  <tr>
+    <td style="background-color: #ffd580; width: 100px;"></td>
+    <td>Gold</td>
+    <td>accent</td>
+    <td>Function, Method, Primary accent</td>
+  </tr>
+  <tr>
+    <td style="background-color: #eFE24D; width: 100px;"></td>
+    <td>Citrine</td>
+    <td>accent</td>
+    <td>Warning, CTA</td>
+  </tr>
+  <tr>
+    <td style="background-color: #a7d963; width: 100px;"></td>
+    <td>Lime</td>
+    <td>accent</td>
+    <td>String</td>
+  </tr>
+  <tr>
+    <td style="background-color: #4aaa45; width: 100px;"></td>
+    <td>Forest</td>
+    <td>accent</td>
+    <td>Success, Positive action</td>
+  </tr>
+  <tr>
+    <td style="background-color: #5ccfe6; width: 100px;"></td>
+    <td>Cyan</td>
+    <td>accent</td>
+    <td>Property, Parameter, Argument, Member</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2190f0; width: 100px;"></td>
+    <td>Azure</td>
+    <td>accent</td>
+    <td>Type, Class, Interface, Namespace, Accessed property</td>
+  </tr>
+  <tr>
+    <td style="background-color: #2Ea3FF; width: 100px;"></td>
+    <td>Cobalt</td>
+    <td>accent</td>
+    <td>TBD, CTA</td>
+  </tr>
+  <tr>
+    <td style="background-color: #c3a6ff; width: 100px;"></td>
+    <td>Lavender</td>
+    <td>accent</td>
+    <td>Keyword, Control flow, Loop, Conditional</td>
+  </tr>
+  <tr>
+    <td style="background-color: #9066ce; width: 100px;"></td>
+    <td>Amethyst</td>
+    <td>accent</td>
+    <td>Secondary keyword (e.g. include), Built-in members</td>
+  </tr>
+  <tr>
+    <td style="background-color: #dc73f1; width: 100px;"></td>
+    <td>Magenta</td>
+    <td>accent</td>
+    <td>Decorator, Generic Type, Uncommon keyword, Secondary accent, CTA</td>
+  </tr>
+</table>
 
 <!-- GEN:PALETTE:END -->

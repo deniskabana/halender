@@ -8,12 +8,8 @@ const path = require("path");
 const name = "generate-palette-stripe";
 
 async function init() {
-  // Load your palette JSON
   const palette = require(path.join(__dirname, "../../../palette.dark.json"));
-  // Output file (static path intentional)
   const outputPath = path.join(__dirname, "../../../assets/docs/palette-stripe.svg");
-
-  // Filter for accent colors
   const accentColors = palette.filter(({ group }) => group === "accent");
 
   // Allow sorting by hue
@@ -57,7 +53,7 @@ async function init() {
   svg += `</svg>`;
 
   fs.writeFileSync(outputPath, svg);
-  return outputPath; // Returned output is consoled for the user confirmation
+  return outputPath;
 }
 
 // ==================================================
