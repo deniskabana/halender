@@ -11,6 +11,10 @@ async function init() {
   const palette = require(path.join(__dirname, "../../../palette.dark.json"));
   const outputDir = path.join(__dirname, "../../../assets/swatches/");
 
+  // Clear out output dir before exporting
+  fs.rmdirSync(outputPath)
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+
   // Generate SVG
   const size = 28;
   const radius = 14;

@@ -12,10 +12,6 @@ async function init() {
   const outputPath = path.join(__dirname, "../../../assets/docs/palette-stripe.svg");
   const accentColors = palette.filter(({ group }) => group === "accent");
 
-  // Clear out output dir before exporting
-  fs.rmdirSync(outputPath)
-  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-
   // Allow sorting by hue
   function hexToHSL(hex) {
     let r = parseInt(hex.slice(1, 3), 16) / 255;
