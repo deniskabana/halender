@@ -9,7 +9,7 @@ const name = "generate-markdown-palette";
 
 async function init() {
   const paletteDark = require(path.join(__dirname, "../../../palette.dark.json"));
-  const paletteLight = require(path.join(__dirname, "../../../palette.dark.json"));
+  const paletteLight = require(path.join(__dirname, "../../../palette.light.json"));
   const outputPath = path.join(__dirname, "../../../README.md");
 
   const flagStart = '<!-- GEN:PALETTE:START -->';

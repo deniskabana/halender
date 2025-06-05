@@ -203,43 +203,43 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
     <th>Description</th>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/crimson_light.svg" alt="#ef6b73" /></td>
-    <td><code>#ef6b73</code></td>
+    <td><img src="./assets/swatches/crimson_light.svg" alt="#cf2a2c" /></td>
+    <td><code>#cf2a2c</code></td>
     <td><strong>Crimson</strong></td>
     <td>Accent</td>
     <td><i>TBD</i></td>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/ruby_light.svg" alt="#cf3a3c" /></td>
-    <td><code>#cf3a3c</code></td>
+    <td><img src="./assets/swatches/ruby_light.svg" alt="#cf2a2c" /></td>
+    <td><code>#cf2a2c</code></td>
     <td><strong>Ruby</strong></td>
     <td>Accent</td>
     <td><i>Error, Danger, Critical action</i></td>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/amber_light.svg" alt="#ffae57" /></td>
-    <td><code>#ffae57</code></td>
+    <td><img src="./assets/swatches/amber_light.svg" alt="#bf4030" /></td>
+    <td><code>#bf4030</code></td>
     <td><strong>Amber</strong></td>
     <td>Accent</td>
     <td><i>Number, Operators, Decisive keyword (e.g. return)</i></td>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/gold_light.svg" alt="#ffd580" /></td>
-    <td><code>#ffd580</code></td>
+    <td><img src="./assets/swatches/gold_light.svg" alt="#907002" /></td>
+    <td><code>#907002</code></td>
     <td><strong>Gold</strong></td>
     <td>Accent</td>
     <td><i>Function, Method, Primary accent</i></td>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/citrine_light.svg" alt="#eFE24D" /></td>
-    <td><code>#eFE24D</code></td>
+    <td><img src="./assets/swatches/citrine_light.svg" alt="#c98005" /></td>
+    <td><code>#c98005</code></td>
     <td><strong>Citrine</strong></td>
     <td>Accent</td>
     <td><i>Warning, CTA</i></td>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/lime_light.svg" alt="#a7d963" /></td>
-    <td><code>#a7d963</code></td>
+    <td><img src="./assets/swatches/lime_light.svg" alt="#339425" /></td>
+    <td><code>#339425</code></td>
     <td><strong>Lime</strong></td>
     <td>Accent</td>
     <td><i>String</i></td>
@@ -252,43 +252,43 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
     <td><i>Success, Positive action</i></td>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/cyan_light.svg" alt="#5ccfe6" /></td>
-    <td><code>#5ccfe6</code></td>
+    <td><img src="./assets/swatches/cyan_light.svg" alt="#007ac5" /></td>
+    <td><code>#007ac5</code></td>
     <td><strong>Cyan</strong></td>
     <td>Accent</td>
     <td><i>Property, Parameter, Argument, Member</i></td>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/azure_light.svg" alt="#2190f0" /></td>
-    <td><code>#2190f0</code></td>
+    <td><img src="./assets/swatches/azure_light.svg" alt="#0010b5" /></td>
+    <td><code>#0010b5</code></td>
     <td><strong>Azure</strong></td>
     <td>Accent</td>
     <td><i>Type, Class, Interface, Namespace, Accessed property</i></td>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/cobalt_light.svg" alt="#2Ea3FF" /></td>
-    <td><code>#2Ea3FF</code></td>
+    <td><img src="./assets/swatches/cobalt_light.svg" alt="#2590EC" /></td>
+    <td><code>#2590EC</code></td>
     <td><strong>Cobalt</strong></td>
     <td>Accent</td>
     <td><i>TBD, CTA</i></td>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/lavender_light.svg" alt="#c3a6ff" /></td>
-    <td><code>#c3a6ff</code></td>
+    <td><img src="./assets/swatches/lavender_light.svg" alt="#9a40b3" /></td>
+    <td><code>#9a40b3</code></td>
     <td><strong>Lavender</strong></td>
     <td>Accent</td>
     <td><i>Keyword, Control flow, Loop, Conditional</i></td>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/amethyst_light.svg" alt="#9066ce" /></td>
-    <td><code>#9066ce</code></td>
+    <td><img src="./assets/swatches/amethyst_light.svg" alt="#6f1f7f" /></td>
+    <td><code>#6f1f7f</code></td>
     <td><strong>Amethyst</strong></td>
     <td>Accent</td>
     <td><i>Secondary keyword (e.g. include), Built-in members</i></td>
   </tr>
   <tr>
-    <td><img src="./assets/swatches/magenta_light.svg" alt="#dc73f1" /></td>
-    <td><code>#dc73f1</code></td>
+    <td><img src="./assets/swatches/magenta_light.svg" alt="#bc42ba" /></td>
+    <td><code>#bc42ba</code></td>
     <td><strong>Magenta</strong></td>
     <td>Accent</td>
     <td><i>Decorator, Generic Type, Uncommon keyword, Secondary accent, CTA</i></td>

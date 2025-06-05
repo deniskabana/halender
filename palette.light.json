@@ -61,13 +61,13 @@
   },
   {
     "group": "accent",
-    "hex": "#c3a6ff",
+    "hex": "#9a40b3",
     "name": "lavender",
     "description": "Keyword, Control flow, Loop, Conditional"
   },
   {
     "group": "accent",
-    "hex": "#9a40b3",
+    "hex": "#6f1f7f",
     "name": "amethyst",
     "description": "Secondary keyword (e.g. include), Built-in members"
   },
