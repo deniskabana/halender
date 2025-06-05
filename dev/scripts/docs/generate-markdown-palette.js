@@ -19,18 +19,18 @@ async function init() {
     throw new Error(`File ${outputPath} does not contain the required flags: ${flagStart} and ${flagEnd}`);
   }
 
-  let md = '<table>\n  <tr>\n    <th>Color</th>\n    <th>Hex</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
+  let md = '<details>\n<summary>🌙 Dark mode</summary>\n<table>\n  <tr>\n    <th>Color</th>\n    <th>Hex</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
 
   // TODO: Generate multiple tables for each group and for dark/light mode
   palette.forEach(color => {
     md += `  <tr>\n    <td><img src="./assets/swatches/${color.name}_dark.svg" alt="${color.hex}" /></td>\n`;
-    md += `    <td><h6><code>${color.hex}</code></h6></td>\n`;
-    md += `    <td><h6>${color.name[0].toLocaleUpperCase() + color.name.slice(1)}</h6></td>\n`;
-    md += `    <td><h6>${color.group[0].toLocaleUpperCase() + color.group.slice(1)}</h6></td>\n`;
-    md += `    <td><h6><i>${color.description || ''}</i></h6></td>\n  </tr>\n`;
+    md += `    <td><code>${color.hex}</code></td>\n`;
+    md += `    <td><strong>${color.name[0].toLocaleUpperCase() + color.name.slice(1)}</strong></td>\n`;
+    md += `    <td>${color.group[0].toLocaleUpperCase() + color.group.slice(1)}</td>\n`;
+    md += `    <td><i>${color.description || ''}</i></td>\n  </tr>\n`;
   });
 
-  md += '</table>';
+  md += '</table>\n</details>';
 
   outputBeforeFlag = originalFileContent.split(flagStart)[0];
   outputAfterFlag = originalFileContent.split(flagEnd)[1];
