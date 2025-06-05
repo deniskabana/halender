@@ -22,14 +22,15 @@ async function init() {
     throw new Error(`File ${outputPath} does not contain the required flags: ${flagStart} and ${flagEnd}`);
   }
 
-  let md = '<table>\n  <tr>\n    <th>Color</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
+  let md = '<table>\n  <tr>\n    <th>Color</th>\n    <th>Hex</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
 
   Object.entries(paletteByGroup).forEach(([group, colors]) => {
     // Group caption
     md += `  <tr>\n    <td colspan="4" style="background-color: #f0f0f0; font-weight: bold;">${group}</td>\n  </tr>\n`;
     // Colors
     colors.forEach(color => {
-      md += `  <tr>\n    <td style="background-color: ${color.hex}; width: 100px;"></td>\n`;
+      md += `  <tr>\n    <td><img src="./assets/swatches/${color.name}_dark.svg" alt="${color.hex}" /></td>\n`;
+      md += `    <td>${color.hex}</td>\n`;
       md += `    <td>${color.name[0].toLocaleUpperCase() + color.name.slice(1)}</td>\n`;
       md += `    <td>${color.group}</td>\n`;
       md += `    <td>${color.description || ''}</td>\n  </tr>\n`;

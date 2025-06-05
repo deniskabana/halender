@@ -12,8 +12,7 @@ async function init() {
   const outputDir = path.join(__dirname, "../../../assets/swatches/");
 
   // Clear out output dir before exporting
-  fs.rmdirSync(outputPath)
-  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.readdirSync(outputDir).forEach(file => fs.rmSync(`${outputDir}/${file}`));
 
   // Generate SVG
   const size = 28;
