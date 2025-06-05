@@ -37,16 +37,17 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 ### 📀 Ports
 
-<h6>Editors</h6>
-<h6>
+<h6>Editors
+  <br />
   <ul>
     <li>
-      <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="22" /></a>
+      <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="16" /></a>
       <a href="./editors/nvim/">Neovim</a>
     </li>
     <li>
-      <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="18" /></a>
-      <a href="./editors/nvim/">Neovim</a>
+      <a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" width="16" /></a>
+      <a href="./editors/vscode/">VSCode</a>
+      <i>(coming soon)</i>
     </li>
   </ul>
 </h6>
