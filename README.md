@@ -4,7 +4,7 @@
 &nbsp;
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/deniskabana/halender/main/assets/docs/palette-stripe.png" width="400" />
+  <img src="./assets/docs/palette-stripe.svg" width="400" />
 </p>
 
 <h3 align="center">

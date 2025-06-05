@@ -1,0 +1,80 @@
+[
+  {
+    "group": "accent",
+    "hex": "#ef6b73",
+    "name": "Crimson",
+    "description": "TBD"
+  },
+  {
+    "group": "accent",
+    "hex": "#cf2a2c",
+    "name": "ruby",
+    "description": "Error, Danger, Critical action"
+  },
+  {
+    "group": "accent",
+    "hex": "#ffae57",
+    "name": "amber",
+    "description": "Number, Operators, Decisive keyword (e.g. return)"
+  },
+  {
+    "group": "accent",
+    "hex": "#ffd580",
+    "name": "gold",
+    "description": "Function, Method, Primary accent"
+  },
+  {
+    "group": "accent",
+    "hex": "#eFE24D",
+    "name": "citrine",
+    "description": "Warning, CTA"
+  },
+  {
+    "group": "accent",
+    "hex": "#a7d963",
+    "name": "lime",
+    "description": "String"
+  },
+  {
+    "group": "accent",
+    "hex": "#4aaa45",
+    "name": "forest",
+    "description": "Success, Positive action"
+  },
+  {
+    "group": "accent",
+    "hex": "#5ccfe6",
+    "name": "cyan",
+    "description": "Property, Parameter, Argument, Member"
+  },
+  {
+    "group": "accent",
+    "hex": "#2190f0",
+    "name": "azure",
+    "description": "Type, Class, Interface, Namespace, Accessed property"
+  },
+  {
+    "group": "accent",
+    "hex": "#2Ea3FF",
+    "name": "cobalt",
+    "description": "TBD, CTA"
+  },
+  {
+    "group": "accent",
+    "hex": "#c3a6ff",
+    "name": "lavender",
+    "description": "Keyword, Control flow, Loop, Conditional"
+  },
+  {
+    "group": "accent",
+    "hex": "#9066ce",
+    "name": "amethyst",
+    "description": "Secondary keyword (e.g. include), Built-in members"
+  },
+  {
+    "group": "accent",
+    "hex": "#dc73f1",
+    "name": "magenta",
+    "description": "Decorator, Generic Type, Uncommon keyword, Secondary accent, CTA"
+  }
+]
