@@ -1,3 +1,8 @@
+> [!CAUTION]
+> Remember - **Halender is in pre-alpha mode!** Documentation is still under construction
+
+&nbsp;
+
 <p align="center">
   <img src="./assets/docs/palette-stripe.svg" width="400" />
 </p>
@@ -18,8 +23,9 @@
 
 &nbsp;
 
-> [!CAUTION]
-> Remember - **Halender is in pre-alpha mode!** Documentation is still under construction
+<p align="center">
+  <img src="./assets/screenshots/code.png" />
+</p>
 
 &nbsp;
 
