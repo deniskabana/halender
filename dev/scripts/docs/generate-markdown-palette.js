@@ -24,14 +24,11 @@ async function init() {
 
   let md = '<table>\n  <tr>\n    <th>Color</th>\n    <th>Hex</th>\n    <th>Name</th>\n    <th>Group</th>\n    <th>Description</th>\n  </tr>\n';
 
-  Object.entries(paletteByGroup).forEach(([group, colors]) => {
-    // Group caption
-    md += `  <tr>\n    <td colspan="4" style="background-color: #f0f0f0; font-weight: bold;">${group}</td>\n  </tr>\n`;
-
-    // Colors
+  // TODO: Generate multiple tables for each group and for dark/light mode
+  Object.values(paletteByGroup).forEach(([_group, colors]) => {
     colors.forEach(color => {
       md += `  <tr>\n    <td><img src="./assets/swatches/${color.name}_dark.svg" alt="${color.hex}" /></td>\n`;
-      md += `    <td>\`${color.hex}\`</td>\n`;
+      md += `    <td><h6><code>${color.hex}</code></h6></td>\n`;
       md += `    <td><h6>${color.name[0].toLocaleUpperCase() + color.name.slice(1)}</h6></td>\n`;
       md += `    <td><h6>${color.group[0].toLocaleUpperCase() + color.group.slice(1)}</h6></td>\n`;
       md += `    <td><h6><i>${color.description || ''}</i></h6></td>\n  </tr>\n`;
