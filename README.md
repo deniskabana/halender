@@ -37,8 +37,8 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 ### 📀 Ports
 
-<h6>Editors
-  <br />
+<h5>Editors</h5>
+<h6>
   <ul>
     <li>
       <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="16" /></a>
@@ -52,74 +52,32 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
   </ul>
 </h6>
 
-<h6>Terminals</h6>
-<ul>
-  <li>
-    <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="20" /></a>
-    <a href="./editors/nvim/">Neovim</a>
-  </li>
-  <li>
-    <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="20" /></a>
-    <a href="./editors/nvim/">Neovim</a>
-  </li>
-</ul>
-
-<table width="100%">
-  <tr>
-    <th colspan="2">Editors</th>
-    <th colspan="2">Terminals</th>
-  </tr>
-  <tr>
-    <td>
-      <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="20" /></a>
-    </td>
-    <td>
-      <a href="./editors/nvim/">Neovim</a>
-    </td>
-    <td>
-      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" width="20" /></a>
-    </td>
-    <td>
+<h5>Terminals</h5>
+<h6>
+  <ul>
+    <li>
+      <a href="./terminals/kitty/"><img src="./assets/logos/logo-kitty.png" width="16" /></a>
       <a href="./terminals/kitty/">Kitty</a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" width="20" /></a>
-    </td>
-    <td>
-      <a href="./editors/vscode/">VSCode</a>
-      <i>(coming soon)</i>
-    </td>
-    <td>
-      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" width="20" /></a>
-    </td>
-    <td>
+    </li>
+    <li>
+      <a href="./terminals/ghostty/"><img src="./assets/logos/logo-ghostty.png" width="16" /></a>
       <a href="./terminals/ghostty/">Ghostty</a>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2"></td>
-    <td>
-      <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" width="20" /></a>
-    </td>
-    <td>
+    </li>
+    <li>
+      <a href="./terminals/iterm2/"><img src="./assets/logos/logo-iterm.png" width="16" /></a>
       <a href="./terminals/iterm2/">iTerm 2</a>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2"></td>
-    <td>
-      <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" width="20" /></a>
-    </td>
-    <td>
+    </li>
+    <li>
+      <a href="./terminals/apple-terminal/"><img src="./assets/logos/logo-apple-terminal.png" width="16" /></a>
       <a href="./terminals/apple-terminal/">Apple&nbsp;terminal</a>
-    </td>
-  </tr>
-</table>
+    </li>
+  </ul>
+</h6>
 
 &nbsp;
 
 ### 🎨 Palette
 
 View the complete color palette with swatches: **[📋 Color Documentation](docs/colors.md)**
+
+<!-- This is a markdown comment that should not get rendered -->
