@@ -1,8 +1,3 @@
-> [!CAUTION]
-> Documentation is still under construction
-
-&nbsp;
-
 <p align="center">
   <img src="./assets/docs/palette-stripe.svg" width="400" />
 </p>
@@ -20,6 +15,11 @@
   ·
   <a href="#">Playground</a>
 </h6>
+
+&nbsp;
+
+> [!CAUTION]
+> Remember - **Halender is in pre-alpha mode!** Documentation is still under construction
 
 &nbsp;
 
