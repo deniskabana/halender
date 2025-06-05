@@ -27,13 +27,14 @@ async function init() {
   Object.entries(paletteByGroup).forEach(([group, colors]) => {
     // Group caption
     md += `  <tr>\n    <td colspan="4" style="background-color: #f0f0f0; font-weight: bold;">${group}</td>\n  </tr>\n`;
+
     // Colors
     colors.forEach(color => {
       md += `  <tr>\n    <td><img src="./assets/swatches/${color.name}_dark.svg" alt="${color.hex}" /></td>\n`;
-      md += `    <td>${color.hex}</td>\n`;
-      md += `    <td>${color.name[0].toLocaleUpperCase() + color.name.slice(1)}</td>\n`;
-      md += `    <td>${color.group}</td>\n`;
-      md += `    <td>${color.description || ''}</td>\n  </tr>\n`;
+      md += `    <td>\`${color.hex}\`</td>\n`;
+      md += `    <td><h6>${color.name[0].toLocaleUpperCase() + color.name.slice(1)}</h6></td>\n`;
+      md += `    <td><h6>${color.group[0].toLocaleUpperCase() + color.group.slice(1)}</h6></td>\n`;
+      md += `    <td><h6><i>${color.description || ''}</i></h6></td>\n  </tr>\n`;
     });
   });
 

@@ -83,6 +83,7 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 <table>
   <tr>
     <th>Color</th>
+    <th>Hex</th>
     <th>Name</th>
     <th>Group</th>
     <th>Description</th>
@@ -91,82 +92,95 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
     <td colspan="4" style="background-color: #f0f0f0; font-weight: bold;">accent</td>
   </tr>
   <tr>
-    <td style="background-color: #ef6b73; width: 100px;"></td>
-    <td>Crimson</td>
-    <td>accent</td>
-    <td>TBD</td>
+    <td><img src="./assets/swatches/crimson_dark.svg" alt="#ef6b73" /></td>
+    <td>`#ef6b73`</td>
+    <td><h6>Crimson</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>TBD</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #cf2a2c; width: 100px;"></td>
-    <td>Ruby</td>
-    <td>accent</td>
-    <td>Error, Danger, Critical action</td>
+    <td><img src="./assets/swatches/ruby_dark.svg" alt="#cf2a2c" /></td>
+    <td>`#cf2a2c`</td>
+    <td><h6>Ruby</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>Error, Danger, Critical action</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #ffae57; width: 100px;"></td>
-    <td>Amber</td>
-    <td>accent</td>
-    <td>Number, Operators, Decisive keyword (e.g. return)</td>
+    <td><img src="./assets/swatches/amber_dark.svg" alt="#ffae57" /></td>
+    <td>`#ffae57`</td>
+    <td><h6>Amber</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>Number, Operators, Decisive keyword (e.g. return)</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #ffd580; width: 100px;"></td>
-    <td>Gold</td>
-    <td>accent</td>
-    <td>Function, Method, Primary accent</td>
+    <td><img src="./assets/swatches/gold_dark.svg" alt="#ffd580" /></td>
+    <td>`#ffd580`</td>
+    <td><h6>Gold</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>Function, Method, Primary accent</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #eFE24D; width: 100px;"></td>
-    <td>Citrine</td>
-    <td>accent</td>
-    <td>Warning, CTA</td>
+    <td><img src="./assets/swatches/citrine_dark.svg" alt="#eFE24D" /></td>
+    <td>`#eFE24D`</td>
+    <td><h6>Citrine</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>Warning, CTA</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #a7d963; width: 100px;"></td>
-    <td>Lime</td>
-    <td>accent</td>
-    <td>String</td>
+    <td><img src="./assets/swatches/lime_dark.svg" alt="#a7d963" /></td>
+    <td>`#a7d963`</td>
+    <td><h6>Lime</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>String</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #4aaa45; width: 100px;"></td>
-    <td>Forest</td>
-    <td>accent</td>
-    <td>Success, Positive action</td>
+    <td><img src="./assets/swatches/forest_dark.svg" alt="#4aaa45" /></td>
+    <td>`#4aaa45`</td>
+    <td><h6>Forest</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>Success, Positive action</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #5ccfe6; width: 100px;"></td>
-    <td>Cyan</td>
-    <td>accent</td>
-    <td>Property, Parameter, Argument, Member</td>
+    <td><img src="./assets/swatches/cyan_dark.svg" alt="#5ccfe6" /></td>
+    <td>`#5ccfe6`</td>
+    <td><h6>Cyan</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>Property, Parameter, Argument, Member</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #2190f0; width: 100px;"></td>
-    <td>Azure</td>
-    <td>accent</td>
-    <td>Type, Class, Interface, Namespace, Accessed property</td>
+    <td><img src="./assets/swatches/azure_dark.svg" alt="#2190f0" /></td>
+    <td>`#2190f0`</td>
+    <td><h6>Azure</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>Type, Class, Interface, Namespace, Accessed property</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #2Ea3FF; width: 100px;"></td>
-    <td>Cobalt</td>
-    <td>accent</td>
-    <td>TBD, CTA</td>
+    <td><img src="./assets/swatches/cobalt_dark.svg" alt="#2Ea3FF" /></td>
+    <td>`#2Ea3FF`</td>
+    <td><h6>Cobalt</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>TBD, CTA</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #c3a6ff; width: 100px;"></td>
-    <td>Lavender</td>
-    <td>accent</td>
-    <td>Keyword, Control flow, Loop, Conditional</td>
+    <td><img src="./assets/swatches/lavender_dark.svg" alt="#c3a6ff" /></td>
+    <td>`#c3a6ff`</td>
+    <td><h6>Lavender</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>Keyword, Control flow, Loop, Conditional</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #9066ce; width: 100px;"></td>
-    <td>Amethyst</td>
-    <td>accent</td>
-    <td>Secondary keyword (e.g. include), Built-in members</td>
+    <td><img src="./assets/swatches/amethyst_dark.svg" alt="#9066ce" /></td>
+    <td>`#9066ce`</td>
+    <td><h6>Amethyst</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>Secondary keyword (e.g. include), Built-in members</i></h6></td>
   </tr>
   <tr>
-    <td style="background-color: #dc73f1; width: 100px;"></td>
-    <td>Magenta</td>
-    <td>accent</td>
-    <td>Decorator, Generic Type, Uncommon keyword, Secondary accent, CTA</td>
+    <td><img src="./assets/swatches/magenta_dark.svg" alt="#dc73f1" /></td>
+    <td>`#dc73f1`</td>
+    <td><h6>Magenta</h6></td>
+    <td><h6>Accent</h6></td>
+    <td><h6><i>Decorator, Generic Type, Uncommon keyword, Secondary accent, CTA</i></h6></td>
   </tr>
 </table>
 
