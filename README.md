@@ -37,6 +37,30 @@ _Heavy inspiration taken from the [Catpuccin](https://github.com/catppuccin/catp
 
 ### 📀 Ports
 
+<h6>Editors</h6>
+<ul>
+  <li>
+    <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="20" /></a>
+    <a href="./editors/nvim/">Neovim</a>
+  </li>
+  <li>
+    <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="20" /></a>
+    <a href="./editors/nvim/">Neovim</a>
+  </li>
+</ul>
+
+<h6>Terminals</h6>
+<ul>
+  <li>
+    <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="20" /></a>
+    <a href="./editors/nvim/">Neovim</a>
+  </li>
+  <li>
+    <a href="./editors/nvim/"><img src="./assets/logos/logo-neovim.png" width="20" /></a>
+    <a href="./editors/nvim/">Neovim</a>
+  </li>
+</ul>
+
 <table width="100%">
   <tr>
     <th colspan="2">Editors</th>
