@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../assets/docs/halender-logo.svg" width="128" />
+  <img src="../../assets/docs/halender-logo.png" width="128" />
 </p>
 
 <h3 align="center">

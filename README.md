@@ -41,7 +41,6 @@
     <li>
       <a href="./editors/vscode/"><img src="./assets/logos/logo-vscode.png" width="16" /></a>
       <a href="./editors/vscode/">VSCode</a>
-      <i>(coming soon)</i>
     </li>
   </ul>
 </h6>
