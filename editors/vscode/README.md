@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../assets/docs/halender-logo.png" width="128" />
+  <img src="https://raw.githubusercontent.com/deniskabana/halender/main/assets/docs/halender-logo.png" width="128" />
 </p>
 
 <h3 align="center">
@@ -8,7 +8,11 @@
 
 ## Screenshot
 
-![Demo](./images/demo.png)
+![Demo](https://raw.githubusercontent.com/deniskabana/halender/main/editors/vscode/images/demo.png)
+
+## More Halender
+
+Check out the [Halender Github](https://github.com/deniskabana/halender) for other Halender ports!
 
 ## Credits
 
