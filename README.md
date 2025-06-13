@@ -1,6 +1,3 @@
-> [!CAUTION]
-> Remember - **Halender is in pre-alpha mode!** Documentation is still under construction
-
 &nbsp;
 
 <p align="center">
