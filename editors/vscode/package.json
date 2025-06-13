@@ -2,7 +2,7 @@
   "name": "halender-vscode",
   "displayName": "Halender Theme",
   "description": "A dark blue theme for VS Code based on the Halcyon theme for VSCode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "deniskabana",
   "icon": "images/logo.png",
   "author": {
