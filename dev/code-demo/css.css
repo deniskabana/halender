@@ -1,0 +1,21 @@
+.class {
+  font-family: "Georgia", sans;
+  transition: 0.25s box-shadow ease-in;
+}
+
+.class:hover {
+  box-shadow: 0 0 10px black;
+}
+
+.class::after {
+  content: "Some other content";
+  color: red;
+}
+
+#someID {
+  background: yellow;
+}
+
+ul > li:nth-child(2) > span:not(.active) {
+  color: blue;
+}
