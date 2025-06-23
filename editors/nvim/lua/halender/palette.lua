@@ -26,7 +26,7 @@ M.dark = {
 	red2 = "#cf2a2c", -- Error, requiring immediate action, destroy
 	green = "#4aaa45",
 
-	bg = "#252738",
+	bg = "#1c2133",
 	sidebar = "#171c28",
 	float = "#171c28",
 	black = "#070c18",
